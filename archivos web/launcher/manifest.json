@@ -1,0 +1,117 @@
+{
+  "version": "1.0.2",
+  "archivos": {
+    "ah.emu": {
+      "sha256": "e85b5a07fcaccf4deea1b7373723b1deeadc5f4a2aac029e3d296696dfe1cf3c",
+      "size": 20008
+    },
+    "main.dll": {
+      "sha256": "45e55752d744d23f10bd0d7d116f321a4f9d40dc601e4e3efaca42eebe920464",
+      "size": 5401088
+    },
+    "main.exe": {
+      "sha256": "ff08a99195b843a08b00dd0b852397f704dfb97f0d86dcdb4c6a113edadeb47d",
+      "size": 3615232
+    },
+    "main.premium": {
+      "sha256": "b591e7dcac67c22d7ac0ace71f5ceea75676fb840c9267ae4ac67e15b0737edd",
+      "size": 2134280
+    },
+    "data/custom/interface/rank01.ozt": {
+      "sha256": "ca6cc7a1c39348b285309d6a122b7893fd06f58e3a7a33ffb2941b74ed13d152",
+      "size": 24384
+    },
+    "data/custom/interface/rank02.ozt": {
+      "sha256": "02753b9a354697c0872a61b30bf41aa7fd6447f52096f8035e3293e775a42589",
+      "size": 24384
+    },
+    "data/custom/interface/rank03.ozt": {
+      "sha256": "06e8d7e05b420e89085c6317c500bb12f0a7ef49b498bf9ce34714eda7d0bca5",
+      "size": 24384
+    },
+    "data/custom/interface/rank04.ozt": {
+      "sha256": "839ba5e7ccb28492ce9f782b092ae79afb4de1f1145a955eac3bad4d9d4a55e2",
+      "size": 24384
+    },
+    "data/custom/interface/rank05.ozt": {
+      "sha256": "c533de2aa1da8a9e7fa4883f9f1defdc2b349b99daf0ba57f9797e75a76e1b06",
+      "size": 24384
+    },
+    "data/custom/interface/rank06.ozt": {
+      "sha256": "7055d23f01a6b288aec432b4676ab72a0036179c2b24fe7860d6738643829012",
+      "size": 24384
+    },
+    "data/custom/interface/rank07.ozt": {
+      "sha256": "101b469f6686ba59db0f41063ddc96b5a967948c72cb7fe06f6df67866124c87",
+      "size": 24384
+    },
+    "data/custom/interface/rank08.ozt": {
+      "sha256": "c40051c1e45b4102fb05955826d7ecc98f543e84e19f2316996a8e8ea91b071f",
+      "size": 24384
+    },
+    "data/custom/interface/rank09.ozt": {
+      "sha256": "9755d6b10d24f3e2f5379db987d5836dce3dd50d6baf2553b5ad870f33b3bee7",
+      "size": 24384
+    },
+    "data/custom/interface/rank10.ozt": {
+      "sha256": "5caa0c5599f2fe8577dc6f6c2c5b1ba0f4a5c5a59f2f41ee6023f4178847f5dd",
+      "size": 24384
+    },
+    "data/custom/interface/rank11.ozt": {
+      "sha256": "ff9262ce25a16c30529d34c62377a2663f71e38dae7944e9b503d413881cb84a",
+      "size": 24384
+    },
+    "data/custom/interface/rank12.ozt": {
+      "sha256": "33f0ca4dce4d3f85aa688edf465155f6b932244d496feb8e3aca383709541022",
+      "size": 24384
+    },
+    "data/custom/interface/rank13.ozt": {
+      "sha256": "ed468bed9a31b763b8794d8cff8651567c73302656a7aa55329c756e42bb5951",
+      "size": 24384
+    },
+    "data/custom/interface/rank14.ozt": {
+      "sha256": "431b6d37289c6226f929ebda47b401f4f354f203182533546992bd012d646d7b",
+      "size": 24384
+    },
+    "data/custom/interface/rank15.ozt": {
+      "sha256": "92cc782aae24fc9fbb79ea15652a76da5a261429e0780cbf6b5eeb2fb5b638f6",
+      "size": 24384
+    },
+    "data/custom/interface/rank16.ozt": {
+      "sha256": "2543996da028dc5a3e0925a823fb614c1f2e3147821d0fcedeb18c1f963596eb",
+      "size": 24384
+    },
+    "data/custom/interface/rank17.ozt": {
+      "sha256": "b6736d24105e3771640e692d28e35f95bc45e1c4a7e9493c218c7728bdd46e3f",
+      "size": 24384
+    },
+    "data/custom/interface/rank18.ozt": {
+      "sha256": "155eea123d662b3d657179983b4c6d87303cbf96721e32a9bed0e90e973fef66",
+      "size": 24384
+    },
+    "data/custom/interface/rank19.ozt": {
+      "sha256": "a95a50331b64eb46d1a912df00dbe2ce8a9bfc4c7ac88d8162e070e06e73168e",
+      "size": 24384
+    },
+    "data/custom/interface/rank20.ozt": {
+      "sha256": "06a95c2ab3c170369282dd72604172129d9538608d146921997221530e3ba691",
+      "size": 24384
+    },
+    "data/custom/interface/rank21.ozt": {
+      "sha256": "bb6c7a9df48c8506f3b6c5fff7888d73ccd26a4bf54e48beedb8b89ce2309433",
+      "size": 24384
+    },
+    "data/custom/interface/rank22.ozt": {
+      "sha256": "ca4929ba61a9f471e38b9deb2a18e95958ee2a11f6c2dab657ec036f03f5c157",
+      "size": 24384
+    },
+    "data/custom/interface/unknown.png": {
+      "sha256": "1b8ffecad4df40f35e63aa5d8708810220957a674f5848ba0e4196d28ddafda7",
+      "size": 130404
+    },
+    "data/interface/fonttest.ozt": {
+      "sha256": "12f8dc0d856720815b68a319cafe6c000448fdcae0792fa20aeadf293bcae07a",
+      "size": 524310
+    }
+  }
+}
