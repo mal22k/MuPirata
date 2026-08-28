@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="MuLauncherWeb/MuLauncherWeb.vcxproj" Id="a5706f03-2cb9-49c1-99d7-a0c7d733b3c7" />
+</Solution>

@@ -1,0 +1,4 @@
+C:\Users\Administrator\Desktop\launchernew\ConfigGeneratorL\ConfigGeneratorL\bin\Debug\ConfigGeneratorL.exe.config
+C:\Users\Administrator\Desktop\launchernew\ConfigGeneratorL\ConfigGeneratorL\obj\Debug\ConfigForm.resources
+C:\Users\Administrator\Desktop\launchernew\ConfigGeneratorL\ConfigGeneratorL\obj\Debug\ConfigGeneratorL.Properties.Resources.resources
+C:\Users\Administrator\Desktop\launchernew\ConfigGeneratorL\ConfigGeneratorL\obj\Debug\ConfigGeneratorL.csproj.GenerateResource.Cache
