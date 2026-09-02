@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="62" Name="Santa Town">
+		<Spot Type="0" Description="NPC">
+			<!-- Snowman -->
+			<Spawn MonsterIndex="467" Distance="0" StartX="202" StartY="41" Dir="1" />
+			<!-- Dasher -->
+			<Spawn MonsterIndex="468" Distance="0" StartX="222" StartY="24" Dir="1" />
+			<!-- Kermit -->
+			<Spawn MonsterIndex="469" Distance="0" StartX="202" StartY="33" Dir="1" />
+			<!-- Little Santa -->
+			<Spawn MonsterIndex="470" Distance="0" StartX="192" StartY="24" Dir="1" />
+			<!-- Cupid -->
+			<Spawn MonsterIndex="471" Distance="0" StartX="207" StartY="9" Dir="1" />
+			<!-- Prancer -->
+			<Spawn MonsterIndex="472" Distance="0" StartX="225" StartY="11" Dir="1" />
+			<!-- Donner -->
+			<Spawn MonsterIndex="473" Distance="0" StartX="232" StartY="13" Dir="1" />
+			<!-- Vixen -->
+			<Spawn MonsterIndex="474" Distance="0" StartX="216" StartY="19" Dir="1" />
+			<!-- Blitzen -->
+			<Spawn MonsterIndex="475" Distance="0" StartX="193" StartY="27" Dir="1" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

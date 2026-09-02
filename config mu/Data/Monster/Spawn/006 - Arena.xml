@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="6" Name="Arena">
+		<Spot Type="1" Description="Multi~Spawn">
+			<Spawn MonsterIndex="3" Distance="10" StartX="186" StartY="124" EndX="186" EndY="124" Dir="-1" Count="10" />
+		</Spot>
+
+	</Map>
+</MonsterSpawn>

@@ -1,0 +1,147 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM MIX
+// ============================================================================
+// Archivo usado por: CCustomMix::Load("Custom\\CustomMix.txt")
+// Estado actual   : SOPORTADO PERO INACTIVO; las 4 secciones no tienen datos.
+//
+// FUNCION REAL DEL SISTEMA
+// Permite crear recetas personalizadas para Chaos Machine. El servidor intenta
+// buscar una receta custom cuando el cliente envia un tipo de mezcla que no cae
+// en los casos oficiales del Chaos Box.
+//
+// PUNTO MAS IMPORTANTE
+// MixIndex debe coincidir con el "type" que envia el cliente al usar la mezcla.
+// Si el cliente no tiene boton/interfaz que envie ese MixIndex, el servidor puede
+// cargar la receta, pero el jugador no tendra forma normal de ejecutarla.
+//
+// FLUJO DEL MIX
+// 1. El jugador pone items en Chaos Machine.
+// 2. El cliente envia un type de mezcla.
+// 3. Si ese type no es una mezcla oficial, ChaosBox llama CustomItemMix(type).
+// 4. Se busca MixIndex = type en seccion 0.
+// 5. Se validan materiales fijos de seccion 1 y grupos de seccion 2.
+// 6. Si acierta, se crea un resultado de seccion 3.
+// 7. Si falla, se limpia el Chaos Box y se consumen materiales/costo.
+//
+// ITEMINDEX GLOBAL
+// Los items usan indice global: GET_ITEM(Grupo, Index) = (Grupo * 512) + Index.
+// Ejemplos: Jewel of Chaos = GET_ITEM(12,15) = 6159.
+//
+// GRUPOS
+// RequiredGroups indica cuantos grupos de materiales alternativos revisara el
+// mix. Si RequiredGroups=1, el grupo valido debe ser Group=0. Si hay 2 grupos,
+// deben existir Group=0 y Group=1 en seccion 2 y seccion 3.
+//
+// RequiredItems es el total exacto de items que deben estar en Chaos Box:
+// items fijos de seccion 1 + items variables de seccion 2.
+//
+// EJEMPLO GENERAL COMENTADO
+// El ejemplo de abajo describe una receta hipotetica:
+// - MixIndex 2000.
+// - Costo base 100000 zen por cada punto de success rate.
+// - 60% free, 65/70/75% para VIP 1/2/3.
+// - Requiere 1 grupo de materiales.
+// - Requiere exactamente 3 items en total.
+// - No randomiza excellent, usa el valor exacto del resultado.
+//
+// Para activarlo de verdad se tendrian que quitar los // de las lineas de
+// ejemplo y asegurarse de que el cliente envie type 2000 al Chaos Box.
+// ============================================================================
+
+// ============================================================================
+// SECCION 0 - REGLAS DE MEZCLA
+// ============================================================================
+// MixIndex        : identificador de receta; debe coincidir con type del cliente.
+// Money           : multiplicador de costo. Costo final = SuccessRate * Money,
+//                   mas impuesto de Castle Siege. Si Money < 0, usa 1000.
+// RateAL0-RateAL3 : porcentaje de exito por AccountLevel. Fuera de 0-100 usa 90.
+// RequiredGroups  : cantidad de grupos alternativos a revisar.
+// RequiredItems   : cantidad exacta de items requeridos en Chaos Box.
+// RandomExcellent : 0 usa Excellent exacto del resultado; 1 randomiza segun
+//                   cantidad de opciones excellent indicadas.
+//
+// EJEMPLO:
+// MixIndex Money  AL0 AL1 AL2 AL3 Groups Items RandExc
+// 2000     100000 60  65  70  75  1      3     0
+//
+//   MixIndex   Money   RateAL0   RateAL1   RateAL2   RateAL3   RequiredGroups   RequiredItems   RandomExcellent
+0
+// 2000       100000     60        65        70        75             1              3                0
+end
+
+// ============================================================================
+// SECCION 1 - ITEMS FIJOS REQUERIDOS
+// ============================================================================
+// Materiales exactos que siempre deben estar en la mezcla.
+//
+// MixIndex        : receta a la que pertenece.
+// ItemIndexGlobal : item exacto requerido.
+// ItemLevel       : nivel exacto requerido.
+// Quantity        : cantidad requerida de ese item.
+//
+// EJEMPLO:
+// Requerir 1 Jewel of Chaos +0 para MixIndex 2000.
+// Jewel of Chaos = GET_ITEM(12,15) = 6159.
+//
+//   MixIndex  ItemIndexGlobal   ItemLevel   Quantity
+1
+// 2000             6159            0           1
+end
+
+// ============================================================================
+// SECCION 2 - GRUPOS DE ITEMS REQUERIDOS
+// ============================================================================
+// Materiales variables por grupo. El mix elige el grupo que cumpla la cantidad
+// requerida. Esto permite recetas alternativas para el mismo MixIndex.
+//
+// MixIndex     : receta a la que pertenece.
+// Group        : grupo alternativo, empezando en 0.
+// Quantity     : cantidad requerida dentro de este rango.
+// MinItemIndex : item global minimo aceptado.
+// MaxItemIndex : item global maximo aceptado.
+// Level        : nivel minimo requerido si Ancient no es 0.
+// Skill        : skill exacto requerido si Ancient no es 0.
+// Luck         : luck exacto requerido si Ancient no es 0.
+// Option       : option/adicional minimo requerido si Ancient no es 0.
+// Excellent    : excellent exacto requerido si Ancient no es 0.
+// Ancient      : set option exacto. Si es 0, el source no valida Level/Skill/
+//                Luck/Option/Excellent. Si es -1, no exige ancient.
+//
+// EJEMPLO:
+// Requerir 2 armas tipo sword del grupo 0, desde Short Sword hasta Rapier,
+// sin validar level/skill/luck/option/excellent/ancient.
+// Short Sword = GET_ITEM(0,1) = 1; Rapier = GET_ITEM(0,2) = 2.
+//
+//   MixIndex   Group   Quantity   MinItemIndex   MaxItemIndex   Level   Skill   Luck   Option   Excellent   Ancient
+2
+// 2000          0         2             1              2          *       *       *       *          *          0
+end
+
+// ============================================================================
+// SECCION 3 - RESULTADOS POSIBLES
+// ============================================================================
+// Resultado que puede crear el mix. El resultado tambien se separa por Group,
+// por eso debe coincidir con el Group validado en seccion 2.
+//
+// MixIndex     : receta a la que pertenece.
+// Group        : grupo de resultado. Debe existir para el grupo validado.
+// MinItemIndex : item global minimo posible.
+// MaxItemIndex : item global maximo posible.
+// Level        : nivel del item creado. Si es -1, crea nivel random 0-5.
+// Skill        : si no es 0, intenta crear skill si el item puede tener skill.
+// Luck         : si no es -1, crea luck fijo en 1; si es -1, luck random 0/1.
+// Option       : adicional del resultado. Menor a 0 = 0, mayor a 7 = 7.
+// Excellent    : si RandomExcellent=0, valor exacto de excellent.
+//                si RandomExcellent=1, representa cantidad de opciones 1-6.
+// Ancient      : si no es -1, usa ese valor; si es -1, ancient random 0/1.
+// Socket1-5    : 255 = socket vacio; otros valores intentan poner seed/opcion.
+//
+// EJEMPLO:
+// Crear al azar un arma entre Sword of Assassin y Blade, +9, skill, luck,
+// adicional +4, sin excellent, sin ancient y sin sockets.
+// Sword of Assassin = GET_ITEM(0,4) = 4; Blade = GET_ITEM(0,5) = 5.
+//
+//   MixIndex   Group   MinItemIndex   MaxItemIndex   Level   Skill   Luck   Option   Excellent   Ancient   Socket1   Socket2   Socket3   Socket4   Socket5
+3
+// 2000          0           4              5           9       1       1       4          0          0        255       255       255       255       255
+end

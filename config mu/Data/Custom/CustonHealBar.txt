@@ -1,0 +1,18 @@
+// ============================================================================
+// SILENTDEVS - BARRA DE VIDA PERSONALIZADA
+// ESTADO VALIDADO: ACTIVO; 3 monstruos configurados
+// SOURCE EX603: CCustomHealBar::Load (cargado desde ServerInfo.cpp).
+// FUNCION: Marca monstruos que usan la barra de vida custom; Map=-1 significa cualquier mapa.
+// COLUMNAS: Index MonsterClass Map Bars
+// Bars: cantidad de capas de vida mostradas en el cliente. Ej: 50 => 50/50, 49/50, etc.
+// DATOS ACTUALES: 275=Kundun, 459=Selupan, 309=Hell Maine. El nombre CustonHealBar.txt es intencional por compatibilidad con el source.
+// REGLAS: * equivale a -1 (sin limite, cualquier valor o valor original, segun el campo).
+//          Los bloques numericos terminan con end. No elimine ni reordene columnas.
+// ============================================================================
+// COLUMNAS: Index   MonsterID         Map      Bars
+
+               0	   275	           -1       50
+               1	   459	           -1       50
+               2	   309	           -1       50
+               3       561             -1       50
+end

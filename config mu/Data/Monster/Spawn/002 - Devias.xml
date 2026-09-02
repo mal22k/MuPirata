@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!--
+ ============================================================================ 
+  SilentDevs MonsterSetBase Configuration
+  ..........................................................................
+  Emulator : SilentDevs MU Online Emulator
+  Website  : https://www.SilentDevs.net
+  Author   : SilentDevs Development
+  Notice   : This file is part of the SilentDevs MuOnline Server files.
+  Editor   : Managed by SilentDevAdminTool Visual Spot Editor
+ ============================================================================ -->
+
+<MonsterSpawn>
+	<Map Number="2" Name="Devias">
+		<Spot Type="0" Description="NPC">
+			<Spawn MonsterIndex="233" Distance="0" StartX="209" StartY="30" Dir="1" />
+			<Spawn MonsterIndex="253" Distance="0" StartX="226" StartY="24" Dir="3" />
+			<Spawn MonsterIndex="240" Distance="0" StartX="218" StartY="63" Dir="2" />
+			<Spawn MonsterIndex="241" Distance="0" StartX="215" StartY="45" Dir="1" />
+			<Spawn MonsterIndex="247" Distance="20" StartX="224" StartY="79" Dir="5" />
+			<Spawn MonsterIndex="247" Distance="20" StartX="219" StartY="79" Dir="5" />
+			<Spawn MonsterIndex="247" Distance="20" StartX="169" StartY="45" Dir="7" />
+			<Spawn MonsterIndex="247" Distance="20" StartX="169" StartY="39" Dir="7" />
+			<Spawn MonsterIndex="257" Distance="0" StartX="219" StartY="73" Dir="3" />
+			<Spawn MonsterIndex="257" Distance="0" StartX="172" StartY="44" Dir="1" />
+		</Spot>
+		<Spot Type="1" Description="Multi~Spawn">
+		    <Spawn MonsterIndex="24" Distance="4" StartX="134" StartY="27" EndX="134" EndY="27" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="24" Distance="4" StartX="223" StartY="84" EndX="223" EndY="84" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="24" Distance="4" StartX="198" StartY="80" EndX="198" EndY="80" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="23" Distance="4" StartX="164" StartY="41" EndX="164" EndY="41" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="23" Distance="4" StartX="165" StartY="17" EndX="165" EndY="17" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="22" Distance="4" StartX="37" StartY="39" EndX="37" EndY="39" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="22" Distance="4" StartX="61" StartY="19" EndX="61" EndY="19" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="22" Distance="4" StartX="77" StartY="34" EndX="77" EndY="34" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="21" Distance="4" StartX="28" StartY="10" EndX="28" EndY="10" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="21" Distance="4" StartX="58" StartY="64" EndX="58" EndY="64" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="21" Distance="4" StartX="27" StartY="95" EndX="27" EndY="95" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="19" Distance="4" StartX="218" StartY="216" EndX="218" EndY="216" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="19" Distance="4" StartX="238" StartY="217" EndX="238" EndY="217" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="19" Distance="4" StartX="215" StartY="192" EndX="215" EndY="192" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="19" Distance="4" StartX="237" StartY="189" EndX="237" EndY="189" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="25" Distance="4" StartX="206" StartY="163" EndX="206" EndY="163" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="20" Distance="4" StartX="198" StartY="224" EndX="198" EndY="224" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="20" Distance="4" StartX="147" StartY="225" EndX="147" EndY="225" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="25" Distance="4" StartX="90" StartY="168" EndX="90" EndY="168" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="25" Distance="4" StartX="39" StartY="221" EndX="39" EndY="221" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="21" Distance="4" StartX="223" StartY="119" EndX="223" EndY="119" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="21" Distance="4" StartX="195" StartY="114" EndX="195" EndY="114" Dir="-1" Count="10" />
+			<Spawn MonsterIndex="21" Distance="4" StartX="244" StartY="129" EndX="244" EndY="129" Dir="-1" Count="10" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

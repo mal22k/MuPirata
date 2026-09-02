@@ -1,0 +1,90 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM COMBO
+// ============================================================================
+// Archivo usado por: CCustomCombo::Load("Custom\\CustomCombo.txt")
+// Estado actual   : ACTIVO; EnableComboToAllSwitch = 1 en GS y GSCS.
+//
+// FUNCION REAL DEL SISTEMA
+// Define que skills pueden participar en el combo cuando el servidor permite
+// combo para todas las clases. Este archivo no cambia el dano directo de una
+// skill; solo clasifica cada SkillID como iniciador o continuador del combo.
+//
+// COMO SE ARMA EL COMBO
+// La logica esta en ComboSkill.cpp:
+// 1. Usar una skill primaria. Esto abre una ventana de 3 segundos.
+// 2. Usar una skill secundaria. Esto abre otra ventana de 3 segundos.
+// 3. Usar otra skill secundaria diferente a la segunda.
+// 4. En ese tercer golpe se activa SKILL_COMBO y se aplica el dano extra.
+//
+// Ejemplo valido:
+// Energy Ball (primaria) -> Lightning (secundaria) -> Ice (secundaria distinta)
+//
+// Ejemplo no valido:
+// Energy Ball -> Lightning -> Lightning
+// La tercera skill secundaria debe ser distinta a la segunda.
+//
+// SWITCH IMPORTANTE
+// EnableComboToAllSwitch = 1:
+//   Usa las listas de este archivo para cualquier clase que tenga esas skills.
+// EnableComboToAllSwitch = 0:
+//   Ignora este archivo y vuelve al combo clasico del BK con quest terminada.
+//
+// DANO DEL COMBO
+// El dano final no se configura aqui. Se calcula en Attack.cpp:
+// - Duplica el dano base del golpe que activo el combo.
+// - Suma un extra basado en Strength + Dexterity + Energy.
+// - Usa ComboDamageConstA y ComboDamageConstB desde GameServerInfo - Character.dat.
+// Valores actuales: ComboDamageConstA = 2, ComboDamageConstB = 1.
+//
+// PROTECCION ANTI MACRO
+// El combo tambien pasa por CheckAutoComboHack en SkillManager.cpp.
+// Valores actuales en GameServerInfo - Common.dat:
+// CheckAutoComboHack = 1, Tolerance = 250 ms, Window = 10000 ms, MaxCount = 14.
+// Si se agregan skills muy rapidas o de muchos golpes, revisar esta proteccion
+// para evitar falsos positivos o combos demasiado faciles.
+//
+// REGLAS DE EDICION
+// - Use IDs reales de C:\MuServer\Data\Skill\Skill.txt.
+// - No agregue nombres como dato; los textos despues de // son solo comentarios.
+// - No use * en este archivo; cada linea debe ser un SkillID numerico.
+// - Los bloques terminan con end.
+// ============================================================================
+
+// ============================================================================
+// SECCION 0 - SKILLS PRIMARIAS
+// ============================================================================
+// Inician la cadena del combo y abren la primera ventana de 3 segundos.
+// Si el jugador usa una skill que no este en seccion 0 o 1, la cadena se reinicia.
+//
+// SkillID
+0
+	17	//Energy Ball
+	19	//Falling Slash
+	20	//Lunge
+	21	//Uppercut
+	22	//Cyclone
+	23	//Slash
+	6	//Teleport
+	45	//Mana Glaive
+	214	//Drain Life
+end
+
+// ============================================================================
+// SECCION 1 - SKILLS SECUNDARIAS Y FINALES
+// ============================================================================
+// Continuan la cadena y tambien pueden activar el combo en el tercer paso.
+// Para activar combo, la tercera skill secundaria debe ser distinta a la segunda.
+//
+// SkillID
+1
+	3	//Lightning
+	7	//Ice
+	12	//Aqua Beam
+	14	//Inferno
+	41	//Twisting Slash
+	42	//Rageful Blow
+	43	//Death Stab
+	232	//Frozen Stab S6+
+	215	//Chain Lightning
+	230	//Red Storm
+end

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="42" Name="Refuge">
+		<Spot Type="2" Description="Single Point Monster">
+			<Spawn MonsterIndex="412" Distance="30" StartX="97" StartY="187" Dir="-1" />
+			<Spawn MonsterIndex="411" Distance="30" StartX="92" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="411" Distance="30" StartX="111" StartY="190" Dir="-1" />
+			<Spawn MonsterIndex="411" Distance="30" StartX="94" StartY="202" Dir="-1" />
+			<Spawn MonsterIndex="411" Distance="30" StartX="82" StartY="190" Dir="-1" />
+			<Spawn MonsterIndex="410" Distance="30" StartX="104" StartY="179" Dir="-1" />
+			<Spawn MonsterIndex="410" Distance="30" StartX="104" StartY="200" Dir="-1" />
+			<Spawn MonsterIndex="410" Distance="30" StartX="85" StartY="179" Dir="-1" />
+			<Spawn MonsterIndex="410" Distance="30" StartX="86" StartY="199" Dir="-1" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

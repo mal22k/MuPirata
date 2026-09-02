@@ -1,0 +1,608 @@
+//==================================================================================================
+// BOTBUFFER.TXT - GUIA DE CONFIGURACION SILENTDEVS
+//==================================================================================================
+// Funcion general:
+//   Crea NPC de tipo Bot Buffer. Al interactuar con ellos, validan los requisitos del jugador,
+//   aplican los buffs configurados y luego cobran el costo indicado.
+//
+// REGLAS IMPORTANTES
+//   - Las secciones deben conservar los numeros 1, 2, 3 y 4, y cada una debe cerrar con "end".
+//   - BotIndex relaciona al mismo bot entre todas las secciones. Rango valido: 0 a 99.
+//   - Nombre admite hasta 10 caracteres por la estructura interna del GameServer.
+//   - Cada BotIndex admite como maximo 5 skills en la seccion 4.
+//   - Las lineas de bots no habilitados en la seccion 1 quedan como plantillas sin aparecer.
+//   - Despues de editar, use Reload si su GameServer recarga BotSystem; de lo contrario reinicie GS.
+//   - No cambie el orden de las columnas ni elimine la palabra "end".
+//==================================================================================================
+
+//==================================================================================================
+// SECCION 1 - CREACION, IDENTIDAD, COSTO Y UBICACION DEL BOT
+//==================================================================================================
+// BotIndex : Identificador interno unico del bot (0-99).
+// Class    : Apariencia/clase usada por el bot:
+//            0 DW, 1 SM, 2 GM | 16 DK, 17 BK, 18 BM | 32 ELF, 33 ME, 34 HE
+//            48 MG, 50 DM | 64 DL, 66 LE | 80 SU, 81 BS, 82 DS | 96 RF, 98 FM.
+// Enabled  : 1 crea el bot; 0 lo mantiene desactivado.
+// ColorName: Codigo PK/color del nombre (0-7). El resultado visual depende del cliente.
+// Zen      : Zen exigido y descontado por cada uso. Use 0 para hacerlo gratuito.
+// PCPoint  : PC Points exigidos y descontados por cada uso. Use 0 para hacerlo gratuito.
+// MaxLvl   : Nivel maximo permitido para recibir buffs. El mismo nivel indicado SI puede usarlos.
+// Name     : Nombre visible entre comillas; maximo 10 caracteres.
+// Map/X/Y  : Numero de mapa y coordenadas donde aparece el bot.
+// Dir      : Direccion inicial del bot (0-7).
+//--------------------------------------------------------------------------------------------------
+// BotIndex Class Enabled ColorName Zen      PCPoint MaxLvl Name          Map X   Y   Dir
+1
+       0    34       1         0      100       0    400 "BufferELF"     0 141 134   2
+       1     2       1         0      100       0    400 "BufferSM"      0 142 134   2
+       2    18       1         0      100       0    400 "BufferBK"      0 144 134   2
+       3    65       1         0      100       0    400 "BufferDL"      0 145 134   2
+       4    98       1         0      100       0    400 "BufferRF"      0 148 134   2
+
+end
+
+//==================================================================================================
+// SECCION 2 - RESTRICCIONES VIP Y GENS
+//==================================================================================================
+// BotIndex        : Debe coincidir con el identificador de la seccion 1.
+// OnlyVip         : 0 permite cuentas normales; cualquier valor distinto de 0 exige AccountLevel > 0.
+// ActiveGens      : 1 activa las validaciones de familia y contribucion Gens; 0 las ignora.
+// ContributionGens: Contribucion minima requerida. Solo se valida; NO se descuenta.
+// GensFamily      : Familia exigida cuando ActiveGens=1: 1=Vanert, 2=Duprian.
+//                   Con ActiveGens=0, los valores de ContributionGens y GensFamily no restringen.
+//--------------------------------------------------------------------------------------------------
+// BotIndex OnlyVip ActiveGens ContributionGens GensFamily
+2
+       0       0          0              100          0
+       1       0          0              100          0
+       2       0          0              100          0
+       3       0          0              100          0
+       4       0          0              100          0
+       5       0          0              100          0
+       6       0          0              100          0
+       7       0          0              100          0
+       8       0          0              100          0
+       9       0          0              100          0
+      10       0          0              100          0
+      11       0          0              100          0
+      12       0          0              100          0
+      13       0          0              100          0
+      14       0          0              100          0
+      15       0          0              100          0
+      16       0          0              100          0
+      17       0          0              100          0
+      18       0          0              100          0
+      19       0          0              100          0
+      20       0          0              100          0
+      21       0          0              100          0
+      22       0          0              100          0
+      23       0          0              100          0
+      24       0          0              100          0
+      25       0          0              100          0
+      26       0          0              100          0
+      27       0          0              100          0
+      28       0          0              100          0
+      29       0          0              100          0
+      30       0          0              100          0
+      31       0          0              100          0
+      32       0          0              100          0
+      33       0          0              100          0
+      34       0          0              100          0
+      35       0          0              100          0
+      36       0          0              100          0
+      37       0          0              100          0
+      38       0          0              100          0
+      39       0          0              100          0
+      40       0          0              100          0
+      41       0          0              100          0
+      42       0          0              100          0
+      43       0          0              100          0
+      44       0          0              100          0
+      45       0          0              100          0
+      46       0          0              100          0
+      47       0          0              100          0
+      48       0          0              100          0
+      49       0          0              100          0
+      50       0          0              100          0
+end
+
+//==================================================================================================
+// SECCION 3 - APARIENCIA Y EQUIPO VISIBLE DEL BOT
+//==================================================================================================
+// BotIndex: Bot al que pertenece la pieza.
+// Slot    : Posicion visual: 0=arma, 1=escudo, 2=casco, 3=armadura, 4=pantalon,
+//           5=guantes, 6=botas, 7=alas, 8=mascota.
+// Type    : Seccion/grupo del item en Item.txt.
+// Index   : Indice del item dentro de ese grupo.
+// Level   : Nivel visual del item.
+// Option  : Valor de opcion adicional (Option3) aplicado al item.
+// NOTA    : Esta seccion cambia la apariencia del bot; no entrega estos items al jugador.
+//--------------------------------------------------------------------------------------------------
+// BotIndex Slot Type Index Level Option
+3
+       0    2    7    19    13      0
+       0    3    8    19    13      0
+       0    4    9    19    13      0
+       0    5   10    19    13      0
+       0    6   11    19    13      0
+       0    7   12    38    13      0
+
+       1    2    7    18    13      0
+       1    3    8    18    13      0
+       1    4    9    18    13      0
+       1    5   10    18    13      0
+       1    6   11    18    13     15
+       1    7   12    37    13     15
+
+       2    2    7    17    13      0
+       2    3    8    17    13      0
+       2    4    9    17    13      0
+       2    5   10    17    13      0
+       2    6   11    17    13     15
+       2    7   12    36    13     15
+
+       3    2    7    28    13      0
+       3    3    8    28    13      0
+       3    4    9    28    13      0
+       3    5   10    28    13      0
+       3    6   11    28    13     15
+       3    7   12    40    13     15
+
+       4    2    7    61    13      0
+       4    3    8    61    13      0
+       4    4    9    61    13      0
+       4    5   10    61    13      0
+       4    6   11    61    13     15
+       4    7   12    50    13     15
+
+       5    2    7    18    13      0
+       5    3    8    18    13      0
+       5    4    9    18    13      0
+       5    5   10    18    13      0
+       5    6   11    18    13     15
+       5    7   12    37    13     15
+
+       6    2    7    18    13      0
+       6    3    8    18    13      0
+       6    4    9    18    13      0
+       6    5   10    18    13      0
+       6    6   11    18    13     15
+       6    7   12    37    13     15
+
+       7    2    7    18    13      0
+       7    3    8    18    13      0
+       7    4    9    18    13      0
+       7    5   10    18    13      0
+       7    6   11    18    13     15
+       7    7   12    37    13     15
+
+       8    2    7    18    13      0
+       8    3    8    18    13      0
+       8    4    9    18    13      0
+       8    5   10    18    13      0
+       8    6   11    18    13     15
+       8    7   12    37    13     15
+
+       9    2    7    18    13      0
+       9    3    8    18    13      0
+       9    4    9    18    13      0
+       9    5   10    18    13      0
+       9    6   11    18    13     15
+       9    7   12    37    13     15
+
+      10    2    7    18    13      0
+      10    3    8    18    13      0
+      10    4    9    18    13      0
+      10    5   10    18    13      0
+      10    6   11    18    13     15
+      10    7   12    37    13     15
+
+      11    2    7    18    13      0
+      11    3    8    18    13      0
+      11    4    9    18    13      0
+      11    5   10    18    13      0
+      11    6   11    18    13     15
+      11    7   12    37    13     15
+
+      12    2    7    18    13      0
+      12    3    8    18    13      0
+      12    4    9    18    13      0
+      12    5   10    18    13      0
+      12    6   11    18    13     15
+      12    7   12    37    13     15
+
+      13    2    7    18    13      0
+      13    3    8    18    13      0
+      13    4    9    18    13      0
+      13    5   10    18    13      0
+      13    6   11    18    13     15
+      13    7   12    37    13     15
+
+      14    2    7    18    13      0
+      14    3    8    18    13      0
+      14    4    9    18    13      0
+      14    5   10    18    13      0
+      14    6   11    18    13     15
+      14    7   12    37    13     15
+
+      15    2    7    18    13      0
+      15    3    8    18    13      0
+      15    4    9    18    13      0
+      15    5   10    18    13      0
+      15    6   11    18    13     15
+      15    7   12    37    13     15
+
+      16    2    7    18    13      0
+      16    3    8    18    13      0
+      16    4    9    18    13      0
+      16    5   10    18    13      0
+      16    6   11    18    13     15
+      16    7   12    37    13     15
+
+      17    2    7    18    13      0
+      17    3    8    18    13      0
+      17    4    9    18    13      0
+      17    5   10    18    13      0
+      17    6   11    18    13     15
+      17    7   12    37    13     15
+
+      18    2    7    18    13      0
+      18    3    8    18    13      0
+      18    4    9    18    13      0
+      18    5   10    18    13      0
+      18    6   11    18    13     15
+      18    7   12    37    13     15
+
+      19    2    7    18    13      0
+      19    3    8    18    13      0
+      19    4    9    18    13      0
+      19    5   10    18    13      0
+      19    6   11    18    13     15
+      19    7   12    37    13     15
+
+      20    2    7    18    13      0
+      20    3    8    18    13      0
+      20    4    9    18    13      0
+      20    5   10    18    13      0
+      20    6   11    18    13     15
+      20    7   12    37    13     15
+
+      21    2    7    18    13      0
+      21    3    8    18    13      0
+      21    4    9    18    13      0
+      21    5   10    18    13      0
+      21    6   11    18    13     15
+      21    7   12    37    13     15
+
+      22    2    7    18    13      0
+      22    3    8    18    13      0
+      22    4    9    18    13      0
+      22    5   10    18    13      0
+      22    6   11    18    13     15
+      22    7   12    37    13     15
+
+      23    2    7    18    13      0
+      23    3    8    18    13      0
+      23    4    9    18    13      0
+      23    5   10    18    13      0
+      23    6   11    18    13     15
+      23    7   12    37    13     15
+
+      24    2    7    18    13      0
+      24    3    8    18    13      0
+      24    4    9    18    13      0
+      24    5   10    18    13      0
+      24    6   11    18    13     15
+      24    7   12    37    13     15
+
+      25    2    7    18    13      0
+      25    3    8    18    13      0
+      25    4    9    18    13      0
+      25    5   10    18    13      0
+      25    6   11    18    13     15
+      25    7   12    37    13     15
+
+      26    2    7    18    13      0
+      26    3    8    18    13      0
+      26    4    9    18    13      0
+      26    5   10    18    13      0
+      26    6   11    18    13     15
+      26    7   12    37    13     15
+
+      27    2    7    18    13      0
+      27    3    8    18    13      0
+      27    4    9    18    13      0
+      27    5   10    18    13      0
+      27    6   11    18    13     15
+      27    7   12    37    13     15
+
+      28    2    7    18    13      0
+      28    3    8    18    13      0
+      28    4    9    18    13      0
+      28    5   10    18    13      0
+      28    6   11    18    13     15
+      28    7   12    37    13     15
+
+      29    2    7    18    13      0
+      29    3    8    18    13      0
+      29    4    9    18    13      0
+      29    5   10    18    13      0
+      29    6   11    18    13     15
+      29    7   12    37    13     15
+
+      30    2    7    18    13      0
+      30    3    8    18    13      0
+      30    4    9    18    13      0
+      30    5   10    18    13      0
+      30    6   11    18    13     15
+      30    7   12    37    13     15
+
+      31    2    7    18    13      0
+      31    3    8    18    13      0
+      31    4    9    18    13      0
+      31    5   10    18    13      0
+      31    6   11    18    13     15
+      31    7   12    37    13     15
+
+      32    2    7    18    13      0
+      32    3    8    18    13      0
+      32    4    9    18    13      0
+      32    5   10    18    13      0
+      32    6   11    18    13     15
+      32    7   12    37    13     15
+
+      33    2    7    18    13      0
+      33    3    8    18    13      0
+      33    4    9    18    13      0
+      33    5   10    18    13      0
+      33    6   11    18    13     15
+      33    7   12    37    13     15
+
+      34    2    7    18    13      0
+      34    3    8    18    13      0
+      34    4    9    18    13      0
+      34    5   10    18    13      0
+      34    6   11    18    13     15
+      34    7   12    37    13     15
+
+      35    2    7    18    13      0
+      35    3    8    18    13      0
+      35    4    9    18    13      0
+      35    5   10    18    13      0
+      35    6   11    18    13     15
+      35    7   12    37    13     15
+
+      36    2    7    18    13      0
+      36    3    8    18    13      0
+      36    4    9    18    13      0
+      36    5   10    18    13      0
+      36    6   11    18    13     15
+      36    7   12    37    13     15
+
+      37    2    7    18    13      0
+      37    3    8    18    13      0
+      37    4    9    18    13      0
+      37    5   10    18    13      0
+      37    6   11    18    13     15
+      37    7   12    37    13     15
+
+      38    2    7    18    13      0
+      38    3    8    18    13      0
+      38    4    9    18    13      0
+      38    5   10    18    13      0
+      38    6   11    18    13     15
+      38    7   12    37    13     15
+
+      39    2    7    18    13      0
+      39    3    8    18    13      0
+      39    4    9    18    13      0
+      39    5   10    18    13      0
+      39    6   11    18    13     15
+      39    7   12    37    13     15
+
+      40    2    7    18    13      0
+      40    3    8    18    13      0
+      40    4    9    18    13      0
+      40    5   10    18    13      0
+      40    6   11    18    13     15
+      40    7   12    37    13     15
+
+      41    2    7    18    13      0
+      41    3    8    18    13      0
+      41    4    9    18    13      0
+      41    5   10    18    13      0
+      41    6   11    18    13     15
+      41    7   12    37    13     15
+
+      42    2    7    18    13      0
+      42    3    8    18    13      0
+      42    4    9    18    13      0
+      42    5   10    18    13      0
+      42    6   11    18    13     15
+      42    7   12    37    13     15
+
+      43    2    7    18    13      0
+      43    3    8    18    13      0
+      43    4    9    18    13      0
+      43    5   10    18    13      0
+      43    6   11    18    13     15
+      43    7   12    37    13     15
+
+      44    2    7    18    13      0
+      44    3    8    18    13      0
+      44    4    9    18    13      0
+      44    5   10    18    13      0
+      44    6   11    18    13     15
+      44    7   12    37    13     15
+
+      45    2    7    18    13      0
+      45    3    8    18    13      0
+      45    4    9    18    13      0
+      45    5   10    18    13      0
+      45    6   11    18    13     15
+      45    7   12    37    13     15
+
+      46    2    7    18    13      0
+      46    3    8    18    13      0
+      46    4    9    18    13      0
+      46    5   10    18    13      0
+      46    6   11    18    13     15
+      46    7   12    37    13     15
+
+      47    2    7    18    13      0
+      47    3    8    18    13      0
+      47    4    9    18    13      0
+      47    5   10    18    13      0
+      47    6   11    18    13     15
+      47    7   12    37    13     15
+
+      48    2    7    18    13      0
+      48    3    8    18    13      0
+      48    4    9    18    13      0
+      48    5   10    18    13      0
+      48    6   11    18    13     15
+      48    7   12    37    13     15
+
+      49    2    7    18    13      0
+      49    3    8    18    13      0
+      49    4    9    18    13      0
+      49    5   10    18    13      0
+      49    6   11    18    13     15
+      49    7   12    37    13     15
+
+      50    2    7    18    13      0
+      50    3    8    18    13      0
+      50    4    9    18    13      0
+      50    5   10    18    13      0
+      50    6   11    18    13     15
+      50    7   12    37    13     15
+end
+
+//==================================================================================================
+// SECCION 4 - BUFFS ENTREGADOS POR CADA BOT
+//==================================================================================================
+// BotIndex: Bot que aplicara el efecto.
+// Skill   : ID admitido por este sistema:
+//           16=Mana Shield, 27=Greater Defense, 28=Greater Damage, 48=Greater Life,
+//           64=Critical Damage, 82=Magic Circle, 129=Ignore Defense Rate,
+//           130=Fitness/Increase Health, 131=Increase Block, 217=Damage Reflect,
+//           218=Berserker/Sword Power (Power se aplica a sus cuatro porcentajes).
+// Time    : Duracion REAL en minutos. El GameServer convierte el valor a segundos (Time x 60).
+// Power   : Potencia enviada al efecto; normalmente representa el porcentaje/valor del buff.
+// IMPORTANTE:
+//   - Maximo 5 lineas de skill por BotIndex.
+//   - No use IDs fuera de la lista: el codigo no tiene una rutina para aplicarlos.
+//   - Al usar el bot, se recorren todos sus skills y despues se descuentan Zen/PC Points.
+//--------------------------------------------------------------------------------------------------
+// BotIndex Skill Time Power
+4
+       0    28    5    30 // BufferElfa: Greater Damage
+       0    16    5    30
+
+       1    16    5    30 // BufferSoul: Mana Shield
+       1    16    5    30 // BufferSoul: Mana Shield
+
+       2    48    5    30 // Buff BK Aumento de Vida
+
+       3    64    5    30 // Buff DL 
+
+       4   129    5    30 // Buff RF: Ignore Defense
+       4   130    5    30 // Buff RF: Increase Health / Fitness
+       4   131    5    30 // Buff RF: Increase Block
+
+       5    16    5    30
+
+       6    16    5    30
+
+       7    16    5    30
+
+       8    16    5    30
+
+       9    16    5    30
+
+      10    16    5    30
+
+      11    16    5    30
+
+      12    16    5    30
+
+      13    16    5    30
+
+      14    16    5    30
+
+      15    16    5    30
+
+      16    16    5    30
+
+      17    16    5    30
+
+      18    16    5    30
+
+      19    16    5    30
+
+      20    16    5    30
+
+      21    16    5    30
+
+      22    16    5    30
+
+      23    16    5    30
+
+      24    16    5    30
+
+      25    16    5    30
+
+      26    16    5    30
+
+      27    16    5    30
+
+      28    16    5    30
+
+      29    16    5    30
+
+      30    16    5    30
+
+      31    16    5    30
+
+      32    16    5    30
+
+      33    16    5    30
+
+      34    16    5    30
+
+      35    16    5    30
+
+      36    16    5    30
+
+      37    16    5    30
+
+      38    16    5    30
+
+      39    16    5    30
+
+      40    16    5    30
+
+      41    16    5    30
+
+      42    16    5    30
+
+      43    16    5    30
+
+      44    16    5    30
+
+      45    16    5    30
+
+      46    16    5    30
+
+      47    16    5    30
+
+      48    16    5    30
+
+      49    16    5    30
+
+      50    16    5    30
+end
+
+//==================================================================================================
+// FIN DEL ARCHIVO
+//==================================================================================================

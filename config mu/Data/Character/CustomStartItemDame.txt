@@ -1,0 +1,22 @@
+
+//==================================================
+//------------------------------------------------------------------------------
+// Item Start
+// -----------------------------------------------------------------------------
+// Class: 0 = Dark Wizard
+// Class: 1 = Dark Knight
+// Class: 2 = Muse Elf
+// Class: 3 = Magic Gladiator
+// Class: 4 = Dark Lord
+// Class: 5 = Summoner
+// Class: 6 = Rage Fighter
+// ------------------------------------------------------------------------------
+// Type: Skill Buff [1] || Buff Ticket [0]
+// Effect: day la skill buff nhe tu 206 - 240
+0
+//=======================================================================================================================================================================================================>>
+//Class	Type	Index	Level	Luck	Dur		Skill	Option	  ExcOp	 TypeEffect	  Effect	%STx2	%STx3	Chí mạng 	Sát Thương	 %Defdamerate	Power1	Power2	Time
+
+
+	
+end

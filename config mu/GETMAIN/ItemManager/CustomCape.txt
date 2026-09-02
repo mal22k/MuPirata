@@ -1,0 +1,18 @@
+//===============================================================================================================
+// MasterCodex Season 6 - Mu Online
+// Developer: MasterCodex [takumi12]
+// Last review: 15.04.2020
+//===============================================================================================================
+// CustomCloak Config File
+//===============================================================================================================
+// Agregar archivos en: [Data/Item]
+//===============================================================================================================
+//ItemType	Mode 	CloakName								        StripName
+6304		1		"Item\\darklordwing4de.tga"			    "Item\\darklordwing4dd.tga"
+6306		0		"Item\\ragefighterwing4db.tga"		    *
+6299		1		"Item\\Death_clka.tga"				    "Item\\Death_clkb.tga"
+6363		0		"Item\\CapeBFearowDaniela1.tga"		    *
+6365		0		"Item\\WaterCapeDaniela1.tga"		    *
+6367		0		"Item\\EgypcianCpeDaniela.tga"		    *
+6371		0		"Item\\BlackNinjaCapeDaniela.tga"		*
+end

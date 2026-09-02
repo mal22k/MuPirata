@@ -1,0 +1,57 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM MONSTER SKILL
+// ============================================================================
+// Archivo usado por: CCustomMonsterSkill::Load("Custom\\CustomMonsterSkill.txt")
+// Estado actual   : ACTIVO; contiene asignaciones cargadas por el GameServer.
+//
+// FUNCION REAL DEL SISTEMA
+// Permite agregar 2 skills a monstruos especificos por MonsterClass.
+// Cuando el monstruo se crea, el GS le agrega Skill1 y Skill2 con:
+// gSkillManager.AddSkill(monster, SkillID, 0)
+//
+// Ademas, si el monstruo esta en esta lista, entra por la logica de ataque con
+// skill/duration skill en Monster.cpp. Por eso este archivo no es solo visual:
+// puede cambiar la forma en que el monstruo ataca.
+//
+// SECCIONES
+// Este archivo usa solamente la SECCION 0.
+// No agregues seccion 1/2/3 porque el source no las procesa.
+//
+// CAMPOS DE LA SECCION 0
+// MonsterClass : ID/clase del monstruo segun Monster.txt.
+// Skill1       : primer SkillID agregado al monstruo.
+// Skill2       : segundo SkillID agregado al monstruo.
+//
+// REGLAS IMPORTANTES
+// - El SkillID debe existir en Skill.txt y estar soportado por el cliente.
+// - Si colocas un SkillID incorrecto, el monstruo puede atacar raro, no mostrar
+//   efecto, quedarse usando animacion incorrecta o no aplicar el efecto esperado.
+// - Este sistema guarda maximo 1000 reglas segun MAX_MONSTER_SKILL.
+// - Si repites el mismo MonsterClass, GetSkillMonster devuelve la primera regla
+//   que encuentre, asi que evita duplicados.
+//
+// EJEMPLOS COMENTADOS
+// 1) Dar dos skills ofensivas al monstruo 275:
+//    // 275 57 55
+//
+// 2) Dar el mismo skill en ambos espacios si quieres forzar un estilo simple:
+//    // 275 237 237
+//
+// 3) Agregar skills a un boss custom clase 880:
+//    // 880 57 55
+//
+// COLUMNA OFICIAL
+// MonsterClass Skill1 Skill2
+// ============================================================================
+
+// ============================================================================
+// SECCION 0 - SKILLS POR MONSTRUO
+// ============================================================================
+// MonsterClass Skill1 Skill2
+0
+       880		  57		55
+       881		  270		265
+       884		  237		237
+       907		  38		37
+       908		  10		10
+end

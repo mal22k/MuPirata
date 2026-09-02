@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="63" Name="Vulcanus">
+		<Spot Type="0" Description="NPC">
+			<!-- Doorkeeper Titus -->
+			<Spawn MonsterIndex="479" Distance="0" StartX="122" StartY="135" Dir="1" />
+		</Spot>
+		<Spot Type="1" Description="Multi~Spawn">
+			<!-- Zombie Fighter -->
+			<Spawn MonsterIndex="481" Distance="30" StartX="64" StartY="54" EndX="124" EndY="89" Dir="-1" Count="3" />
+			<!-- Zombie Fighter -->
+			<Spawn MonsterIndex="481" Distance="30" StartX="65" StartY="12" EndX="105" EndY="47" Dir="-1" Count="3" />
+			<!-- Zombie Fighter -->
+			<Spawn MonsterIndex="481" Distance="30" StartX="22" StartY="10" EndX="64" EndY="98" Dir="-1" Count="4" />
+			<!-- Resurrected Gladiator -->
+			<Spawn MonsterIndex="483" Distance="30" StartX="21" StartY="128" EndX="77" EndY="186" Dir="-1" Count="4" />
+			<!-- Resurrected Gladiator -->
+			<Spawn MonsterIndex="483" Distance="30" StartX="28" StartY="189" EndX="105" EndY="232" Dir="-1" Count="4" />
+			<!-- Ash Slaughterer -->
+			<Spawn MonsterIndex="485" Distance="30" StartX="123" StartY="186" EndX="174" EndY="219" Dir="-1" Count="2" />
+			<!-- Ash Slaughterer -->
+			<Spawn MonsterIndex="485" Distance="30" StartX="172" StartY="215" EndX="230" EndY="234" Dir="-1" Count="2" />
+			<!-- Ash Slaughterer -->
+			<Spawn MonsterIndex="485" Distance="30" StartX="175" StartY="171" EndX="238" EndY="194" Dir="-1" Count="2" />
+			<!-- Ash Slaughterer -->
+			<Spawn MonsterIndex="485" Distance="30" StartX="203" StartY="195" EndX="243" EndY="214" Dir="-1" Count="1" />
+			<!-- Cruel Blood Assassin -->
+			<Spawn MonsterIndex="488" Distance="30" StartX="198" StartY="106" EndX="226" EndY="148" Dir="-1" Count="3" />
+			<!-- Cruel Blood Assassin -->
+			<Spawn MonsterIndex="488" Distance="30" StartX="228" StartY="107" EndX="248" EndY="133" Dir="-1" Count="1" />
+			<!-- Cruel Blood Assassin -->
+			<Spawn MonsterIndex="488" Distance="30" StartX="168" StartY="101" EndX="198" EndY="131" Dir="-1" Count="1" />
+			<!-- Ruthless Lava Giant -->
+			<Spawn MonsterIndex="491" Distance="30" StartX="143" StartY="8" EndX="178" EndY="63" Dir="-1" Count="2" />
+			<!-- Ruthless Lava Giant -->
+			<Spawn MonsterIndex="491" Distance="30" StartX="182" StartY="13" EndX="210" EndY="70" Dir="-1" Count="2" />
+			<!-- Ruthless Lava Giant -->
+			<Spawn MonsterIndex="491" Distance="30" StartX="211" StartY="39" EndX="244" EndY="72" Dir="-1" Count="1" />
+		</Spot>
+		<Spot Type="2" Description="Single Point Monster">
+			<!-- Zombie Fighter -->
+			<Spawn MonsterIndex="480" Distance="30" StartX="107" StartY="60" Dir="-1" />
+			<!-- Resurrected Gladiator -->
+			<Spawn MonsterIndex="482" Distance="30" StartX="79" StartY="78" Dir="-1" />
+			<!-- Ash Slaughterer -->
+			<Spawn MonsterIndex="484" Distance="30" StartX="29" StartY="132" Dir="-1" />
+			<!-- Blood Assassin -->
+			<Spawn MonsterIndex="486" Distance="30" StartX="204" StartY="143" Dir="-1" />
+			<!-- Cruel Blood Assassin -->
+			<Spawn MonsterIndex="487" Distance="30" StartX="178" StartY="115" Dir="-1" />
+			<!-- Burning Lava Giant -->
+			<Spawn MonsterIndex="489" Distance="30" StartX="195" StartY="61" Dir="-1" />
+			<!-- Ruthless Lava Giant -->
+			<Spawn MonsterIndex="490" Distance="30" StartX="193" StartY="19" Dir="-1" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

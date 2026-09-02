@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="30" Name="Castle Siege">
+		<Spot Type="0" Description="NPC">
+			<Spawn MonsterIndex="217" Distance="0" StartX="167" StartY="195" Dir="7" />
+			<Spawn MonsterIndex="218" Distance="0" StartX="184" StartY="195" Dir="7" />
+			<Spawn MonsterIndex="216" Distance="0" StartX="176" StartY="212" Dir="1" />
+			<Spawn MonsterIndex="220" Distance="0" StartX="139" StartY="101" Dir="3" />
+			<Spawn MonsterIndex="224" Distance="0" StartX="86" StartY="61" Dir="1" />
+			<Spawn MonsterIndex="224" Distance="0" StartX="99" StartY="61" Dir="1" />
+			<Spawn MonsterIndex="223" Distance="0" StartX="179" StartY="214" Dir="1" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

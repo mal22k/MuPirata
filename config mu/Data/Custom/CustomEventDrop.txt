@@ -1,0 +1,122 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM EVENT DROP
+// ============================================================================
+// Archivo usado por: CCustomEventDrop::Load("Custom\\CustomEventDrop.txt")
+// Estado actual   : ACTIVO; CustomEventDropSwitch = 1 en GS y GSCS.
+// Switch/textos   : C:\MuServer\3-GameServer\Data\GameServerInfo - Custom.dat
+//                   C:\MuServer\6-GameServerCS\DATA\GameServerInfo - Custom.dat
+//
+// FUNCION REAL DEL SISTEMA
+// Programa eventos donde el servidor tira items al piso en una zona concreta del
+// mapa. No depende de matar monstruos: el GS crea los items directamente durante
+// el tiempo del evento y muestra fuegos artificiales cerca del punto de drop.
+//
+// FLUJO DEL EVENTO
+// 1. EMPTY : espera el proximo horario de la seccion 0.
+// 2. ALARMA: cuando faltan AlarmMin minutos, anuncia el evento.
+// 3. START : durante EventMin minutos, va soltando los items de la seccion 2.
+// 4. FIN   : anuncia cierre, reinicia DropState y busca el siguiente horario.
+//
+// PANEL DE EVENTOS
+// Este sistema alimenta el contador EventDrop del GameServer. En el panel H del
+// cliente aparece como TypeEvent=3, TimeSlot=6 en Custom\MonsterEvent\
+// CustomEventTime.xml.
+//
+// INICIO MANUAL
+// El comando administrativo que llama gCustomEventDrop.StartDrop() fuerza el
+// evento 0 para iniciar aproximadamente 2 minutos despues del comando.
+//
+// ITEMS
+// ItemIndexGlobal es el indice global usado por el source, equivalente a:
+// GET_ITEM(Grupo, Index) = (Grupo * 512) + Index.
+// Ejemplos actuales:
+// 6159 = Jewel of Chaos, 7181 = Jewel of Bless, 7182 = Jewel of Soul,
+// 7184 = Jewel of Life, 7179 = Box of Kundun.
+//
+// UBICACION
+// Map/X/Y indican el centro del drop. Range define el radio aleatorio alrededor
+// del punto. El servidor intenta hasta 50 posiciones libres; si no encuentra,
+// usa exactamente X/Y.
+//
+// REGLAS GENERALES
+// - MAX_CUSTOM_EVENT_DROP = 10, indices validos 0-9.
+// - * se interpreta como -1 en horarios; en limites equivale a cualquier valor.
+// - Los bloques terminan con end y el parser depende del orden 0, 1, 2.
+// ============================================================================
+
+// ============================================================================
+// SECCION 0 - HORARIOS
+// ============================================================================
+// Index     : evento al que pertenece el horario.
+// Year      : anio exacto o * para todos.
+// Month     : mes exacto o * para todos.
+// Day       : dia del mes o * para todos.
+// DayOfWeek : dia de semana o * para todos.
+// Hour      : hora 0-23 o * para todas las horas.
+// Minute    : minuto 0-59.
+// Second    : segundo 0-59.
+//
+// Config actual:
+// Evento 0 abre cada hora al minuto 11, y tambien a las 19:00 y 23:00.
+//
+// Index Year Month Day DayOfWeek   Hour   Minute   Second
+0
+     0    *     *    *      *         *      11       0
+     0    *     *    *      *        19      0        0
+     0    *     *    *      *        23      0        0
+end
+
+// ============================================================================
+// SECCION 1 - DATOS DEL EVENTO
+// ============================================================================
+// Index    : indice del evento.
+// Name     : nombre usado en los anuncios.
+// Map      : mapa donde se tiran los items.
+// X/Y      : coordenadas centrales.
+// Range    : radio aleatorio para repartir el drop.
+// AlarmMin : minutos antes del inicio para anunciar.
+// EventMin : duracion total del evento en minutos.
+//
+// Evento actual:
+// "Drop de itens" tira items en Lorencia, mapa 0, cerca de 145/135, radio 5,
+// anuncia 5 minutos antes y dura 3 minutos.
+//
+// Index            Name            Map        X       Y    Range      AlarmMin    EventMin
+1
+     0         "Drop de itens"     	0         145     135     5           5           3
+end
+
+// ============================================================================
+// SECCION 2 - ITEMS DEL EVENTO
+// ============================================================================
+// EventIndex      : evento que recibira este item.
+// ItemIndexGlobal : indice global del item.
+// ItemLevel       : nivel del item creado.
+// DropCount       : cantidad que se tira cuando llega su momento.
+// DropDelaySec    : segundos desde que inicio el evento, NO milisegundos.
+//
+// Nota importante:
+// DropDelaySec permite escalonar el drop. Con EventMin=3, el evento dura
+// 180 segundos, por eso aqui hay drops entre 0 y 170 segundos.
+//
+// EventIndex ItemIndexGlobal ItemLevel DropCount DropDelaySec     Description Items Drop
+2
+       0            6159          0         2         00          //Jewel of Chaos
+       0            6159          0         2         10          //Jewel of Chaos
+       0            7181          0         2         20          //Jewel of Chaos
+       0            7181          0         2         30          //Jewel of Bless
+       0            7181          0         2         40          //Jewel of Bless
+       0            7181          0         2         50          //Jewel of Bless
+       0            7182          0         2         60          //Jewel of Soul
+       0            7182          0         2         70          //Jewel of Soul
+       0            7182          0         2         80          //Jewel of Soul
+       0            7184          0         2         90          //Jewel of Life
+       0            7184          0         2         100         //Jewel of Life
+       0            7184          0         2         110         //Jewel of Life
+       0            7179          8         1         120         //Box of Kundun 4
+       0            7179          9         1         130         //Box of Kundun 4
+       0            7179          10        1         140         //Box of Kundun 4
+       0            7179          10        1         150         //Box of Kundun 5
+       0            7179          11        1         160         //Box of Kundun 5
+       0            7179          12        1         170         //Box of Kundun 5
+end

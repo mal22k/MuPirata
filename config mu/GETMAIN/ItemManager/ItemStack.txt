@@ -1,0 +1,61 @@
+0
+//Index  	level	MaxStack   CreateIndex   Comment
+6688   		0   	20         *             //Splinter of Armor
+6689   		0   	20         *             //Bless of Guardian
+6690   		0   	10         *             //Claw of Beast
+6288   		0   	5          6292          //Mithril Fragment
+6290   		0   	5          6293          //Elixir Fragment
+6801   		0   	5          6802          //Spirit Map Fragment
+6803   		0   	10         *             //Trophies of Battle
+7168   		0   	255        *             //Apple
+7169   		0   	255        *             //Small Healing Potion
+7170   		0   	255        *             //Healing Potion
+7171   		0   	255        *             //Large Healing Potion
+7172   		0   	255        *             //Small Mana Potion
+7173   		0   	255        *             //Mana Potion
+7174   		0   	255        *             //Large Mana Potion
+7175   		0   	255        *             //Siege Potion
+7176   		0   	255        *             //Antidote
+7189   		0   	255        *             //Rena
+7197   		0   	5          7196          //Symbol of Kundun
+7203   		0   	255        *             //Small SD Potion
+7204   		0   	255        *             //SD Potion
+7205   		0   	255        *             //Large SD Potion
+7206   		0   	255        *             //Small Complex Potion
+7207   		0   	255        *             //Complex Potion
+7208   		0   	255        *             //Large Complex Potion
+7214   		0   	3          *             //Jack O'Lantern Blessings
+7215   		0   	3          *             //Jack O'Lantern Wrath
+7216   		0   	3          *             //Jack O'Lantern Cry
+7217   		0   	3          *             //Jack O'Lantern Food
+7218   		0   	3          *             //Jack O'Lantern Drink
+7238   		0   	255        *             //Elite Healing Potion
+7239   		0   	255        *             //Elite Mana Potion
+7253   		0   	3          *             //Cherry Blossom Wine
+7254   		0   	3          *             //Cherry Blossom Rice Cake
+7255   		0   	3          *             //Cherry Blossom Flower Petal
+7256   		0   	10         *             //White Cherry Blossom Branch
+7257   		0   	30         *             //Red Cherry Blossom Branch
+7258   		0   	255        *             //Golden Cherry Blossom Branch
+7268   		0   	255        *             //Lucky Coin
+7269   		0   	5          7270          //Suspicious Scrap of Paper
+7278   		0   	5          7279          //Sign of Dimensions
+7301   		0   	255        *             //Elite SD Potion
+7383   		0   	24         7384          //Card Piece
+6806   		0   	10         *			   //Steel of Heaven
+6823   		0   	50         *			   //Golden Sentences
+6824   		0   	20         6826          //Lesser Spirit Stone    
+6825   		0   	15         6826          //Intermediate Spirit Stone
+6826   		0   	50         *             //Greater Spirit Stone    
+6838   		0   	10         *             //Sepulture 
+6159		0		255			*			// chaos
+7182		0		255			*			// Ngọc Tâm Linh  
+7181		0		255			*			// Ngọc Tâm Linh 
+7179		8		255			*			// Ngọc Tâm Linh
+7179		9		255			*			// Ngọc Tâm Linh
+7179		10		255			*			// Ngọc Tâm Linh
+7179		11		255			*			// Ngọc Tâm Linh
+7179		12		255			*			// Ngọc Tâm Linh
+7420		0		255			*			// ngoc full
+end
+

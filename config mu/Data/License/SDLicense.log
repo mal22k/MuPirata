@@ -1,0 +1,125 @@
+2026-08-29 18:08:06 [CACHE] Receipt cache saved. Module=GAMESERVER Path=..\Data\License\SDLicense_GAMESERVER.cache
+2026-08-29 18:08:06 [OK] License accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:08:06+00:00
+2026-08-29 18:09:26 [CACHE] Receipt cache saved. Module=GAMESERVER Path=..\Data\License\SDLicense_GAMESERVER.cache
+2026-08-29 18:09:26 [OK] License accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:09:26+00:00
+2026-08-29 18:19:03 [CACHE] Receipt cache saved. Module=GAMESERVER Path=..\Data\License\SDLicense_GAMESERVER.cache
+2026-08-29 18:19:03 [OK] License accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:19:03+00:00
+2026-08-29 18:22:09 [CACHE] Receipt cache saved. Module=GAMESERVER Path=..\Data\License\SDLicense_GAMESERVER.cache
+2026-08-29 18:22:09 [OK] License accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:22:09+00:00
+2026-08-29 18:24:47 [CACHE] Receipt cache saved. Module=GAMESERVER Path=..\Data\License\SDLicense_GAMESERVER.cache
+2026-08-29 18:24:47 [OK] License accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 18:55:33 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 18:59:06 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 18:59:06 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 18:59:06 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:00:59 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:00:59 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:00:59 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:02:08 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:02:08 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:02:08 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:11:43 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:11:43 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:11:43 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:16:00 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:16:00 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:16:00 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:18:39 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:18:39 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:18:39 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:29:07 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:29:07 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:29:07 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:31:22 [HTTP] HttpSendRequest failed: 12169
+2026-08-29 19:31:22 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:31:22 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:45:08 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:45:08 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:45:08 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:49:37 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:49:37 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:49:37 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 19:52:36 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 19:52:36 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 19:52:36 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 20:00:40 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 20:00:40 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 20:00:40 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 20:02:18 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 20:02:18 [FAIL] HTTP validation failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 20:02:18 [OK] Offline cache accepted. Module=GAMESERVER Customer=SilentDevs Hwid=658179********************************************************** Last4=281E OfflineUntil=2026-08-30T13:24:47+00:00
+2026-08-29 20:29:38 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 20:34:45 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 20:37:23 [HWID] ConnectServer WMI failed: 0x800706F7
+2026-08-29 20:37:23 [FAIL] Could not build server HWID hash. Module=GAMESERVER Enforce=1
+2026-08-29 20:40:09 [SIGN] Invalid receipt format
+2026-08-29 20:40:09 [FAIL] Signed receipt verification failed. Module=GAMESERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 20:41:50 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 20:43:41 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 20:45:22 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 20:48:24 [FAIL] License rejected. Module=CONNECTSERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 20:53:55 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 21:01:46 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 21:01:57 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 21:11:21 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 21:12:20 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 21:13:57 [FAIL] License rejected. Module=GAMESERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-29 21:33:53 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 21:33:53 [FAIL] HTTP validation failed. Module=DATASERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 21:33:53 [CACHE] No offline receipt cache. Module=DATASERVER Path=..\Data\License\SDLicense_DATASERVER.cache
+2026-08-29 21:35:43 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 21:35:43 [FAIL] HTTP validation failed. Module=DATASERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 21:35:43 [CACHE] No offline receipt cache. Module=DATASERVER Path=..\Data\License\SDLicense_DATASERVER.cache
+2026-08-29 21:37:30 [HTTP] HttpSendRequest failed: 12029
+2026-08-29 21:37:30 [FAIL] HTTP validation failed. Module=DATASERVER Hwid=658179********************************************************** Enforce=1
+2026-08-29 21:37:30 [CACHE] No offline receipt cache. Module=DATASERVER Path=..\Data\License\SDLicense_DATASERVER.cache
+2026-08-29 21:39:37 [FAIL] License rejected. Module=DATASERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 08:25:33 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:25:33 [FAIL] HTTP validation failed. Module=CONNECTSERVER Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:25:33 [CACHE] No offline receipt cache. Module=CONNECTSERVER Path=..\Data\License\SDLicense_CONNECTSERVER.cache
+2026-08-30 08:28:07 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:28:07 [FAIL] HTTP validation failed. Module=CONNECTSERVER Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:28:07 [CACHE] No offline receipt cache. Module=CONNECTSERVER Path=..\Data\License\SDLicense_CONNECTSERVER.cache
+2026-08-30 08:29:11 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:29:11 [FAIL] HTTP validation failed. Module=CONNECTSERVER Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:29:11 [CACHE] No offline receipt cache. Module=CONNECTSERVER Path=..\Data\License\SDLicense_CONNECTSERVER.cache
+2026-08-30 08:31:00 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:31:00 [FAIL] HTTP validation failed. Module=CONNECTSERVER Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:31:00 [CACHE] No offline receipt cache. Module=CONNECTSERVER Path=..\Data\License\SDLicense_CONNECTSERVER.cache
+2026-08-30 08:36:22 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:36:22 [FAIL] HTTP validation failed. Module=JOINSERVER Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:36:22 [CACHE] No offline receipt cache. Module=JOINSERVER Path=..\Data\License\SDLicense_JOINSERVER.cache
+2026-08-30 08:38:42 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:38:42 [FAIL] HTTP validation failed. Module=JOINSERVER Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:38:42 [CACHE] No offline receipt cache. Module=JOINSERVER Path=..\Data\License\SDLicense_JOINSERVER.cache
+2026-08-30 08:39:54 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:39:54 [FAIL] HTTP validation failed. Module=JOINSERVER Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:39:54 [CACHE] No offline receipt cache. Module=JOINSERVER Path=..\Data\License\SDLicense_JOINSERVER.cache
+2026-08-30 08:41:13 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:41:13 [FAIL] HTTP validation failed. Module=JOINSERVER Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:41:13 [CACHE] No offline receipt cache. Module=JOINSERVER Path=..\Data\License\SDLicense_JOINSERVER.cache
+2026-08-30 08:42:40 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:42:40 [FAIL] HTTP validation failed. Module=GAMESERVERCS Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:42:40 [CACHE] No offline receipt cache. Module=GAMESERVERCS Path=..\Data\License\SDLicense_GAMESERVERCS.cache
+2026-08-30 08:43:57 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:43:57 [FAIL] HTTP validation failed. Module=GAMESERVERCS Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:43:57 [CACHE] No offline receipt cache. Module=GAMESERVERCS Path=..\Data\License\SDLicense_GAMESERVERCS.cache
+2026-08-30 08:45:17 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:45:17 [FAIL] HTTP validation failed. Module=GAMESERVERCS Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:45:17 [CACHE] No offline receipt cache. Module=GAMESERVERCS Path=..\Data\License\SDLicense_GAMESERVERCS.cache
+2026-08-30 08:47:13 [HTTP] HttpSendRequest failed: 12029
+2026-08-30 08:47:13 [FAIL] HTTP validation failed. Module=GAMESERVERCS Hwid=658179********************************************************** Enforce=1
+2026-08-30 08:47:13 [CACHE] No offline receipt cache. Module=GAMESERVERCS Path=..\Data\License\SDLicense_GAMESERVERCS.cache
+2026-08-30 09:34:29 [FAIL] License rejected. Module=CONNECTSERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 09:44:58 [FAIL] License rejected. Module=CONNECTSERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 09:45:03 [FAIL] License rejected. Module=DATASERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 09:45:09 [FAIL] License rejected. Module=JOINSERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 09:45:19 [FAIL] License rejected. Module=GAMESERVERCS Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 19:16:03 [FAIL] License rejected. Module=CONNECTSERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 19:16:07 [FAIL] License rejected. Module=DATASERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 19:16:13 [FAIL] License rejected. Module=JOINSERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 19:16:24 [FAIL] License rejected. Module=GAMESERVERCS Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 19:34:50 [FAIL] License rejected. Module=CONNECTSERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 19:34:55 [FAIL] License rejected. Module=DATASERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 19:35:00 [FAIL] License rejected. Module=JOINSERVER Hwid=658179********************************************************** Error= Enforce=1
+2026-08-30 19:35:10 [FAIL] License rejected. Module=GAMESERVERCS Hwid=658179********************************************************** Error= Enforce=1

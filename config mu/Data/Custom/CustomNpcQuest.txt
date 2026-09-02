@@ -1,0 +1,32 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM NPC QUEST
+// ============================================================================
+// ESTADO ACTUAL: DESACTIVADO / NO USAR
+//
+// DECISION DE CONFIGURACION:
+// Este servidor usara solamente:
+//
+//   Data\Custom\CustomQuest.txt
+//
+// MOTIVO:
+// CustomQuest.txt y CustomNpcQuest.txt pertenecen a sistemas de quest parecidos,
+// pero usar ambos al mismo tiempo puede generar confusion administrativa:
+//
+// - CustomQuest.txt:
+//   Sistema principal elegido para SilentDevs.
+//   Maneja la cadena de quests/progreso que actualmente se administra.
+//
+// - CustomNpcQuest.txt:
+//   Sistema alternativo por NPC exacto.
+//   No se usara para evitar tener dos configuraciones de quest compitiendo.
+//
+// IMPORTANTE:
+// - No agregue quests activas en este archivo.
+// - Configure, documente y edite quests solamente en CustomQuest.txt.
+// - Se dejo este archivo como referencia para que el GameServer encuentre el
+//   archivo si intenta cargarlo, pero sin datos activos.
+//
+// RESPALDO:
+// El contenido anterior fue respaldado en:
+//   CustomNpcQuest.txt.backup_before_disable
+// ============================================================================

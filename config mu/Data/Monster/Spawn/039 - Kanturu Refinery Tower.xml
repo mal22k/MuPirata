@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+<Map Number="39" Name="Kanturu 2 (Refinery Tower)">
+		<Spot Type="0" Description="NPC">
+			<Spawn MonsterIndex="106" Distance="30" StartX="60" StartY="108" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="173" StartY="61" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="173" StartY="64" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="173" StartY="67" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="173" StartY="70" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="173" StartY="73" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="173" StartY="76" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="173" StartY="79" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="179" StartY="89" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="176" StartY="86" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="173" StartY="82" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="201" StartY="94" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="204" StartY="92" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="207" StartY="91" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="210" StartY="89" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="212" StartY="88" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="215" StartY="86" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="217" StartY="84" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="218" StartY="81" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="218" StartY="78" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="218" StartY="73" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="218" StartY="70" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="218" StartY="67" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="218" StartY="64" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="217" StartY="60" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="214" StartY="57" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="211" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="208" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="205" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="201" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="198" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="193" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="190" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="185" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="182" StartY="54" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="178" StartY="56" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="176" StartY="58" Dir="8" />
+			<Spawn MonsterIndex="106" Distance="30" StartX="174" StartY="59" Dir="8" />
+			<Spawn MonsterIndex="368" Distance="0" StartX="77" StartY="177" Dir="2" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="32" Name="Devil Square">
+		<Spot Type="4" Description="Single Point Monster">
+			<Spawn MonsterIndex="069" Distance="30" StartX="138" StartY="164" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="127" StartY="154" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="138" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="134" StartY="159" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="129" StartY="155" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="149" StartY="159" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="131" StartY="168" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="142" StartY="170" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="137" StartY="181" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="149" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="130" StartY="161" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="147" StartY="170" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="151" StartY="169" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="137" StartY="167" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="131" StartY="175" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="151" StartY="173" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="133" StartY="181" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="125" StartY="158" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="132" StartY="162" Dir="-1" />
+			<Spawn MonsterIndex="069" Distance="30" StartX="124" StartY="172" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="168" StartY="103" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="177" StartY="097" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="166" StartY="084" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="159" StartY="095" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="176" StartY="084" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="174" StartY="100" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="181" StartY="108" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="157" StartY="091" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="169" StartY="085" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="166" StartY="100" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="175" StartY="108" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="169" StartY="090" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="156" StartY="103" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="167" StartY="102" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="156" StartY="086" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="172" StartY="104" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="180" StartY="106" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="163" StartY="105" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="157" StartY="106" Dir="-1" />
+			<Spawn MonsterIndex="071" Distance="30" StartX="172" StartY="109" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="151" StartY="180" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="151" StartY="162" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="135" StartY="175" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="132" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="146" StartY="158" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="143" StartY="176" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="149" StartY="178" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="137" StartY="177" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="137" StartY="178" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="127" StartY="181" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="144" StartY="155" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="139" StartY="157" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="134" StartY="170" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="124" StartY="155" Dir="-1" />
+			<Spawn MonsterIndex="073" Distance="30" StartX="141" StartY="179" Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="145" StartY="181 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="146" StartY="160 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="149" StartY="168 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="149" StartY="173 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="142" StartY="154 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="142" StartY="171 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="140" StartY="177 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="137" StartY="180 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="131" StartY="181 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="142" StartY="162 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="151" StartY="168 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="130" StartY="164 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="147" StartY="169 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="130" StartY="167 " Dir="-1" />
+			<Spawn MonsterIndex="074" Distance="30" StartX="124" StartY="179 " Dir="-1" />				
+			<Spawn MonsterIndex="072" Distance="30" StartX="133" StartY="168" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="140" StartY="162" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="140" StartY="165" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="134" StartY="166" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="136" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="127" StartY="163" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="144" StartY="154" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="145" StartY="177" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="135" StartY="158" Dir="-1" />
+			<Spawn MonsterIndex="072" Distance="30" StartX="139" StartY="162 " Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="124" StartY="154" Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="126" StartY="172" Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="144" StartY="166" Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="127" StartY="162" Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="140" StartY="162" Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="133" StartY="170" Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="147" StartY="161" Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="127" StartY="164" Dir="-1" />
+			<Spawn MonsterIndex="075" Distance="30" StartX="143" StartY="174" Dir="-1" />					
+			<Spawn MonsterIndex="075" Distance="30" StartX="133" StartY="158" Dir="-1" />
+	        <Spawn MonsterIndex="077" Distance="30" StartX="135" StartY="168" Dir="-1" />
+			<Spawn MonsterIndex="077" Distance="30" StartX="127" StartY="179" Dir="-1" />
+			<Spawn MonsterIndex="077" Distance="30" StartX="135" StartY="156" Dir="-1" />
+			<Spawn MonsterIndex="077" Distance="30" StartX="135" StartY="177" Dir="-1" />
+			<Spawn MonsterIndex="077" Distance="30" StartX="136" StartY="172" Dir="-1" />
+			<Spawn MonsterIndex="077" Distance="30" StartX="125" StartY="158" Dir="-1" />
+			<Spawn MonsterIndex="077" Distance="30" StartX="129" StartY="166" Dir="-1" />
+			<Spawn MonsterIndex="077" Distance="30" StartX="151" StartY="173" Dir="-1" />				
+			<Spawn MonsterIndex="077" Distance="30" StartX="143" StartY="162" Dir="-1" />
+			<Spawn MonsterIndex="077" Distance="30" StartX="142" StartY="178" Dir="-1" />			
+			<Spawn MonsterIndex="434" Distance="30" StartX="065" StartY="150" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="054" StartY="140" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="065" StartY="160" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="061" StartY="145" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="056" StartY="141" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="076" StartY="145" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="058" StartY="154" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="069" StartY="156" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="064" StartY="167" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="076" StartY="160" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="057" StartY="147" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="074" StartY="156" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="078" StartY="155" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="064" StartY="153" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="058" StartY="161" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="078" StartY="159" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="060" StartY="167" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="052" StartY="144" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="059" StartY="148" Dir="-1" />      
+            <Spawn MonsterIndex="434" Distance="30" StartX="051" StartY="158" Dir="-1" />      
+            <Spawn MonsterIndex="435"  Distance="30" StartX="075" StartY="154" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="059" StartY="163" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="077" StartY="152" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="063" StartY="145" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="071" StartY="162" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="074" StartY="160" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="073" StartY="167" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="057" StartY="143" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="071" StartY="155" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="065" StartY="152" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="072" StartY="161" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="058" StartY="155" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="058" StartY="142" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="064" StartY="153" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="051" StartY="142" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="069" StartY="158" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="071" StartY="166" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="075" StartY="149" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="075" StartY="143" Dir="-1" />           
+            <Spawn MonsterIndex="435"  Distance="30" StartX="075" StartY="158" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="078" StartY="166" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="078" StartY="148" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="062" StartY="161" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="059" StartY="160" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="073" StartY="144" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="070" StartY="162" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="076" StartY="164" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="064" StartY="163" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="064" StartY="164" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="054" StartY="167" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="071" StartY="141" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="066" StartY="143" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="061" StartY="156" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="051" StartY="141" Dir="-1" />           
+            <Spawn MonsterIndex="436"  Distance="30" StartX="068" StartY="165" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="072" StartY="167" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="073" StartY="146" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="076" StartY="154" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="076" StartY="159" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="069" StartY="140" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="069" StartY="157" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="067" StartY="163" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="064" StartY="166" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="058" StartY="167" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="069" StartY="148" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="078" StartY="154" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="057" StartY="150" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="074" StartY="155" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="057" StartY="153" Dir="-1" />           
+            <Spawn MonsterIndex="437"  Distance="30" StartX="051" StartY="165" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="060" StartY="154" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="067" StartY="148" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="067" StartY="151" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="061" StartY="152" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="063" StartY="160" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="054" StartY="149" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="071" StartY="140" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="072" StartY="163" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="062" StartY="144" Dir="-1" />           
+            <Spawn MonsterIndex="438"  Distance="30" StartX="066" StartY="148" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="051" StartY="140" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="053" StartY="158" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="071" StartY="152" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="054" StartY="148" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="067" StartY="148" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="060" StartY="156" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="074" StartY="147" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="054" StartY="150" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="070" StartY="160" Dir="-1" />           
+            <Spawn MonsterIndex="439"  Distance="30" StartX="060" StartY="144" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="062" StartY="154" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="054" StartY="165" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="062" StartY="142" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="062" StartY="163" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="063" StartY="158" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="052" StartY="144" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="056" StartY="152" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="078" StartY="159" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="070" StartY="148" Dir="-1" />           
+            <Spawn MonsterIndex="440"  Distance="30" StartX="069" StartY="164" Dir="-1" />           
+
+
+
+
+
+
+
+
+		</Spot>
+	</Map>
+</MonsterSpawn>

@@ -1,0 +1,70 @@
+// ============================================================================
+//   SilentDevs MonsterSetBase Configuration
+//   ..........................................................................
+//   Emulator : SilentDevs MU Online Emulator
+//   Website  : https://www.SilentDevs.net
+//   Author   : SilentDevs Development
+//   Notice   : This file is part of the SilentDevs MuOnline Server files.
+// ============================================================================
+
+
+2
+// -------------------------------------------------------------
+// Index   MapNumber   Rate_AL0   Rate_AL1   Rate_AL2   Rate_AL3
+// -------------------------------------------------------------
+   0       *             100         100         100         100         
+end
+
+3
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Index   Group   SectionRate   ItemDropRate   MoneyAmount   SetItemDropRate   ItemDropCount   EffectValue   RewardType   Coin1   Coin2   Coin3   DW   DK   FE   MG   DL   SU   RF
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   0       0       10000         100             1000          0                 1               0             0             0       0       0       1       1    1    1    1    1    1    
+end
+
+4
+// ---------------------------------------------------------------------------------------------------------------------------------------
+// Group   Index     Level   Grade   Durability   Option0   Option1   Option2   Option3   Option4   Option5   Option6   Duration   Comment
+// ---------------------------------------------------------------------------------------------------------------------------------------
+   0       00,000    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       00,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       00,004    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       00,003    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       01,001    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       01,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       02,000    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       02,001    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       03,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       04,008    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       04,001    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       04,009    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       05,000    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       06,004    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       06,001    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       06,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       07,005    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       07,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       07,010    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       08,005    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       08,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       08,010    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       09,005    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       09,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       09,010    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       10,005    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       10,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       10,010    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       11,005    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       11,002    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       11,010    5       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       13,000    0       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       13,001    0       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       13,002    0       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       13,008    0       0       0            *         *         *         13        *         *         *         0          //Skeleton King
+   0       13,009    0       0       0            *         *         *         13        *         *         *         0          //Skeleton King
+   0       13,012    0       0       0            *         *         *         13        *         *         *         0          //Skeleton King
+   0       13,013    0       0       0            *         *         *         13        *         *         *         0          //Skeleton King
+   0       14,013    0       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       14,014    0       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+   0       12,015    0       0       0            *         *         *         *         *         *         *         0          //Skeleton King
+end

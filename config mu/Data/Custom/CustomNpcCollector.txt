@@ -1,0 +1,77 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM NPC COLLECTOR
+// ============================================================================
+// Archivo usado por: CCustomNpcCollector::Load("Custom\\CustomNpcCollector.txt")
+// Estado actual   : ACTIVO si CustomNpcCollectorSwitch=1 en GameServerInfo.
+//
+// FUNCION REAL DEL SISTEMA
+// Define que items acepta el NPC Collector y cuantas monedas entrega al jugador.
+// El NPC relacionado en el GS es la clase 236
+//
+// COMO FUNCIONA EN JUEGO
+// 1. El jugador habla con el NPC clase 236.
+// 2. El sistema mira el primer slot del inventario principal.
+// 3. Luego exige que TODO el inventario principal tenga 64 items.
+// 4. Los 64 items deben ser exactamente del mismo ItemIndex.
+// 5. Si ese item esta listado aqui, elimina los 64 items y entrega Coin1/2/3.
+//
+// PUNTO MAS IMPORTANTE
+// No convierte 1 item suelto. El source exige Count == 64.
+// Si hay un espacio vacio o un item distinto en el inventario principal,
+// devuelve mensaje de error y no entrega recompensa.
+//
+// SECCIONES
+// Este archivo usa solamente la SECCION 0.
+//
+// CAMPOS DE LA SECCION 0
+// ItemGroup : grupo/categoria del item. Ejemplo: joyas normalmente grupo 14.
+// ItemIndex : index dentro del grupo.
+// Coin1     : primera moneda/punto a entregar.
+// Coin2     : segunda moneda/punto a entregar.
+// Coin3     : tercera moneda/punto a entregar.
+//
+// ITEMINDEX GLOBAL
+// Internamente compara contra GET_ITEM(ItemGroup, ItemIndex), o sea:
+// ItemGlobal = (ItemGroup * 512) + ItemIndex.
+//
+// MENSAJES USADOS POR EL GS
+// 740 : sistema desactivado.
+// 741 : inventario invalido / item distinto / espacio vacio.
+// 742 : conversion aceptada por el NPC.
+// 743 : item no registrado en este archivo.
+// 744 : aviso de recompensa entregada.
+//
+// REGLAS IMPORTANTES
+// - Maximo teorico del listado: 50 items segun MAX_ITEM_LIST.
+// - El NPC debe existir en MonsterSetBase como clase 236 para poder usarse.
+// - Coin1/2/3 se envian a GDSetCoinSend con motivo "NpCCollector".
+// - Al convertir, elimina todos los items del inventario principal, no equipo.
+//
+// EJEMPLOS COMENTADOS
+// 1) Aceptar 64 Jewel of Chaos y entregar 6 Coin1:
+//    // 12 15 6 0 0
+//
+// 2) Aceptar 64 Jewel of Bless y entregar 2 Coin1:
+//    // 14 13 2 0 0
+//
+// 3) Aceptar 64 items y repartir entre varias monedas:
+//    // 14 42 5 1 0
+//
+// COLUMNA OFICIAL
+// ItemGroup ItemIndex Coin1 Coin2 Coin3
+// ============================================================================
+
+// ============================================================================
+// SECCION 0 - CONVERSIONES DE ITEMS A MONEDAS
+// ============================================================================
+//      ItemGroup      ItemIndex       Coin1      Coin2       Coin3
+0
+            12             15            6          0           0	//Jewel of Chaos
+            14             13            2          0           0	//Jewel of Bless
+            14             14            2          0           0	//Jewel of Soul
+            14             16            2          0           0	//Jewel of Life
+            14             22            2          0           0	//Jewel of Creation
+            14             41            2          0           0	//Gemstone
+            14             42            6          0           0	//Jewel of Harmony
+            14             21            2          0           0	//Rena			
+end

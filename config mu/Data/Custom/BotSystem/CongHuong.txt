@@ -1,0 +1,167 @@
+//=================================================================================================================
+// CONGHUONG.TXT - BOT ALQUIMISTA / TRANSFERENCIA DE OPCIONES
+//=================================================================================================================
+// ESTADO DEL ARCHIVO: ACTIVO Y EN USO.
+//
+// El GameServer fue compilado con BOTCONGHUONG=1. Al iniciar ejecuta:
+//   BotAlchemist.Read("Custom\\BotSystem\\CongHuong.txt")
+//   BotAlchemist.MakeBot()
+// Tambien interviene al abrir, confirmar y cancelar el trade con este NPC.
+//
+// Funcion general:
+//   Transfiere Level, Option, Luck, Skill y/o Excellent desde un item donante
+//   hacia un item destino, segun las reglas configuradas en las secciones 3 y 4.
+//
+// Flujo de uso dentro del juego:
+//   1. Hacer trade con el bot.
+//   2. Colocar exactamente DOS items.
+//   3. ITEM DESTINO: mitad izquierda del trade (columnas 1 a 4).
+//   4. ITEM DONANTE: mitad derecha del trade (columnas 5 a 8).
+//   5. Confirmar el trade.
+//
+// IMPORTANTE:
+//   - Solo admite items de los grupos 0 al 11 (armas, escudos y armaduras).
+//   - Alas, mascotas, joyas y grupos 12 o superiores son rechazados.
+//   - Si la combinacion falla, las opciones transferibles se eliminan del donante,
+//     pero no se agregan al destino. Ambos items se devuelven al inventario.
+//   - El costo se cobra tanto al acertar como al fallar la combinacion.
+//   - Deje espacio suficiente en el inventario para recibir los DOS items.
+//
+// Limites:
+//   BotIndex valido: 0 a 29.
+//   Name: maximo 10 caracteres.
+//
+// Activar/desactivar un bot:
+//   Este formato NO posee una columna Enabled.
+//   Para desactivar un bot individual, quite o comente TODAS sus filas en las
+//   secciones 1, 2, 3 y 4. Quitar solamente la seccion 1 provoca referencias
+//   invalidas en las secciones siguientes.
+//=================================================================================================================
+
+//=================================================================================================================
+// SECCION 1 - IDENTIDAD, PROBABILIDAD Y POSICION DEL NPC
+//=================================================================================================================
+// Formato:
+// BotIndex  Class  Rate  Name  Map  X  Y  Dir
+//
+// BotIndex : identificador interno del bot (0 a 29).
+// Class    : clase y apariencia base del personaje:
+//              0/1/2   = DW / SM / GM
+//             16/17/18 = DK / BK / BM
+//             32/33/34 = Elf / ME / HE
+//             48/50    = MG / DM
+//             64/66    = DL / LE
+//             80/81/82 = SU / BS / DS
+//             96/98    = RF / FM
+// Rate     : umbral de exito usado por el source.
+//            El codigo genera un numero de 0 a 99 y falla solo si numero > Rate.
+//            Por ello 0 realmente da 1%, 32 da 33% y 99/100 dan 100%.
+// Name     : nombre visible del NPC, entre comillas; maximo 10 caracteres.
+// Map/X/Y  : mapa y coordenadas donde aparece.
+// Dir      : direccion del NPC (0 a 7).
+//
+// Configuracion actual: el valor Rate=32 equivale a 33% real de exito.
+//-----------------------------------------------------------------------------------------------------------------
+1
+// BotIndex  Class  Rate  Name      Map  X    Y    Dir
+      0        0    32   "Test 1"   0    139  139  1
+end
+
+//=================================================================================================================
+// SECCION 2 - EQUIPO VISUAL DEL BOT
+//=================================================================================================================
+// Formato:
+// BotIndex  Slot  Type  Index  Level  Opt
+//
+// BotIndex : bot definido previamente en la seccion 1.
+// Slot     : parte visual que se equipa:
+//              0 = arma       1 = escudo     2 = casco
+//              3 = armor      4 = pants      5 = gloves
+//              6 = boots      7 = wings      8 = pet
+// Type     : grupo del item.
+// Index    : indice del item dentro del grupo.
+// Level    : nivel visual del item (+0 a +15, segun compatibilidad).
+// Opt      : opcion adicional visual/interna del item.
+//
+// Esta seccion solo modifica la apariencia del NPC; no define los items usados
+// en la alquimia ni entrega estos items al jugador.
+//-----------------------------------------------------------------------------------------------------------------
+2
+// BotIndex  Slot  Type  Index  Level  Opt
+0            0     2     22     0      0
+0            1     6     17     0      0
+0            2     7     10     0      0
+0            3     8     10     0      0
+0            4     9     10     0      0
+0            5     10    10     0      0
+0            6     11    10     0      0
+0            7     12    0      0      0
+0            8     13    80     0      0
+end
+
+//=================================================================================================================
+// SECCION 3 - OPCIONES QUE EL BOT PUEDE TRANSFERIR
+//=================================================================================================================
+// Formato:
+// BotIndex  AllowLevel  AllowOpt  AllowLuck  AllowSkill  AllowExc  AllowFFFF
+//
+// Todos los campos Allow usan: 0 = no transferir, 1 = permitir transferencia.
+//
+// AllowLevel : transfiere niveles +N del donante al destino, hasta MaxLevel.
+// AllowOpt   : transfiere la opcion adicional (+4, +8, etc.), con limite interno 7.
+// AllowLuck  : transfiere Luck si el destino no posee Luck.
+// AllowSkill : transfiere Skill; el source solo lo aplica a grupos menores que 7.
+// AllowExc   : transfiere opciones Excellent hasta alcanzar MaxExc.
+// AllowFFFF  : la columna se lee y almacena, pero el source actual NO la consulta
+//              durante la combinacion. Cambiarla no produce efecto operativo.
+//
+// La transferencia no duplica opciones: lo transferido se retira del donante.
+// En un fallo tambien se retira del donante, pero no se agrega al destino.
+//-----------------------------------------------------------------------------------------------------------------
+3
+// BotIndex  AllowLevel  AllowOpt  AllowLuck  AllowSkill  AllowExc  AllowFFFF
+0            1           1         1          1           1         0
+end
+
+//=================================================================================================================
+// SECCION 4 - ACCESO, COSTOS, RESTRICCIONES Y LIMITES
+//=================================================================================================================
+// Formato:
+// BotIndex  OnlyVip  WCoinC  Zen  WCoinP  OnlySameType  OnlyLowerIndex  AcceptAncient  MaxLevel  MaxExc
+//
+// BotIndex       : bot definido en la seccion 1.
+// OnlyVip        : 0 = cualquier cuenta; 1 = exige AccountLevel mayor que 0.
+// WCoinC         : costo en Coin1 / WCoinC.
+// Zen            : costo en Zen.
+// WCoinP         : costo en Coin2 / WCoinP.
+// OnlySameType   : con 1, el source hace dos validaciones y termina exigiendo que
+//                  destino y donante sean exactamente el mismo Type + Index.
+//                  No significa solamente "espada con espada".
+// OnlyLowerIndex : con 1, compara el campo base Level definido en Item.txt.
+//                  Rechaza si el Level base del destino supera al donante por mas
+//                  de 10. No compara el +nivel del item ni su Index numerico.
+//                  Con OnlySameType=1 esta regla normalmente queda redundante.
+// AcceptAncient  : 0 = rechaza un destino Ancient; 1 = lo permite.
+//                  El source solo revisa el DESTINO. La opcion Ancient del donante
+//                  no se transfiere y no se valida expresamente.
+// MaxLevel       : nivel +N maximo que puede alcanzar el item destino.
+// MaxExc         : cantidad maxima de opciones Excellent en el destino.
+//
+// ADVERTENCIAS DE COSTO DEL SOURCE ACTUAL:
+//   - Para Zen, el source valida TradeMoney y luego descuenta Zen del dinero del PJ.
+//   - No configure WCoinC y WCoinP simultaneamente. El source valida ambos saldos,
+//     pero al cobrar usa un else-if: si WCoinP es mayor que 0, solo descuenta WCoinP.
+//   - Los costos tambien se cobran cuando el resultado falla.
+//
+// Configuracion actual:
+//   Cualquier cuenta; costo 10000 WCoinP; mismo item exacto; no acepta destino
+//   Ancient; limite +9; maximo 3 opciones Excellent.
+//-----------------------------------------------------------------------------------------------------------------
+4
+// BotIndex  OnlyVip  WCoinC  Zen  WCoinP  OnlySameType  OnlyLowerIndex  AcceptAncient  MaxLevel  MaxExc
+0            0        0       0    10000   1             1               0              9         3
+end
+
+//=================================================================================================================
+// FIN DEL ARCHIVO
+//=================================================================================================================

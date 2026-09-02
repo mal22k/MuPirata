@@ -1,0 +1,8 @@
+//Index   ColorR   ColorG   ColorB   ModelName
+// Huyết Long 77 RF
+3661         50        50       255        "HelmMale105"
+4173         50        50       255        "ArmorMale105"
+4685         50        50       255        "PantMale105"
+5709         50        50       255        "BootMale105"
+
+end

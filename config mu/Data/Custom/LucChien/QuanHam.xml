@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+DOCUMENTACION SILENTDEVS
+Archivo: QuanHam.xml
+Funcion: Sistema de rangos/titulos basado en puntos de poder o progreso.
+Como configurar: El XML define rangos, requisitos y textos visibles segun atributos.
+Activar/Desactivar: Use Enable="0" si el nodo principal lo tiene; si no, desactive dejando sin rangos o ajustando requisitos.
+Notas: Quan Ham significa rango/titulo.
+Importante: no borrar este archivo si el source lo carga directamente; use Enable="0" o quite entradas concretas.
+-->
+
+<CustomVIPChar Enable="1" Firework="1" Notice="1" Msg="[%s] subio su Rango Militar a [%d]">
+<MessageInfo>
+	<Message Index="0" Text="Sistema temporalmente desactivado." />
+	<Message Index="1" Text="Este item no se puede convertir." />
+	<Message Index="2" Text="Recibiste [%d] puntos de rango." />
+	<Message Index="3" Text="Rango Militar aumentado correctamente." />
+	<Message Index="4" Text="No tienes suficientes WCoin o puntos." />
+	<Message Index="5" Text="Operacion demasiado rapida." />
+	<Message Index="6" Text="Ya alcanzaste el maximo Rango Militar." />	
+	<Message Index="7" Text="Poder requerido insuficiente." />	
+</MessageInfo>	
+
+<!--Cấu hình vật phẩm quy đổi
+	Point = số point nhận được khi quy đổi item
+-->
+<ItemPoint>
+	<Item IndexItem="7337"  Level="-1"  ExlOp="-1" PointVIP="1" /> <!-- Military Rank Badge: item 14,169. Cada unidad convertida otorga 1 punto de rango. -->
+
+
+</ItemPoint> 
+<LevelUpVip>
+	<Config LevelVIP="1"  PointVIP="5"     WC="100000"  WP="0" GP="0" 	YCLucChien="700"	TypeOp1="89" ValueOp1="5"   TypeOp2="102" ValueOp2="5"   TypeOp3="117" ValueOp3="5"   TypeOp4="88" ValueOp4="5"   TypeOp5="92" ValueOp5="5"   TypeOp6="84" ValueOp6="5"    LucChien="3000"/>
+	<Config LevelVIP="2"  PointVIP="10"    WC="150000"  WP="0" GP="0" 	YCLucChien="10000"	TypeOp1="89" ValueOp1="10"  TypeOp2="102" ValueOp2="10"  TypeOp3="117" ValueOp3="10"  TypeOp4="88" ValueOp4="10"  TypeOp5="92" ValueOp5="10"  TypeOp6="84" ValueOp6="10"   LucChien="6000"/>
+	<Config LevelVIP="3"  PointVIP="15"    WC="200000"  WP="0" GP="0" 	YCLucChien="13000"	TypeOp1="89" ValueOp1="15"  TypeOp2="102" ValueOp2="15"  TypeOp3="117" ValueOp3="15"  TypeOp4="88" ValueOp4="15"  TypeOp5="92" ValueOp5="15"  TypeOp6="84" ValueOp6="15"   LucChien="9000"/>
+	<Config LevelVIP="4"  PointVIP="20"    WC="250000"  WP="0" GP="0" 	YCLucChien="16000"	TypeOp1="89" ValueOp1="20"  TypeOp2="102" ValueOp2="20"  TypeOp3="117" ValueOp3="20"  TypeOp4="88" ValueOp4="20"  TypeOp5="92" ValueOp5="20"  TypeOp6="84" ValueOp6="20"   LucChien="12000"/>
+	<Config LevelVIP="5"  PointVIP="25"    WC="300000"  WP="0" GP="0" 	YCLucChien="19000"	TypeOp1="89" ValueOp1="25"  TypeOp2="102" ValueOp2="25"  TypeOp3="117" ValueOp3="25"  TypeOp4="88" ValueOp4="25"  TypeOp5="92" ValueOp5="25"  TypeOp6="84" ValueOp6="25"   LucChien="15000"/>
+	<Config LevelVIP="6"  PointVIP="30"    WC="370000"  WP="0" GP="0" 	YCLucChien="22000"	TypeOp1="89" ValueOp1="30"  TypeOp2="102" ValueOp2="30"  TypeOp3="117" ValueOp3="30"  TypeOp4="88" ValueOp4="30"  TypeOp5="92" ValueOp5="30"  TypeOp6="84" ValueOp6="30"   LucChien="23000"/>
+	<Config LevelVIP="7"  PointVIP="35"    WC="440000"  WP="0" GP="0" 	YCLucChien="25000"	TypeOp1="89" ValueOp1="35"  TypeOp2="102" ValueOp2="35"  TypeOp3="117" ValueOp3="35"  TypeOp4="88" ValueOp4="35"  TypeOp5="92" ValueOp5="35"  TypeOp6="84" ValueOp6="35"   LucChien="31000"/>
+	<Config LevelVIP="8"  PointVIP="40"    WC="510000"  WP="0" GP="0" 	YCLucChien="28000"	TypeOp1="89" ValueOp1="40"  TypeOp2="102" ValueOp2="40"  TypeOp3="117" ValueOp3="40"  TypeOp4="88" ValueOp4="40"  TypeOp5="92" ValueOp5="40"  TypeOp6="84" ValueOp6="40"   LucChien="39000"/>
+	<Config LevelVIP="9"  PointVIP="45"    WC="580000"  WP="0" GP="0" 	YCLucChien="31000"	TypeOp1="89" ValueOp1="45"  TypeOp2="102" ValueOp2="45"  TypeOp3="117" ValueOp3="45"  TypeOp4="88" ValueOp4="45"  TypeOp5="92" ValueOp5="45"  TypeOp6="84" ValueOp6="45"   LucChien="47000"/>
+	<Config LevelVIP="10" PointVIP="50"    WC="650000"  WP="0" GP="0" 	YCLucChien="34000"	TypeOp1="89" ValueOp1="50"  TypeOp2="102" ValueOp2="50"  TypeOp3="117" ValueOp3="50"  TypeOp4="88" ValueOp4="50"  TypeOp5="92" ValueOp5="50"  TypeOp6="84" ValueOp6="50"   LucChien="55000"/>
+	<Config LevelVIP="11" PointVIP="85"    WC="750000"  WP="0" GP="0" 	YCLucChien="36000"	TypeOp1="89" ValueOp1="55"  TypeOp2="102" ValueOp2="55"  TypeOp3="117" ValueOp3="55"  TypeOp4="88" ValueOp4="55"  TypeOp5="92" ValueOp5="55"  TypeOp6="84" ValueOp6="55"   LucChien="71000"/>
+	<Config LevelVIP="12" PointVIP="115"   WC="850000"  WP="0" GP="0" 	YCLucChien="38000"	TypeOp1="89" ValueOp1="60"  TypeOp2="102" ValueOp2="60"  TypeOp3="117" ValueOp3="60"  TypeOp4="88" ValueOp4="60"  TypeOp5="92" ValueOp5="60"  TypeOp6="84" ValueOp6="60"   LucChien="87000"/>
+	<Config LevelVIP="13" PointVIP="145"   WC="950000"  WP="0" GP="0" 	YCLucChien="40000"	TypeOp1="89" ValueOp1="65"  TypeOp2="102" ValueOp2="65"  TypeOp3="117" ValueOp3="65"  TypeOp4="88" ValueOp4="65"  TypeOp5="92" ValueOp5="65"  TypeOp6="84" ValueOp6="65"   LucChien="103000"/>
+	<Config LevelVIP="14" PointVIP="175"   WC="1050000" WP="0" GP="0" 	YCLucChien="42000"	TypeOp1="89" ValueOp1="70"  TypeOp2="102" ValueOp2="70"  TypeOp3="117" ValueOp3="70"  TypeOp4="88" ValueOp4="70"  TypeOp5="92" ValueOp5="70"  TypeOp6="84" ValueOp6="70"   LucChien="119000"/>
+	<Config LevelVIP="15" PointVIP="205"   WC="1150000" WP="0" GP="0" 	YCLucChien="44000"	TypeOp1="89" ValueOp1="75"  TypeOp2="102" ValueOp2="75"  TypeOp3="117" ValueOp3="75"  TypeOp4="88" ValueOp4="75"  TypeOp5="92" ValueOp5="75"  TypeOp6="84" ValueOp6="75"   LucChien="135000"/>
+	<Config LevelVIP="16" PointVIP="235"   WC="1300000" WP="0" GP="0" 	YCLucChien="46000"	TypeOp1="89" ValueOp1="80"  TypeOp2="102" ValueOp2="80"  TypeOp3="117" ValueOp3="80"  TypeOp4="88" ValueOp4="80"  TypeOp5="92" ValueOp5="80"  TypeOp6="84" ValueOp6="80"   LucChien="164000"/>
+	<Config LevelVIP="17" PointVIP="265"   WC="1450000" WP="0" GP="0" 	YCLucChien="48000"	TypeOp1="89" ValueOp1="85"  TypeOp2="102" ValueOp2="85"  TypeOp3="117" ValueOp3="85"  TypeOp4="88" ValueOp4="85"  TypeOp5="92" ValueOp5="85"  TypeOp6="84" ValueOp6="85"   LucChien="193000"/>
+	<Config LevelVIP="18" PointVIP="295"   WC="1600000" WP="0" GP="0" 	YCLucChien="50000"	TypeOp1="89" ValueOp1="90"  TypeOp2="102" ValueOp2="90"  TypeOp3="117" ValueOp3="90"  TypeOp4="88" ValueOp4="90"  TypeOp5="92" ValueOp5="90"  TypeOp6="84" ValueOp6="90"   LucChien="222000"/>
+	<Config LevelVIP="19" PointVIP="325"   WC="1750000" WP="0" GP="0" 	YCLucChien="52000"	TypeOp1="89" ValueOp1="95"  TypeOp2="102" ValueOp2="95"  TypeOp3="117" ValueOp3="95"  TypeOp4="88" ValueOp4="95"  TypeOp5="92" ValueOp5="95"  TypeOp6="84" ValueOp6="95"   LucChien="251000"/>
+	<Config LevelVIP="20" PointVIP="355"   WC="1900000" WP="0" GP="0" 	YCLucChien="54000"	TypeOp1="89" ValueOp1="100" TypeOp2="102" ValueOp2="100" TypeOp3="117" ValueOp3="100" TypeOp4="88" ValueOp4="100" TypeOp5="92" ValueOp5="100" TypeOp6="84" ValueOp6="100"  LucChien="280000"/>
+	<Config LevelVIP="21" PointVIP="395"   WC="2100000" WP="0" GP="0" 	YCLucChien="55000"	TypeOp1="89" ValueOp1="105" TypeOp2="102" ValueOp2="105" TypeOp3="117" ValueOp3="105" TypeOp4="88" ValueOp4="105" TypeOp5="92" ValueOp5="105" TypeOp6="84" ValueOp6="105"  LucChien="325000"/>
+	<Config LevelVIP="22" PointVIP="435"   WC="2300000" WP="0" GP="0" 	YCLucChien="56000"	TypeOp1="89" ValueOp1="110" TypeOp2="102" ValueOp2="110" TypeOp3="117" ValueOp3="110" TypeOp4="88" ValueOp4="110" TypeOp5="92" ValueOp5="110" TypeOp6="84" ValueOp6="110"  LucChien="370000"/>
+	<Config LevelVIP="23" PointVIP="475"   WC="2500000" WP="0" GP="0" 	YCLucChien="57000"	TypeOp1="89" ValueOp1="115" TypeOp2="102" ValueOp2="115" TypeOp3="117" ValueOp3="115" TypeOp4="88" ValueOp4="115" TypeOp5="92" ValueOp5="115" TypeOp6="84" ValueOp6="115"  LucChien="415000"/>
+	<Config LevelVIP="24" PointVIP="515"   WC="2700000" WP="0" GP="0" 	YCLucChien="58000"	TypeOp1="89" ValueOp1="120" TypeOp2="102" ValueOp2="120" TypeOp3="117" ValueOp3="120" TypeOp4="88" ValueOp4="120" TypeOp5="92" ValueOp5="120" TypeOp6="84" ValueOp6="120"  LucChien="460000"/>
+	<Config LevelVIP="25" PointVIP="555"   WC="2900000" WP="0" GP="0" 	YCLucChien="59000"	TypeOp1="89" ValueOp1="125" TypeOp2="102" ValueOp2="125" TypeOp3="117" ValueOp3="125" TypeOp4="88" ValueOp4="125" TypeOp5="92" ValueOp5="125" TypeOp6="84" ValueOp6="125"  LucChien="505000"/>
+	<Config LevelVIP="26" PointVIP="595"   WC="3150000" WP="0" GP="0" 	YCLucChien="60000"	TypeOp1="89" ValueOp1="130" TypeOp2="102" ValueOp2="130" TypeOp3="117" ValueOp3="130" TypeOp4="88" ValueOp4="130" TypeOp5="92" ValueOp5="130" TypeOp6="84" ValueOp6="130"  LucChien="585000"/>
+	<Config LevelVIP="27" PointVIP="635"   WC="3400000" WP="0" GP="0" 	YCLucChien="61000"	TypeOp1="89" ValueOp1="135" TypeOp2="102" ValueOp2="135" TypeOp3="117" ValueOp3="135" TypeOp4="88" ValueOp4="135" TypeOp5="92" ValueOp5="135" TypeOp6="84" ValueOp6="135"  LucChien="665000"/>
+	<Config LevelVIP="28" PointVIP="675"   WC="3650000" WP="0" GP="0" 	YCLucChien="62000"	TypeOp1="89" ValueOp1="140" TypeOp2="102" ValueOp2="140" TypeOp3="117" ValueOp3="140" TypeOp4="88" ValueOp4="140" TypeOp5="92" ValueOp5="140" TypeOp6="84" ValueOp6="140"  LucChien="745000"/>
+	<Config LevelVIP="29" PointVIP="715"   WC="3900000" WP="0" GP="0" 	YCLucChien="63000"	TypeOp1="89" ValueOp1="145" TypeOp2="102" ValueOp2="145" TypeOp3="117" ValueOp3="145" TypeOp4="88" ValueOp4="145" TypeOp5="92" ValueOp5="145" TypeOp6="84" ValueOp6="145"  LucChien="825000"/>
+	<Config LevelVIP="30" PointVIP="755"   WC="4150000" WP="0" GP="0" 	YCLucChien="64000"	TypeOp1="89" ValueOp1="150" TypeOp2="102" ValueOp2="150" TypeOp3="117" ValueOp3="150" TypeOp4="88" ValueOp4="150" TypeOp5="92" ValueOp5="150" TypeOp6="84" ValueOp6="150"  LucChien="905000"/>
+	<Config LevelVIP="31" PointVIP="805"   WC="4450000" WP="0" GP="0" 	YCLucChien="64500"	TypeOp1="89" ValueOp1="155" TypeOp2="102" ValueOp2="155" TypeOp3="117" ValueOp3="155" TypeOp4="88" ValueOp4="155" TypeOp5="92" ValueOp5="155" TypeOp6="84" ValueOp6="155"  LucChien="1065000"/>
+	<Config LevelVIP="32" PointVIP="855"   WC="4750000" WP="0" GP="0" 	YCLucChien="65000"	TypeOp1="89" ValueOp1="160" TypeOp2="102" ValueOp2="160" TypeOp3="117" ValueOp3="160" TypeOp4="88" ValueOp4="160" TypeOp5="92" ValueOp5="160" TypeOp6="84" ValueOp6="160"  LucChien="1225000"/>
+	<Config LevelVIP="33" PointVIP="905"   WC="5050000" WP="0" GP="0" 	YCLucChien="65500"	TypeOp1="89" ValueOp1="165" TypeOp2="102" ValueOp2="165" TypeOp3="117" ValueOp3="165" TypeOp4="88" ValueOp4="165" TypeOp5="92" ValueOp5="165" TypeOp6="84" ValueOp6="165"  LucChien="1385000"/>
+	<Config LevelVIP="34" PointVIP="955"   WC="5350000" WP="0" GP="0" 	YCLucChien="66000"	TypeOp1="89" ValueOp1="170" TypeOp2="102" ValueOp2="170" TypeOp3="117" ValueOp3="170" TypeOp4="88" ValueOp4="170" TypeOp5="92" ValueOp5="170" TypeOp6="84" ValueOp6="170"  LucChien="1545000"/>
+	<Config LevelVIP="35" PointVIP="1005"  WC="5650000" WP="0" GP="0" 	YCLucChien="66500"	TypeOp1="89" ValueOp1="175" TypeOp2="102" ValueOp2="175" TypeOp3="117" ValueOp3="175" TypeOp4="88" ValueOp4="175" TypeOp5="92" ValueOp5="175" TypeOp6="84" ValueOp6="175"  LucChien="1705000"/>
+	<Config LevelVIP="36" PointVIP="1055"  WC="6000000" WP="0" GP="0" 	YCLucChien="67000"	TypeOp1="89" ValueOp1="180" TypeOp2="102" ValueOp2="180" TypeOp3="117" ValueOp3="180" TypeOp4="88" ValueOp4="180" TypeOp5="92" ValueOp5="180" TypeOp6="84" ValueOp6="180"  LucChien="2105000"/>
+	<Config LevelVIP="37" PointVIP="1105"  WC="6350000" WP="0" GP="0" 	YCLucChien="67500"	TypeOp1="89" ValueOp1="185" TypeOp2="102" ValueOp2="185" TypeOp3="117" ValueOp3="185" TypeOp4="88" ValueOp4="185" TypeOp5="92" ValueOp5="185" TypeOp6="84" ValueOp6="185"  LucChien="2505000"/>
+	<Config LevelVIP="38" PointVIP="1155"  WC="6700000" WP="0" GP="0" 	YCLucChien="68000"	TypeOp1="89" ValueOp1="190" TypeOp2="102" ValueOp2="190" TypeOp3="117" ValueOp3="190" TypeOp4="88" ValueOp4="190" TypeOp5="92" ValueOp5="190" TypeOp6="84" ValueOp6="190"  LucChien="2905000"/>
+	<Config LevelVIP="39" PointVIP="1205"  WC="7050000" WP="0" GP="0" 	YCLucChien="68500"	TypeOp1="89" ValueOp1="195" TypeOp2="102" ValueOp2="195" TypeOp3="117" ValueOp3="195" TypeOp4="88" ValueOp4="195" TypeOp5="92" ValueOp5="195" TypeOp6="84" ValueOp6="195"  LucChien="3305000"/>
+	<Config LevelVIP="40" PointVIP="1255"  WC="7400000" WP="0" GP="0" 	YCLucChien="69000"	TypeOp1="89" ValueOp1="200" TypeOp2="102" ValueOp2="200" TypeOp3="117" ValueOp3="200" TypeOp4="88" ValueOp4="200" TypeOp5="92" ValueOp5="200" TypeOp6="84" ValueOp6="200"  LucChien="3705000"/>
+	<Config LevelVIP="41" PointVIP="1355"  WC="7750000" WP="0" GP="0" 	YCLucChien="90000"	TypeOp1="89" ValueOp1="205" TypeOp2="102" ValueOp2="205" TypeOp3="117" ValueOp3="205" TypeOp4="88" ValueOp4="205" TypeOp5="92" ValueOp5="205" TypeOp6="84" ValueOp6="205"  LucChien="4605000"/>
+	<Config LevelVIP="42" PointVIP="1455"  WC="8100000" WP="0" GP="0" 	YCLucChien="100000"	TypeOp1="89" ValueOp1="210" TypeOp2="102" ValueOp2="210" TypeOp3="117" ValueOp3="210" TypeOp4="88" ValueOp4="210" TypeOp5="92" ValueOp5="210" TypeOp6="84" ValueOp6="210"  LucChien="5505000"/>
+	<Config LevelVIP="43" PointVIP="1550"  WC="8550000" WP="0" GP="0" 	YCLucChien="200000"	TypeOp1="89" ValueOp1="215" TypeOp2="102" ValueOp2="215" TypeOp3="117" ValueOp3="215" TypeOp4="88" ValueOp4="215" TypeOp5="92" ValueOp5="215" TypeOp6="84" ValueOp6="215"  LucChien="6405000"/>
+	<Config LevelVIP="44" PointVIP="1600"  WC="9000000" WP="0" GP="0" 	YCLucChien="300000"	TypeOp1="89" ValueOp1="220" TypeOp2="102" ValueOp2="220" TypeOp3="117" ValueOp3="220" TypeOp4="88" ValueOp4="220" TypeOp5="92" ValueOp5="220" TypeOp6="84" ValueOp6="220"  LucChien="7305000"/>
+
+
+
+</LevelUpVip>
+</CustomVIPChar>

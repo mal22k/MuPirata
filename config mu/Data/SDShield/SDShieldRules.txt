@@ -1,0 +1,61 @@
+# SilentDevs Shield Rules DB
+# Formato:
+# Type=Version|Value=N
+# Type=Window|Pattern=texto|Severity=1-10|Action=Report|Note=descripcion
+# Type=Process|Pattern=archivo.exe|Severity=1-10|Action=Report|Note=descripcion
+# Type=ProcessHash|Pattern=archivo.exe,HASHFNV1A|Severity=1-10|Action=Report|Note=detecta binario aunque mantenga nombre esperado
+# Type=Module|Pattern=texto.dll|Severity=1-10|Action=Report|Note=dll cargada en el cliente
+# Type=TrustedHandle|Pattern=archivo.exe,HASHFNV1A permite herramientas propias con hash exacto.
+# Type=HandleAccess es interno: detecta procesos externos con permisos peligrosos sobre el cliente.
+#
+# Esta DB vive en el servidor. El cliente solo recibe una copia temporal en memoria.
+
+Type=Version|Value=5
+
+# Herramientas propias permitidas para abrir handle sobre el cliente.
+Type=TrustedHandle|Pattern=LauncherSilentDevs.exe,BE64FC63|Severity=0|Action=Allow|Note=Launcher oficial SilentDevs permitido por nombre y hash
+
+# Editores de memoria y herramientas comunes
+Type=Window|Pattern=Cheat Engine|Severity=10|Action=Report|Note=Editor de memoria detectado por titulo de ventana
+Type=Window|Pattern=ArtMoney|Severity=9|Action=Report|Note=Editor de memoria detectado por titulo de ventana
+Type=Window|Pattern=Memory Viewer|Severity=8|Action=Report|Note=Visor de memoria sospechoso
+Type=Window|Pattern=Process Hacker|Severity=7|Action=Report|Note=Herramienta de inspeccion de procesos
+Type=Window|Pattern=x64dbg|Severity=10|Action=Report|Note=Debugger detectado
+Type=Window|Pattern=x32dbg|Severity=10|Action=Report|Note=Debugger detectado
+Type=Window|Pattern=OllyDbg|Severity=10|Action=Report|Note=Debugger detectado
+Type=Window|Pattern=IDA Pro|Severity=8|Action=Report|Note=Herramienta de reversing detectada
+Type=Window|Pattern=Scylla|Severity=8|Action=Report|Note=Herramienta de dumping detectada
+Type=Window|Pattern=Extreme Injector|Severity=10|Action=Report|Note=Injector detectado
+Type=Window|Pattern=GH Injector|Severity=10|Action=Report|Note=Injector detectado
+
+Type=Process|Pattern=cheatengine.exe|Severity=10|Action=Report|Note=Editor de memoria
+Type=Process|Pattern=cheatengine-x86_64.exe|Severity=10|Action=Report|Note=Editor de memoria
+Type=Process|Pattern=artmoney.exe|Severity=9|Action=Report|Note=Editor de memoria
+Type=Process|Pattern=ollydbg.exe|Severity=10|Action=Report|Note=Debugger
+Type=Process|Pattern=x32dbg.exe|Severity=10|Action=Report|Note=Debugger
+Type=Process|Pattern=x64dbg.exe|Severity=10|Action=Report|Note=Debugger
+Type=Process|Pattern=ida.exe|Severity=8|Action=Report|Note=Reversing
+Type=Process|Pattern=ida64.exe|Severity=8|Action=Report|Note=Reversing
+Type=Process|Pattern=scylla.exe|Severity=8|Action=Report|Note=Dumper
+Type=Process|Pattern=processhacker.exe|Severity=7|Action=Report|Note=Inspeccion de procesos
+Type=Process|Pattern=procexp.exe|Severity=5|Action=Report|Note=Inspeccion de procesos
+Type=Process|Pattern=procmon.exe|Severity=5|Action=Report|Note=Monitor de procesos
+Type=Process|Pattern=extreme injector.exe|Severity=10|Action=Report|Note=Injector
+Type=Process|Pattern=gh injector.exe|Severity=10|Action=Report|Note=Injector
+
+# DLLs sospechosas cargadas dentro del cliente. Mantener lista afinada para evitar falsos positivos.
+Type=Module|Pattern=cheatengine|Severity=10|Action=Report|Note=Modulo relacionado a Cheat Engine cargado en cliente
+Type=Module|Pattern=speedhack|Severity=10|Action=Report|Note=Modulo speedhack cargado en cliente
+Type=Module|Pattern=injector|Severity=9|Action=Report|Note=Modulo injector sospechoso cargado en cliente
+Type=Module|Pattern=detours.dll|Severity=7|Action=Report|Note=Hooking library detectada
+Type=Module|Pattern=minhook|Severity=7|Action=Report|Note=Hooking library detectada
+
+# Macros genericos. Mantener en ReportOnly hasta validar falsos positivos.
+Type=Window|Pattern=Macro Recorder|Severity=4|Action=Report|Note=Macro generico
+Type=Process|Pattern=MacroRecorder.exe|Severity=4|Action=Report|Note=Macro generico
+Type=Process|Pattern=AutoHotkey.exe|Severity=4|Action=Report|Note=Automatizacion generica
+Type=Process|Pattern=tinytask.exe|Severity=4|Action=Report|Note=Automatizacion generica
+
+# Integridad de archivos:
+# Se delega al flujo oficial de GETMAIN/MainInfo.ini.
+# SDShield no duplica hashes de SilentDevs.exe, plugins ni .bin para evitar falsos positivos.

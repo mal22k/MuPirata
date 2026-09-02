@@ -1,0 +1,126 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM JEWEL
+// ============================================================================
+// Archivo usado por: CCustomJewel::Load("Custom\\CustomJewel.txt")
+// Estado actual   : ACTIVO; 9 joyas configuradas, indices 0-8.
+// Limite del source: MAX_CUSTOM_JEWEL = 15.
+//
+// FUNCION REAL DEL SISTEMA
+// Define joyas custom que se arrastran desde el inventario sobre un item destino.
+// Si el item cumple las restricciones de la seccion 0, el servidor consume la
+// joya y aplica el resultado de exito o fallo segun la tasa por AccountLevel.
+//
+// FLUJO AL USAR UNA JOYA
+// 1. ItemManager detecta que el item usado es una joya custom.
+// 2. ObjectManager valida si el item destino puede recibir esa joya.
+// 3. Calcula exito con RateAL0-RateAL3 segun el AccountLevel del jugador.
+// 4. Si acierta, aplica la seccion 1.
+// 5. Si falla, aplica la seccion 2.
+// 6. La joya se consume si la aplicacion fue valida.
+//
+// ITEMINDEX GLOBAL
+// JewelItem es indice global: GET_ITEM(Grupo, Index) = (Grupo * 512) + Index.
+// Las joyas actuales 7412-7420 corresponden al grupo 14, indices 244-252.
+//
+// TIPOS DE ITEM PERMITIDOS
+// Weapon controla armas, Armor controla armaduras y Wing controla alas/custom wing.
+// Valor 1 permite ese tipo; valor 0 lo bloquea; * equivale a sin restriccion.
+//
+// RATE POR TIPO DE CUENTA
+// RateAL0 = cuenta normal/free.
+// RateAL1 = VIP nivel 1.
+// RateAL2 = VIP nivel 2.
+// RateAL3 = VIP nivel 3.
+// En la configuracion actual todas estan a 100%, por eso no hay fallo real.
+//
+// SECCION 2 VACIA
+// La seccion de fallo esta vacia. Eso significa que, si una joya fallara, no le
+// restaria nivel/skill/luck/option al item. La joya igual se consume cuando la
+// aplicacion es valida.
+//
+// EXCELLENT, ANCIENT Y SOCKET
+// Excellent agrega opciones al azar segun la cantidad indicada. En alas el maximo
+// puede ser menor que 6 por reglas internas del source.
+// Ancient usa bits de SetOption. Valores actuales: 5 para ancient tipo 1 y 6
+// para ancient tipo 2.
+// Socket agrega sockets vacios 0xFE en posiciones libres.
+//
+// PRECIO Y MODELO
+// SalePrice reemplaza el precio de venta de la joya.
+// Model es el nombre usado por el cliente para identificar/mostrar el modelo.
+//
+// REGLAS DE EDICION
+// - Use indices 0-14 como maximo, salvo que se aumente MAX_CUSTOM_JEWEL.
+// - No repita JewelItem; el sistema busca la primera coincidencia por item.
+// - Use * solo donde el parser acepta -1/sin restriccion.
+// - Los bloques deben estar en orden 0, 1, 2 y terminar con end.
+// ============================================================================
+
+// ============================================================================
+// SECCION 0 - CONFIGURACION Y RESTRICCIONES DE CADA JOYA
+// ============================================================================
+// Index     : indice interno de la joya.
+// JewelItem : item global de la joya.
+// MinLvl/MaxLvl       : nivel minimo/maximo del item destino.
+// MaxSkill/MaxLuck    : maximo permitido de skill/luck antes de aplicar.
+// MinOpt/MaxOpt       : rango permitido de option/adicional.
+// MinExc/MaxExc       : cantidad minima/maxima de opciones excellent.
+// MaxAnc              : restriccion ancient; * sin restriccion.
+// MinSock/MaxSock     : cantidad minima/maxima de sockets.
+// Weapon/Armor/Wing   : tipos de item permitidos.
+// RateAL0-RateAL3     : porcentaje de exito por AccountLevel.
+// SalePrice           : precio de venta de la joya.
+// Model               : modelo/nombre grafico usado por cliente.
+//
+// Index    JewelItem   MinLvl   MaxLvl  MaxSkill   MaxLuck   MinOpt  MaxOpt  MinExc  MaxExc   MaxAnc   MinSock   MaxSock  Weapon   Armor   Wing   RateAL0   RateAL1   RateAL2   RateAL3   SalePrice   Model        Description Item
+0
+     0         7412       0        12       *          *         *       *       *       *       *         *         *       *        *       *      100       100       100       100         20     "Jewel180"    //Jewel Of Level
+     1         7413       0        15       0          *         *       *       *       *       *         *         *       *        *       *      100       100       100       100         20     "Jewel181"    //Jewel Of Skill
+     2         7414       0        15       *          0         *       *       *       *       *         *         *       *        *       *      100       100       100       100         20     "Jewel182"    //Jewel Of Luck
+     3         7415       0        15       *          *         0       6       *       *       *         *         *       *        *       *      100       100       100       100         20     "Jewel183"    //Jewel Of Adicional
+     4         7416       0        15       *          *         *       *       0       5       *         *         *       *        *       *      100       100       100       100         20     "Jewel184"    //Jewel Of Excelentt
+     5         7417       0        15       *          *         *       *       *       *       *         0         5       *        *       *      100       100       100       100         20     "Jewel185"    //Jewel Of Socket
+     6         7418       0        15       *          *         *       *       *       *       1         *         *       *        *       *      100       100       100       100         20     "Jewel187"    //Jewel Of Ancient 1
+     7         7419       0        15       *          *         *       *       *       *       2         *         *       *        *       *      100       100       100       100         20     "Jewel188"    //Jewel Of Ancient 2
+     8         7420       0        15       *          *         *       *       *       *       *         *         *       *        *       *      100       100       100       100         20     "Jewel186"    //Jewel Of Full
+end
+
+// ============================================================================
+// SECCION 1 - RESULTADO EN EXITO
+// ============================================================================
+// Define que se suma o aplica al item cuando la joya acierta.
+//
+// Level     : niveles a sumar, con tope interno +15.
+// Skill     : 1 agrega skill si el item puede tener skill.
+// Luck      : 1 agrega luck.
+// Option    : adicional a sumar, limitado por MaxItemOption del servidor.
+// Excellent : cantidad de opciones excellent aleatorias a agregar.
+// Ancient   : valor usado para SetOption ancient.
+// Socket    : cantidad de sockets vacios a agregar.
+//
+// Index   Level   Skill  Luck   Option   Excellent  Ancient   Socket
+1
+     0      15       0     0        0        0          0        0
+     1      0        1     0        0        0          0        0
+     2      0        0     1        0        0          0        0
+     3      0        0     0        7        0          0        0
+     4      0        0     0        0        1          0        0
+     5      0        0     0        0        0          0        1
+     6      0        0     0        0        0          5        0
+     7      0        0     0        0        0          6        0
+     8      15       1     1        7        6          0        0
+end
+
+// ============================================================================
+// SECCION 2 - RESULTADO EN FALLO
+// ============================================================================
+// Define que se resta al item si la joya falla.
+// Actualmente esta vacia, asi que no hay penalizacion al item en caso de fallo.
+//
+// Importante: el codigo de fallo solo resta Level, Skill, Luck y Option.
+// Aunque la estructura tiene Excellent/Ancient/Socket, esos campos no se aplican
+// en la rama de fallo actual del source.
+//
+// Index Level Skill Luck Option Excellent Ancient Socket
+2
+end

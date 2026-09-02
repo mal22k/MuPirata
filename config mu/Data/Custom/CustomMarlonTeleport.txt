@@ -1,0 +1,17 @@
+// ============================================================================
+// SILENTDEVS - TELETRANSPORTE DE MARLON
+// ESTADO VALIDADO: ACTIVO; 4 destinos configurados
+// SOURCE EX603: CTeleportMarlon::Load (cargado desde ServerInfo.cpp).
+// FUNCION: Define las posiciones posibles de Marlon.
+// REGLAS: * equivale a -1 (sin limite, cualquier valor o valor original, segun el campo).
+//          Los bloques numericos terminan con end. No elimine ni reordene columnas.
+// ============================================================================
+
+// SECCION 0 - UBICACIONES
+//    Map   X     Y     Direction
+0
+       2   198	  47	    2
+       0   137	  87	    1
+       3   169	  89	    2
+       7   17	  25	    2
+end

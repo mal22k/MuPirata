@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+============================================================================
+ SilentDevs Event Time Configuration
+ Emulator : SilentDevs MU Online Emulator
+ Website  : https://www.SilentDevs.net
+ Author   : SilentDevs Development
+============================================================================
+
+This panel is opened in game with H. It receives the real remaining time from
+the GameServer; it does not calculate schedules on the client.
+
+TypeEvent:
+  0 = Base events. TimeSlot: 0 Blood Castle, 1 Devil Square, 2 Chaos Castle.
+  1 = InvasionManager. TimeSlot is the invasion index.
+  2 = CustomArena. TimeSlot is the arena index in CustomArena.txt.
+  3 = Global timers. TimeSlot: 0 Illusion Temple, 1 Online Lottery,
+      2 Custom Quiz, 3 Custom Bonus, 4 Moss Merchant, 5 King of MU,
+      6 Drop Event, 7 Team vs Team, 8 Castle Siege, 9 Castle Deep,
+      10 Crywolf.
+
+GateMove1/2/3 only enables click-to-move when at least one valid gate is set.
+Use 0 for informational events that do not have a direct entry gate.
+-->
+<SauEventTime Enable="1">
+  <TimeEventConfig>
+    <!-- Base events -->
+    <Event Name="Blood Castle" TypeEvent="0" TimeSlot="0" IndexBoss="233" SizeBoss="0.5" IndexItemBag="19" GateMove1="500" GateMove2="500" GateMove3="500"/>
+    <Event Name="Devil Square" TypeEvent="0" TimeSlot="1" IndexBoss="237" SizeBoss="0.5" IndexItemBag="28" GateMove1="501" GateMove2="501" GateMove3="501"/>
+    <Event Name="Chaos Castle" TypeEvent="0" TimeSlot="2" IndexBoss="162" SizeBoss="0.5" IndexItemBag="26" GateMove1="502" GateMove2="502" GateMove3="502"/>
+    <Event Name="Illusion Temple" TypeEvent="3" TimeSlot="0" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="0" GateMove2="0" GateMove3="0"/>
+
+    <!-- Invasions enabled in InvasionManager.dat -->
+    <Event Name="Skeleton King" TypeEvent="1" TimeSlot="0" IndexBoss="55" SizeBoss="0.5" IndexItemBag="1" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Red Dragon" TypeEvent="1" TimeSlot="1" IndexBoss="42" SizeBoss="0.5" IndexItemBag="2" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Golden Dragon" TypeEvent="1" TimeSlot="2" IndexBoss="79" SizeBoss="0.5" IndexItemBag="112" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="White Wizard" TypeEvent="1" TimeSlot="3" IndexBoss="135" SizeBoss="0.5" IndexItemBag="27" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="New Year" TypeEvent="1" TimeSlot="4" IndexBoss="502" SizeBoss="0.5" IndexItemBag="117" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Rabbits" TypeEvent="1" TimeSlot="5" IndexBoss="413" SizeBoss="0.5" IndexItemBag="62" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Summer" TypeEvent="1" TimeSlot="6" IndexBoss="463" SizeBoss="0.5" IndexItemBag="68" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Cursed Santa" TypeEvent="1" TimeSlot="7" IndexBoss="476" SizeBoss="0.5" IndexItemBag="130" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Golden Invasion" TypeEvent="1" TimeSlot="8" IndexBoss="501" SizeBoss="0.5" IndexItemBag="126" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Medusa" TypeEvent="1" TimeSlot="9" IndexBoss="561" SizeBoss="0.5" IndexItemBag="106" GateMove1="0" GateMove2="0" GateMove3="0"/>
+
+    <!-- Global custom systems -->
+    <Event Name="Online Lottery" TypeEvent="3" TimeSlot="1" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Custom Quiz" TypeEvent="3" TimeSlot="2" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="0" GateMove2="0" GateMove3="0"/>
+    <Event Name="Custom Bonus" TypeEvent="3" TimeSlot="3" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="0" GateMove2="0" GateMove3="0"/>
+
+    <!-- Custom arenas declared in CustomArena.txt -->
+    <Event Name="Survivor" TypeEvent="2" TimeSlot="0" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="450" GateMove2="450" GateMove3="450"/>
+    <Event Name="DMxDM" TypeEvent="2" TimeSlot="1" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="451" GateMove2="451" GateMove3="451"/>
+    <Event Name="GMxGM" TypeEvent="2" TimeSlot="2" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="452" GateMove2="452" GateMove3="452"/>
+    <Event Name="BMxBM" TypeEvent="2" TimeSlot="3" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="453" GateMove2="453" GateMove3="453"/>
+    <Event Name="FMxFM" TypeEvent="2" TimeSlot="4" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="454" GateMove2="454" GateMove3="454"/>
+    <Event Name="LExLE" TypeEvent="2" TimeSlot="5" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="455" GateMove2="455" GateMove3="455"/>
+    <Event Name="ELFxELF" TypeEvent="2" TimeSlot="6" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="456" GateMove2="456" GateMove3="456"/>
+    <Event Name="SUMxSUM" TypeEvent="2" TimeSlot="7" IndexBoss="0" SizeBoss="0.0" IndexItemBag="-1" GateMove1="457" GateMove2="457" GateMove3="457"/>
+  </TimeEventConfig>
+</SauEventTime>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="79" Name="Loren Market">
+		<Spot Type="0" Description="NPC">
+			<Spawn MonsterIndex="546" Distance="0" StartX="131" StartY="109" Dir="3" />
+			<Spawn MonsterIndex="547" Distance="0" StartX="123" StartY="140" Dir="3" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

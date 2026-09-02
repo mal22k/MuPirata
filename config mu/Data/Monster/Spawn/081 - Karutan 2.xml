@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!--
+ ============================================================================ 
+  SilentDevs MonsterSetBase Configuration
+  ..........................................................................
+  Emulator : SilentDevs MU Online Emulator
+  Website  : https://www.SilentDevs.net
+  Author   : SilentDevs Development
+  Notice   : This file is part of the SilentDevs MuOnline Server files.
+  Editor   : Managed by SilentDevAdminTool Visual Spot Editor
+ ============================================================================ -->
+
+<MonsterSpawn>
+	<Map Number="81" Name="Karutan 2">
+		<Spot Type="1" Description="Single Point Monster">
+			<!-- Venomous Chain Scorpion -->
+			<Spawn MonsterIndex="569" Distance="4" StartX="134" StartY="153" EndX="134" EndY="153" Dir="-1" Count="5" />
+			<Spawn MonsterIndex="569" Distance="4" StartX="161" StartY="31" EndX="161" EndY="31" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="569" Distance="4" StartX="182" StartY="39" EndX="182" EndY="39" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="569" Distance="4" StartX="150" StartY="50" EndX="150" EndY="50" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="575" Distance="4" StartX="172" StartY="28" EndX="172" EndY="28" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="575" Distance="4" StartX="203" StartY="37" EndX="203" EndY="37" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="575" Distance="4" StartX="187" StartY="64" EndX="187" EndY="64" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="575" Distance="4" StartX="209" StartY="67" EndX="209" EndY="67" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="575" Distance="4" StartX="203" StartY="94" EndX="203" EndY="94" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="575" Distance="4" StartX="213" StartY="126" EndX="213" EndY="126" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="209" StartY="159" EndX="209" EndY="159" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="166" StartY="70" EndX="166" EndY="70" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="127" StartY="67" EndX="127" EndY="67" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="86" StartY="50" EndX="86" EndY="50" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="79" StartY="101" EndX="79" EndY="101" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="64" StartY="137" EndX="64" EndY="137" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="54" StartY="165" EndX="54" EndY="165" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="69" StartY="179" EndX="69" EndY="179" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="103" StartY="77" EndX="103" EndY="77" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="138" StartY="114" EndX="138" EndY="114" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="114" StartY="44" EndX="114" EndY="44" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="576" Distance="4" StartX="157" StartY="110" EndX="157" EndY="110" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="573" Distance="4" StartX="57" StartY="59" EndX="57" EndY="59" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="573" Distance="4" StartX="69" StartY="42" EndX="69" EndY="42" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="573" Distance="4" StartX="54" StartY="121" EndX="54" EndY="121" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="573" Distance="4" StartX="128" StartY="95" EndX="128" EndY="95" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="574" Distance="4" StartX="147" StartY="144" EndX="147" EndY="144" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="574" Distance="4" StartX="72" StartY="119" EndX="72" EndY="119" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="574" Distance="4" StartX="226" StartY="50" EndX="227" EndY="50" Dir="-1" Count="7" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

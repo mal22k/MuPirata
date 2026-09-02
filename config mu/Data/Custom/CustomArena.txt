@@ -1,0 +1,118 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM ARENA
+// ============================================================================
+// Archivo usado por: CCustomArena::Load("Custom\\CustomArena.txt")
+// Estado actual   : ACTIVO en GS y GSCS.
+// Switch real     : CustomArenaSwitch = 1
+// Config adicional: C:\MuServer\3-GameServer\Data\GameServerInfo - Custom.dat
+//                   C:\MuServer\6-GameServerCS\DATA\GameServerInfo - Custom.dat
+//
+// FUNCION REAL DEL SISTEMA
+// Define las arenas PvP programadas que aparecen en el panel del GameServer y
+// en el panel de eventos del cliente. Cada arena usa un indice interno del 0 al
+// 29, un horario de apertura, una regla de entrada y un gate de ingreso.
+//
+// FLUJO DEL EVENTO
+// 1. EMPTY  : espera el proximo horario declarado en la seccion 0.
+// 2. ALARMA : cuando faltan AlarmMin minutos, abre la entrada por StartGate.
+// 3. STAND  : al cerrar la entrada, espera StandMin minutos antes de iniciar.
+// 4. START  : pelea activa durante EventMin minutos.
+// 5. CLEAN  : calcula ranking, guarda resultado y expulsa por FinalGate.
+//
+// PUNTUACION
+// Al matar: el atacante gana CustomArenaKillerScoreIncrease puntos.
+// Al morir: la victima pierde CustomArenaVictimScoreDecrease puntos, sin bajar
+// de 0. En tu configuracion actual: +100 por kill y -10 por muerte.
+//
+// RESTRICCIONES IMPORTANTES
+// - El jugador no puede entrar si esta en party, guerra de guild, duelo o tienda.
+// - Al entrar, el servidor limpia todos los buffs/efectos activos del personaje.
+// - Solo pueden atacar dentro de la arena durante el estado START.
+// - Si MaxDeath no es *, al alcanzar ese numero de muertes el jugador sale por
+//   FinalGate y se guarda su ranking con posicion 0.
+// - RequireClass valida clase y evolucion: 0 = no entra, 1 = clase base o mayor,
+//   2 = segunda evolucion o mayor, 3 = tercera evolucion.
+//
+// MAPA Y GATES
+// Custom Arena usa MAP_SILENT, que en este emulador es el mapa 40.
+// Los StartGate actuales 450-457 estan definidos en Data\Move\Gate.txt y deben
+// llevar a zonas de arena compatibles. Si se cambia un StartGate, tambien debe
+// existir en Gate.txt y conviene actualizar Custom\MonsterEvent\CustomEventTime.xml
+// para que el panel H siga mostrando el boton/movimiento correcto.
+//
+// SIGNIFICADO DE *
+// En este archivo, * se interpreta como -1. En campos de tiempo significa
+// "cualquier valor"; en limites significa "sin limite".
+//
+// No elimine columnas ni cambie el orden de secciones. Los bloques terminan con
+// end y el parser depende de ese formato.
+// ============================================================================
+
+// ============================================================================
+// SECCION 0 - HORARIOS DE APERTURA
+// ============================================================================
+// Cada linea programa un intento de apertura para una arena.
+//
+// Index     : indice de arena definido en la seccion 1.
+// Year      : anio exacto o * para todos.
+// Month     : mes exacto o * para todos.
+// Day       : dia del mes o * para todos.
+// DayOfWeek : dia de semana o * para todos. En esta base, 7 se usa como domingo.
+// Hour      : hora 0-23 o * para todas las horas.
+// Minute    : minuto 0-59.
+// Second    : segundo 0-59.
+//
+// Ejemplo actual:
+// Arena 0 (SURVIVOR) abre cada hora al minuto 10.
+// Arenas 1-7 abren los domingos entre 17:00 y 19:00, cada 20 minutos.
+//
+// Index  Year  Month  Day  DayOfWeek  Hour  Minute  Second
+0
+0         *      *       *     *       *     10        0
+1         *      *       *     7       17    00        0
+2         *      *       *     7       17    20        0
+3         *      *       *     7       17    40        0
+4         *      *       *     7       18    00        0
+5         *      *       *     7       18    20        0
+6         *      *       *     7       18    40        0
+7         *      *       *     7       19    00        0
+end
+
+// ============================================================================
+// SECCION 1 - REGLAS DE CADA ARENA
+// ============================================================================
+// Define el comportamiento de cada arena declarada en la seccion 0.
+//
+// Index      : indice interno de arena. Debe coincidir con el Index del horario.
+// Name       : nombre mostrado en GS/panel y usado en mensajes del evento.
+// AlarmMin   : minutos antes del horario en que se permite entrar por StartGate.
+// StandMin   : espera entre cierre de entrada e inicio real de la pelea.
+// EventMin   : duracion de la pelea activa.
+// CloseMin   : tiempo de limpieza/cierre antes de volver a esperar horario.
+// StartGate  : gate para entrar y respawnear mientras el jugador siga activo.
+// FinalGate  : gate de salida al finalizar o al llegar a MaxDeath.
+// MinUser    : minimo de jugadores para iniciar. Si no se cumple, vuelve a EMPTY.
+// MaxUser    : maximo de jugadores aceptados, tope interno 100.
+// MaxDeath   : maximo de muertes permitidas antes de sacar al jugador; * sin limite.
+// MinLvl/MaxLvl, MinMLvl/MaxMLvl, MinReset/MaxReset, MinMReset/MaxMReset:
+//              restricciones de nivel, master level, resets y master resets.
+// DW..RF     : clase permitida y evolucion minima requerida.
+//
+// Clases: DW=Dark Wizard, DK=Dark Knight, FE=Fairy Elf, MG=Magic Gladiator,
+//         DL=Dark Lord, SU=Summoner, RF=Rage Fighter.
+//
+// Nota de balance:
+// El dano dentro de Custom Arena se ajusta aparte con CustomArenaDamageRate y
+// CustomArenaElementalDamageRate en GameServerInfo - Custom.dat.
+//
+// Index         Name            AlarmMin     StandMin    EventMin    CloseMin    StartGate    FinalGate    MinUser    MaxUser    MaxDeath    MinLvl    MaxLvl    MinMLvl    MaxMLvl    MinReset    MaxReset    MinMReset    MaxMReset   DW  DK  FE  MG  DL  SU RF
+1
+0                "SURVIVOR"        5           0           7             0           450           1           4         100          *         0        400        *           *          85           *           *             *       1   1  1   1   1   1  1                 
+1                "MGxMG"           5           0           5             0           451           1           4         100          *         0        400        *           *          *            *           *             *       0   0  0   1   0   0  0                 
+2                "SMxSM"           5           0           5             0           452           1           4         100          *         0        400        *           *          *            *           *             *       1   0  0   0   0   0  0                 
+3                "BKxBK"           5           0           5             0           453           1           4         100          *         0        400        *           *          *            *           *             *       0   1  0   0   0   0  0                 
+4                "RFxRF"           5           0           5             0           454           1           4         100          *         0        400        *           *          *            *           *             *       0   0  0   0   0   0  1                 
+5                "DLxDL"           5           0           5             0           455           1           4         100          *         0        400        *           *          *            *           *             *       0   0  0   0   1   0  0                 
+6                "ELFxELF"         5           0           5             0           456           1           4         100          *         0        400        *           *          *            *           *             *       0   0  1   0   0   0  0                 
+7                "SUMxSUM"         5           0           5             0           457           1           4         100          *         0        400        *           *          *            *           *             *       0   0  0   0   0   1  0                 
+end

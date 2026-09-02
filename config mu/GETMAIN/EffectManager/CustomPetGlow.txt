@@ -1,0 +1,37 @@
+//=====================================================================
+// Programmer SilentDevs
+// Files SilentDevs
+// PET  Glow
+//=====================================================================
+
+//	#ItemIndex	#GlowIndex	#GlowType	#GlowColorR	#GlowColorG	#GlowColorB
+ 	 6876		1		    576		     0		     255		0
+ 	 6876		2		    576		     0		     255		0
+ 	 6876		3		    576		     0		     255		0
+	 6876		1		    70		     50		     205		50
+ 	 6876		2		    70		     50		     205		50
+	 6876		3		    70		     50		     205		50
+//	#ItemIndex	#GlowIndex	#GlowType	#GlowColorR	#GlowColorG	#GlowColorB
+ 	 6877		1		    576		     255		 255		255
+ 	 6877		2		    576		     255		 255		255
+ 	 6877		3		    576		     255		 255		255
+	 6877		1		    70		     255		 255		255
+ 	 6877		2		    70		     255		 255		255
+	 6877		3		    70		     255		 255		255
+//	#ItemIndex	#GlowIndex	#GlowType	#GlowColorR	#GlowColorG	#GlowColorB
+ 	 6878		1		    576		     186		  85		211
+ 	 6878		2		    576		     186		  85		211
+ 	 6878		3		    576		     186		  85		211
+	 6878		1		    70		     128		  0		    128
+ 	 6878		2		    70		     128		  0		    128
+	 6878		3		    70		     128		  0		    128
+//	#ItemIndex	#GlowIndex	#GlowType	#GlowColorR	#GlowColorG	#GlowColorB
+ 	 6879		1		    576		     0		     148		222
+ 	 6879		2		    576		     0		     148		222
+ 	 6879		3		    576		     0		     148		222
+	 6879		1		    70		     0		     110		166
+ 	 6879		2		    70		     0		     110		166
+	 6879		3		    70		     0		     110		166
+
+
+end

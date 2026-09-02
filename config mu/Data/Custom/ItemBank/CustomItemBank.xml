@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+DOCUMENTACION SILENTDEVS
+Archivo: CustomItemBank.xml
+Funcion: Banco custom de items/joyas con deposito, retiro y autoloot.
+Como configurar: Enable del nodo CustomItemBank activa/desactiva el sistema completo. Active activa cada item; AutoLoot envia al banco al recoger.
+Activar/Desactivar: Para desactivar todo use Enable="0". Para desactivar un item use Active="0".
+Notas: Traduccion: khong = no; gui = depositar/enviar; rut = retirar; toi da = maximo.
+Importante: no borrar este archivo si el source lo carga directamente; use Enable="0" o quite entradas concretas.
+-->
+<!-- 
+//=========================================================================================================================================
+// WWW.SILENTDEVS.NET - PREMIUM
+//=========================================================================================================================================
+	Enable
+-->
+<CustomItemBank Enable="1" >
+	<Message>
+	<!-- Mess-->
+		<Msg Index="0"	Text="[Banco] Esta funcion no esta disponible." />
+		<Msg Index="1"	Text="[Banco] No tienes %s en el inventario para guardar." />
+		<Msg Index="2"	Text="[Banco] No tienes suficientes joyas para retirar." />
+		<Msg Index="3"	Text="[Banco] Solo puedes guardar un maximo de %d %s." />
+		<Msg Index="4"	Text="[Banco] Guardaste (+%d) %s en el banco." />
+		<Msg Index="5"	Text="[Banco] Retiraste (%d) %s del banco." />
+		<Msg Index="6"	Text="[Banco] No tienes espacio suficiente en el inventario." />
+	</Message>
+<!-- Active = 0 no se muestra en el banco y no permite guardar/retirar.
+		AutoLoot = 1 envia automaticamente al banco al recoger el item, sin pasar por el inventario.
+		AutoLoot = 0 conserva el deposito manual; el jugador aun puede activar su AutoPick individual desde la ventana.
+		ItemIndex,ItemLevel = Item
+		MaxCountTypeX = cantidad maxima permitida segun tipo de cuenta/VIP (0, 1, 2, 3).
+	-->
+	<ListBank>
+		<Item Active="1" AutoLoot="1" ItemIndex="6159" ItemLevel="0"    Cum10Index="6285"  Cum10Level="0"  Cum20Index="6285" Cum20Level="1" Cum30Index="6285" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />    
+     	<Item Active="1" AutoLoot="1" ItemIndex="7181" ItemLevel="0"    Cum10Index="6174"  Cum10Level="0"  Cum20Index="6174" Cum20Level="1" Cum30Index="6174" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />    
+		<Item Active="1" AutoLoot="1" ItemIndex="7182" ItemLevel="0"    Cum10Index="6175"  Cum10Level="0"  Cum20Index="6175" Cum20Level="1" Cum30Index="6175" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />    
+		<Item Active="1" AutoLoot="1" ItemIndex="7184" ItemLevel="0"    Cum10Index="6280"  Cum10Level="0"  Cum20Index="6280" Cum20Level="1" Cum30Index="6280" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />    
+		<Item Active="1" AutoLoot="1" ItemIndex="7190" ItemLevel="0"    Cum10Index="6281"  Cum10Level="0"  Cum20Index="6281" Cum20Level="1" Cum30Index="6281" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />    
+		<Item Active="1" AutoLoot="1" ItemIndex="7210" ItemLevel="0"    Cum10Index="6284"  Cum10Level="0"  Cum20Index="6284" Cum20Level="1" Cum30Index="6284" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />	
+		<Item Active="1" AutoLoot="1" ItemIndex="7209" ItemLevel="0"    Cum10Index="6283"  Cum10Level="0"  Cum20Index="6283" Cum20Level="1" Cum30Index="6283" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />	
+		<Item Active="1" AutoLoot="1" ItemIndex="7211" ItemLevel="0"    Cum10Index="6286"  Cum10Level="0"  Cum20Index="6286" Cum20Level="1" Cum30Index="6286" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />	
+		<Item Active="1" AutoLoot="1" ItemIndex="7212" ItemLevel="0"    Cum10Index="6287"  Cum10Level="0"  Cum20Index="6287" Cum20Level="1" Cum30Index="6287" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />	
+		<Item Active="1" AutoLoot="1" ItemIndex="7199" ItemLevel="0"    Cum10Index="6282"  Cum10Level="0"  Cum20Index="6282" Cum20Level="1" Cum30Index="6282" Cum30Level="2"   MaxCountType0="10000" MaxCountType1="10000" MaxCountType2="10000" MaxCountType3="10000" MaxRut="10" />	
+
+
+	</ListBank>
+	
+
+</CustomItemBank>

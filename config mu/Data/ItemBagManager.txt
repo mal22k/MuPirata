@@ -1,0 +1,133 @@
+//Index   ItemIndex   ItemLevel   MonsterClass   SpecialValue	DropInventory   Comment
+0	7179	0	*	*	0	"Item\Box of Luck"	//Box of Luck
+1	*	*	55	*	0	"Monster\Skeleton King"	//Skeleton King
+2	*	*	42	*	0	"Monster\Red Dragon"	//Red Dragon
+3	7179	1	*	*	0	"Item\Star of Christmas"	//Star of Christmas
+4	7179	3	*	*	0	"Item\Heart of Love"	//Heart of Love
+5	7179	5	*	*	0	"Item\Silver Medal"	//Silver Medal
+6	7179	6	*	*	0	"Item\Gold Medal"	//Gold Medal
+7	7179	8	*	*	1	"Item\Box of Kundun 1"	//Box of Kundun 1
+8	7179	9	*	*	1	"Item\Box of Kundun 2"	//Box of Kundun 2
+9	7179	10	*	*	1	"Item\Box of Kundun 3"	//Box of Kundun 3
+10	7179	11	*	*	1	"Item\Box of Kundun 4"	//Box of Kundun 4
+11	7179	12	*	*	1	"Item\Box of Kundun 5"	//Box of Kundun 5
+12	*	*	*	0	0	"Special\Blood Castle 1"	//Blood Castle 1
+13	*	*	*	1	0	"Special\Blood Castle 2"	//Blood Castle 2
+14	*	*	*	2	0	"Special\Blood Castle 3"	//Blood Castle 3
+15	*	*	*	3	0	"Special\Blood Castle 4"	//Blood Castle 4
+16	*	*	*	4	0	"Special\Blood Castle 5"	//Blood Castle 5
+17	*	*	*	5	0	"Special\Blood Castle 6"	//Blood Castle 6
+18	*	*	*	6	0	"Special\Blood Castle 7"	//Blood Castle 7
+19	*	*	*	7	0	"Special\Blood Castle 8"	//Blood Castle 8
+20	*	*	*	8	0	"Special\Chaos Castle 1"	//Chaos Castle 1
+21	*	*	*	9	0	"Special\Chaos Castle 2"	//Chaos Castle 2
+22	*	*	*	10	0	"Special\Chaos Castle 3"	//Chaos Castle 3
+23	*	*	*	11	0	"Special\Chaos Castle 4"	//Chaos Castle 4
+24	*	*	*	12	0	"Special\Chaos Castle 5"	//Chaos Castle 5
+25	*	*	*	13	0	"Special\Chaos Castle 6"	//Chaos Castle 6
+26	*	*	*	14	0	"Special\Chaos Castle 7"	//Chaos Castle 7
+27	*	*	135	*	0	"Monster\White Wizard"	//White Wizard
+28	*	*	*	15	0	"Special\Starter Ring 40"	//Starter Ring 40
+29	*	*	*	16	0	"Special\Starter Ring 80"	//Starter Ring 80
+30	7179	7	*	*	0	"Item\Box of Heaven"	//Box of Heaven
+31	7179	13	*	*	0	"Item\Blue Heart"	//Blue Heart
+32	*	*	275	*	0	"Monster\Kundun"	//Kundun
+33	*	*	295	*	0	"Monster\Erohim"	//Erohim
+34	*	*	*	17	0	"Special\Senior Mix"	//Senior Mix
+35	6176	*	*	*	0	"Item\Red Ribbon Box"	//Red Ribbon Box
+36	6177	*	*	*	0	"Item\Green Ribbon Box"	//Green Ribbon Box
+37	6178	*	*	*	0	"Item\Blue Ribbon Box"	//Blue Ribbon Box
+38	7200	0	*	*	0	"Item\Pink Chocolate Box"	//Pink Chocolate Box
+39	7201	0	*	*	0	"Item\Red Chocolate Box"	//Red Chocolate Box
+40	7202	0	*	*	0	"Item\Blue Chocolate Box"	//Blue Chocolate Box
+41	7200	1	*	*	0	"Item\Purple Candy Box"	//Purple Candy Box
+42	7201	1	*	*	0	"Item\Red Candy Box"	//Red Candy Box
+43	7202	1	*	*	0	"Item\Blue Candy Box"	//Blue Candy Box
+44	*	*	340	*	0	"Monster\Dark Elf"	//Dark Elf
+45	*	*	349	*	0	"Monster\Balgass"	//Balgass
+46	*	*	362	*	0	"Monster\Maya Hand Left"	//Maya Hand Left
+47	*	*	363	*	0	"Monster\Maya Hand Right"	//Maya Hand Right
+48	*	*	361	*	0	"Monster\Nightmare"	//Nightmare
+49	7213	*	*	*	0	"Item\Halloween Pumpkin"	//Halloween Pumpkin
+50	*	*	365	*	0	"Monster\Fortune Pouch"	//Fortune Pouch
+51	7220	*	*	*	0	"Item\Game Master Box"	//Game Master Box
+52	7223	*	*	*	0	"Item\Green Mistery Box"	//Green Mistery Box
+53	7224	*	*	*	0	"Item\Pink Mistery Box"	//Pink Mistery Box
+54	7225	*	*	*	0	"Item\Purple Mistery Box"	//Purple Mistery Box
+55	*	*	*	18	0	"Special\Leo the Helper"	//Leo the Helper
+56	*	*	*	19	0	"Special\Illusion Temple 1"	//Illusion Temple 1
+57	*	*	*	20	0	"Special\Illusion Temple 2"	//Illusion Temple 2
+58	*	*	*	21	0	"Special\Illusion Temple 3"	//Illusion Temple 3
+59	*	*	*	22	0	"Special\Illusion Temple 4"	//Illusion Temple 4
+60	*	*	*	23	0	"Special\Illusion Temple 5"	//Illusion Temple 5
+61	*	*	*	24	0	"Special\Illusion Temple 6"	//Illusion Temple 6
+62	*	*	413	*	0	"Monster\Lunar Rabbit"	//Lunar Rabbit
+63	7252	*	*	*	0	"Item\Cherry Blossom Box"	//Cherry Blossom Box
+64	*	*	*	25	0	"Special\Cherry Blossom Mix 1"	//Cherry Blossom Mix 1
+65	*	*	*	26	0	"Special\Cherry Blossom Mix 2"	//Cherry Blossom Mix 2
+66	*	*	*	27	0	"Special\Cherry Blossom Mix 3"	//Cherry Blossom Mix 3
+67	*	*	459	*	0	"Monster\Selupan"	//Selupan
+68	*	*	463	*	0	"Monster\Fire Flame Ghost"	//Fire Flame Ghost
+69	*	*	*	28	0	"Special\Santa Claus"	//Santa Claus
+70	*	*	*	29	0	"Special\Lucky Coin 1"	//Lucky Coin 1
+71	*	*	*	30	0	"Special\Lucky Coin 2"	//Lucky Coin 2
+72	*	*	*	31	0	"Special\Lucky Coin 3"	//Lucky Coin 3
+73	*	*	*	32	0	"Special\Chaos Card Mix 1"	//Chaos Card Mix 1
+74	*	*	*	33	0	"Special\Chaos Card Mix 2"	//Chaos Card Mix 2
+75	*	*	*	34	0	"Special\Chaos Card Mix 3"	//Chaos Card Mix 3
+76	*	*	*	35	0	"Special\Chaos Card Mix 4"	//Chaos Card Mix 4
+77	*	*	*	36	0	"Special\Chaos Card Mix 5"	//Chaos Card Mix 5
+78	*	*	*	37	0	"Special\Double Goer Silver Chest 1"	//Double Goer Silver Chest 1
+79	*	*	*	38	0	"Special\Double Goer Silver Chest 2"	//Double Goer Silver Chest 2
+80	*	*	*	39	0	"Special\Double Goer Silver Chest 3"	//Double Goer Silver Chest 3
+81	*	*	*	40	0	"Special\Double Goer Silver Chest 4"	//Double Goer Silver Chest 4
+82	*	*	*	41	0	"Special\Double Goer Silver Chest 5"	//Double Goer Silver Chest 5
+83	*	*	*	42	0	"Special\Double Goer Golden Chest 1"	//Double Goer Golden Chest 1
+84	*	*	*	43	0	"Special\Double Goer Golden Chest 2"	//Double Goer Golden Chest 2
+85	*	*	*	44	0	"Special\Double Goer Golden Chest 3"	//Double Goer Golden Chest 3
+86	*	*	*	45	0	"Special\Double Goer Golden Chest 4"	//Double Goer Golden Chest 4
+87	*	*	*	46	0	"Special\Double Goer Golden Chest 5"	//Double Goer Golden Chest 5
+88	*	*	*	47	0	"Special\Imperial Guardian Side Boss 1"	//Imperial Guardian Side Boss 1
+89	*	*	*	48	0	"Special\Imperial Guardian Side Boss 2"	//Imperial Guardian Side Boss 2
+90	*	*	*	49	0	"Special\Imperial Guardian Side Boss 3"	//Imperial Guardian Side Boss 3
+91	*	*	*	50	0	"Special\Imperial Guardian Side Boss 4"	//Imperial Guardian Side Boss 4
+92	*	*	*	51	0	"Special\Imperial Guardian Side Boss 5"	//Imperial Guardian Side Boss 5
+93	*	*	*	52	0	"Special\Imperial Guardian Main Boss 1"	//Imperial Guardian Main Boss 1
+94	*	*	*	53	0	"Special\Imperial Guardian Main Boss 2"	//Imperial Guardian Main Boss 2
+95	*	*	*	54	0	"Special\Imperial Guardian Main Boss 3"	//Imperial Guardian Main Boss 3
+96	*	*	*	55	0	"Special\Imperial Guardian Main Boss 4"	//Imperial Guardian Main Boss 4
+97	*	*	*	56	0	"Special\Imperial Guardian Main Boss 5"	//Imperial Guardian Main Boss 5
+98	7179	14	*	*	0	"Item\Blue Luck Pouch"	//Blue Luck Pouch
+99	7179	15	*	*	0	"Item\Red Luck Pouch"	//Red Luck Pouch
+100	7291	*	*	*	0	"Item\Golden Box"	//Golden Box
+101	7292	*	*	*	0	"Item\Silver Box"	//Silver Box
+102	7309	*	*	*	0	"Item\Shining Jewelry Case"	//Shining Jewelry Case
+103	7310	*	*	*	0	"Item\Elegant Jewelry Case"	//Elegant Jewelry Case
+104	7311	*	*	*	0	"Item\Steel Jewelry Case"	//Steel Jewelry Case
+105	7312	*	*	*	0	"Item\Old Jewelry Case"	//Old Jewelry Case
+106	*	*	561	*	0	"Monster\Medusa"	//Medusa
+107	*	*	*	57	0	"Special\Crywolf"	//Crywolf
+108	*	*	43	*	0	"Monster\Golden Budge Dragon"	//Golden Budge Dragon
+109	*	*	78	*	0	"Monster\Golden Goblin"	//Golden Goblin
+110	*	*	54	*	0	"Monster\Golden Soldier"	//Golden Soldier
+111	*	*	53	*	0	"Monster\Golden Titan"	//Golden Titan
+112	*	*	79	*	0	"Monster\Golden Dragon"	//Golden Dragon
+113	*	*	80	*	0	"Monster\Golden Lizard King"	//Golden Lizard King
+114	*	*	81	*	0	"Monster\Golden Vepar"	//Golden Vepar
+115	*	*	82	*	0	"Monster\Golden Tantalos"	//Golden Tantalos
+116	*	*	83	*	0	"Monster\Golden Iron Wheel"	//Golden Iron Wheel
+117	*	*	502	*	0	"Monster\Golden Rabbit"	//Golden Rabbit
+118	*	*	493	*	0	"Monster\Golden Dark Knight"	//Golden Dark Knight
+119	*	*	494	*	0	"Monster\Golden Devil"	//Golden Devil
+120	*	*	495	*	0	"Monster\Golden Stone Golem"	//Golden Stone Golem
+121	*	*	496	*	0	"Monster\Golden Crust"	//Golden Crust
+122	*	*	497	*	0	"Monster\Golden Satyros"	//Golden Satyros
+123	*	*	498	*	0	"Monster\Golden Twin Tail"	//Golden Twin Tail
+124	*	*	499	*	0	"Monster\Golden Iron Knight"	//Golden Iron Knight
+125	*	*	500	*	0	"Monster\Golden Napin"	//Golden Napin
+126	*	*	501	*	0	"Monster\Golden Great Dragon"	//Golden Great Dragon
+127	*	*	*	60	0	"Special\Online Lottery"	//Online Lottery
+128	*	*	*	61	0	"Special\Gift System"	//Gift System
+129	6827	*	*	*	0	"Item\Pet egg"	//Pet egg
+130	*	*	476	*	0	"Monster\Cursed Santa"	//Cursed Santa
+end

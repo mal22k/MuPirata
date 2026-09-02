@@ -1,0 +1,7 @@
+// 									Custom Option Ring pen Exl
+// Type 1 is a ring, type 2 is a damage pen, and type 3 is a magic pen.
+//===============================================================================================================
+//ItemID        Model                   		Type    ColorR  ColorG  ColorB
+
+
+end

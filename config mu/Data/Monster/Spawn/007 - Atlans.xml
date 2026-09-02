@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="7" Name="Atlans">
+		<Spot Type="0" Description="NPC">
+			<Spawn MonsterIndex="240" Distance="0" StartX="24" StartY="24" Dir="1" />
+			<Spawn MonsterIndex="253" Distance="0" StartX="28" StartY="23" Dir="1" />
+			<Spawn MonsterIndex="257" Distance="0" StartX="18" StartY="25" Dir="3" />
+		</Spot>				
+		<Spot Type="1" Description="Multi~Spawn">
+			<Spawn MonsterIndex="45" Distance="4" StartX="35" StartY="54" EndX="35" EndY="54" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="45" Distance="4" StartX="53" StartY="37" EndX="53" EndY="37" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="45" Distance="4" StartX="78" StartY="23" EndX="78" EndY="23" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="45" Distance="4" StartX="29" StartY="112" EndX="29" EndY="112" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="45" Distance="4" StartX="72" StartY="85" EndX="72" EndY="85" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="47" Distance="4" StartX="118" StartY="31" EndX="118" EndY="31" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="47" Distance="4" StartX="147" StartY="16" EndX="147" EndY="16" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="47" Distance="4" StartX="221" StartY="18" EndX="221" EndY="18" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="47" Distance="4" StartX="188" StartY="21" EndX="188" EndY="21" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="46" Distance="4" StartX="218" StartY="64" EndX="218" EndY="64" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="46" Distance="4" StartX="196" StartY="51" EndX="196" EndY="51" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="46" Distance="4" StartX="222" StartY="100" EndX="222" EndY="100" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="51" Distance="4" StartX="165" StartY="62" EndX="165" EndY="62" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="51" Distance="4" StartX="135" StartY="69" EndX="135" EndY="69" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="51" Distance="4" StartX="114" StartY="95" EndX="114" EndY="95" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="52" Distance="4" StartX="80" StartY="133" EndX="80" EndY="133" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="52" Distance="4" StartX="39" StartY="167" EndX="39" EndY="167" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="52" Distance="4" StartX="120" StartY="135" EndX="120" EndY="135" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="49" Distance="4" StartX="161" StartY="117" EndX="161" EndY="117" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="49" Distance="4" StartX="115" StartY="181" EndX="115" EndY="181" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="49" Distance="4" StartX="174" StartY="146" EndX="174" EndY="146" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="48" Distance="4" StartX="225" StartY="193" EndX="225" EndY="193" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="48" Distance="4" StartX="229" StartY="142" EndX="229" EndY="142" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="48" Distance="4" StartX="126" StartY="209" EndX="126" EndY="209" Dir="-1" Count="7" />
+		</Spot>
+	</Map>
+	<Map Number="7" Name="Atlans (1 ~ 3)">
+		<Spot Type="2" Description="Single Point Monster">
+			<Spawn MonsterIndex="48" Distance="30" StartX="236" StartY="177" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="212" StartY="96" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="21" StartY="41" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="23" StartY="33" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="31" StartY="31" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="39" StartY="23" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="41" StartY="11" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="21" StartY="48" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="47" StartY="41" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="39" StartY="63" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="72" StartY="42" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="23" StartY="56" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="23" StartY="64" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="35" StartY="70" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="29" StartY="75" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="62" StartY="21" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="78" StartY="19" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="67" StartY="36" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="24" StartY="86" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="48" StartY="57" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="45" StartY="70" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="19" StartY="125" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="49" StartY="8" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="46" StartY="20" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="39" StartY="35" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="37" StartY="50" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="20" StartY="75" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="63" StartY="44" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="68" StartY="52" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="49" StartY="64" Dir="-1" />
+			<Spawn MonsterIndex="45" Distance="30" StartX="29" StartY="52" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="46" StartY="21" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="48" StartY="9" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="50" StartY="65" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="51" StartY="70" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="80" StartY="33" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="62" StartY="17" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="61" StartY="11" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="69" StartY="19" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="75" StartY="15" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="83" StartY="15" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="84" StartY="21" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="67" StartY="27" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="59" StartY="34" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="86" StartY="37" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="78" StartY="44" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="71" StartY="52" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="65" StartY="59" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="65" StartY="51" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="55" StartY="44" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="40" StartY="48" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="31" StartY="53" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="24" StartY="90" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="21" StartY="100" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="25" StartY="105" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="30" StartY="110" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="21" StartY="118" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="38" StartY="117" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="141" StartY="11" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="127" StartY="17" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="114" StartY="26" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="107" StartY="18" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="104" StartY="13" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="115" StartY="12" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="89" StartY="62" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="75" StartY="76" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="69" StartY="87" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="50" StartY="93" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="23" StartY="72" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="78" StartY="23" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="70" StartY="38" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="55" StartY="25" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="30" StartY="122" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="17" StartY="126" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="122" StartY="29" Dir="-1" />
+			<Spawn MonsterIndex="46" Distance="30" StartX="108" StartY="40" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="66" StartY="222" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="63" StartY="218" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="57" StartY="225" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="171" StartY="162" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="175" StartY="169" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="178" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="173" StartY="179" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="171" StartY="187" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="165" StartY="193" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="159" StartY="198" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="152" StartY="201" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="144" StartY="201" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="137" StartY="205" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="124" StartY="206" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="115" StartY="210" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="104" StartY="211" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="94" StartY="210" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="87" StartY="214" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="76" StartY="215" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="47" StartY="224" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="46" StartY="217" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="29" StartY="226" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="22" StartY="213" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="24" StartY="204" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="34" StartY="200" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="35" StartY="209" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="40" StartY="210" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="45" StartY="205" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="47" StartY="211" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="37" StartY="232" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="226" StartY="52" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="22" StartY="230" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="41" StartY="224" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="82" StartY="215" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="167" StartY="156" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="177" StartY="146" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="156" StartY="156" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="162" StartY="149" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="152" StartY="169" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="72" StartY="128" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="70" StartY="138" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="61" StartY="147" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="49" StartY="158" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="33" StartY="169" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="22" StartY="173" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="55" StartY="181" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="67" StartY="186" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="73" StartY="180" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="89" StartY="184" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="101" StartY="183" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="111" StartY="183" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="122" StartY="178" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="129" StartY="171" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="138" StartY="167" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="147" StartY="164" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="170" StartY="145" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="163" StartY="138" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="53" StartY="220" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="41" StartY="222" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="29" StartY="231" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="22" StartY="232" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="27" StartY="209" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="36" StartY="205" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="109" StartY="211" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="131" StartY="207" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="155" StartY="196" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="167" StartY="154" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="177" StartY="19" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="118" StartY="167" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="111" StartY="175" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="63" StartY="178" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="162" StartY="141" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="138" StartY="176" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="41" StartY="109" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="49" StartY="100" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="54" StartY="89" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="62" StartY="87" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="71" StartY="82" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="79" StartY="70" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="85" StartY="64" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="94" StartY="60" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="101" StartY="50" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="106" StartY="48" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="112" StartY="45" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="109" StartY="38" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="118" StartY="37" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="122" StartY="29" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="119" StartY="20" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="124" StartY="14" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="133" StartY="14" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="150" StartY="14" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="161" StartY="11" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="166" StartY="16" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="171" StartY="18" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="182" StartY="14" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="190" StartY="24" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="196" StartY="27" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="200" StartY="17" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="208" StartY="9" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="218" StartY="47" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="222" StartY="14" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="117" StartY="74" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="139" StartY="61" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="152" StartY="61" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="172" StartY="55" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="189" StartY="56" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="226" StartY="46" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="240" StartY="11" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="227" StartY="16" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="152" StartY="22" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="142" StartY="15" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="128" StartY="22" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="116" StartY="9" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="113" StartY="27" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="33" StartY="108" Dir="-1" />
+			<Spawn MonsterIndex="47" Distance="30" StartX="35" StartY="118" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="228" StartY="16" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="237" StartY="17" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="237" StartY="26" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="238" StartY="40" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="235" StartY="48" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="251" StartY="51" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="206" StartY="55" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="200" StartY="49" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="193" StartY="52" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="184" StartY="52" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="178" StartY="58" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="170" StartY="61" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="156" StartY="59" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="144" StartY="63" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="133" StartY="61" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="133" StartY="70" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="125" StartY="78" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="118" StartY="85" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="124" StartY="90" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="116" StartY="98" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="106" StartY="101" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="99" StartY="108" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="91" StartY="115" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="81" StartY="123" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="126" StartY="167" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="111" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="90" StartY="177" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="76" StartY="180" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="62" StartY="178" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="42" StartY="178" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="27" StartY="161" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="42" StartY="152" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="19" StartY="159" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="62" StartY="140" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="70" StartY="133" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="168" StartY="54" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="7" StartY="52" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="225" StartY="45" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="207" StartY="9" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="154" StartY="69" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="111" StartY="82" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="81" StartY="116" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="72" StartY="125" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="122" StartY="66" Dir="-1" />
+			<Spawn MonsterIndex="49" Distance="30" StartX="19" StartY="230" Dir="-1" />
+			<Spawn MonsterIndex="49" Distance="30" StartX="24" StartY="227" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="219" StartY="56" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="215" StartY="65" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="232" StartY="55" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="231" StartY="64" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="238" StartY="71" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="229" StartY="74" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="217" StartY="75" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="225" StartY="81" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="215" StartY="86" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="223" StartY="89" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="218" StartY="101" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="232" StartY="95" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="223" StartY="70" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="211" StartY="59" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="232" StartY="86" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="208" StartY="104" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="235" StartY="106" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="224" StartY="108" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="219" StartY="124" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="225" StartY="117" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="227" StartY="123" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="219" StartY="133" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="226" StartY="134" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="224" StartY="142" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="226" StartY="154" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="221" StartY="150" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="220" StartY="168" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="232" StartY="166" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="231" StartY="176" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="217" StartY="197" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="215" StartY="182" Dir="-1" />
+			<Spawn MonsterIndex="49" Distance="30" StartX="211" StartY="192" Dir="-1" />
+			<Spawn MonsterIndex="49" Distance="30" StartX="229" StartY="203" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="208" StartY="183" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="215" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="222" StartY="190" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="229" StartY="190" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="230" StartY="181" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="226" StartY="161" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="208" StartY="198" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="232" StartY="206" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="231" StartY="196" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="223" StartY="202" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="224" StartY="184" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="230" StartY="171" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="221" StartY="158" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="233" StartY="124" Dir="-1" />
+			<Spawn MonsterIndex="48" Distance="30" StartX="232" StartY="102" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="200" StartY="103" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="192" StartY="101" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="179" StartY="92" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="187" StartY="94" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="177" StartY="101" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="166" StartY="117" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="159" StartY="112" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="156" StartY="122" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="173" StartY="109" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="167" StartY="107" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="150" StartY="120" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="142" StartY="125" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="136" StartY="129" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="129" StartY="130" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="117" StartY="130" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="121" StartY="135" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="144" StartY="109" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="122" StartY="144" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="112" StartY="137" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="101" StartY="147" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="97" StartY="142" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="144" StartY="132" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="93" StartY="136" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="90" StartY="148" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="124" StartY="125" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="87" StartY="132" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="86" StartY="140" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="78" StartY="145" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="79" StartY="136" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="67" StartY="147" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="71" StartY="140" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="105" StartY="137" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="83" StartY="155" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="81" StartY="164" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="70" StartY="168" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="76" StartY="174" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="85" StartY="185" Dir="-1" />
+			<Spawn MonsterIndex="52" Distance="30" StartX="87" StartY="175" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="65" StartY="187" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="64" StartY="159" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="186" StartY="99" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="185" StartY="90" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="147" StartY="114" Dir="-1" />
+			<Spawn MonsterIndex="51" Distance="30" StartX="84" StartY="170" Dir="-1" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="36" Name="Kalima 7">
+		<Spot Type="0" Description="NPC">
+			<!-- Oracle Layla -->
+			<Spawn MonsterIndex="259" Distance="0" StartX="7" StartY="19" Dir="2" />
+		</Spot>
+		<Spot Type="2" Description="Single Point Monster">
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="30" StartY="75" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="35" StartY="21" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="28" StartY="17" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="36" StartY="11" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="51" StartY="11" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="42" StartY="12" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="45" StartY="22" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="52" StartY="24" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="53" StartY="17" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="60" StartY="9" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="67" StartY="22" Dir="-1" />
+			<!-- Aegis -->
+			<Spawn MonsterIndex="331" Distance="30" StartX="60" StartY="22" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="69" StartY="9" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="74" StartY="14" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="82" StartY="8" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="81" StartY="19" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="86" StartY="13" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="92" StartY="6" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="96" StartY="16" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="99" StartY="9" Dir="-1" />
+			<!-- Rogue Centurion -->
+			<Spawn MonsterIndex="332" Distance="30" StartX="109" StartY="19" Dir="-1" />
+			<!-- Blood Soldier -->
+			<Spawn MonsterIndex="333" Distance="30" StartX="110" StartY="9" Dir="-1" />
+			<!-- Blood Soldier -->
+			<Spawn MonsterIndex="333" Distance="30" StartX="118" StartY="17" Dir="-1" />
+			<!-- Blood Soldier -->
+			<Spawn MonsterIndex="333" Distance="30" StartX="110" StartY="35" Dir="-1" />
+			<!-- Blood Soldier -->
+			<Spawn MonsterIndex="333" Distance="30" StartX="121" StartY="27" Dir="-1" />
+			<!-- Blood Soldier -->
+			<Spawn MonsterIndex="333" Distance="30" StartX="119" StartY="35" Dir="-1" />
+			<!-- Blood Soldier -->
+			<Spawn MonsterIndex="333" Distance="30" StartX="114" StartY="44" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="120" StartY="50" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="105" StartY="54" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="119" StartY="57" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="110" StartY="65" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="121" StartY="67" Dir="-1" />
+			<!-- Blood Soldier -->
+			<Spawn MonsterIndex="333" Distance="30" StartX="108" StartY="28" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="111" StartY="72" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="105" StartY="86" Dir="-1" />
+			<!-- Necron -->
+			<Spawn MonsterIndex="335" Distance="30" StartX="118" StartY="84" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="118" StartY="95" Dir="-1" />
+			<!-- Necron -->
+			<Spawn MonsterIndex="335" Distance="30" StartX="104" StartY="101" Dir="-1" />
+			<!-- Necron -->
+			<Spawn MonsterIndex="335" Distance="30" StartX="115" StartY="106" Dir="-1" />
+			<!-- Necron -->
+			<Spawn MonsterIndex="335" Distance="30" StartX="93" StartY="96" Dir="-1" />
+			<!-- Necron -->
+			<Spawn MonsterIndex="335" Distance="30" StartX="93" StartY="84" Dir="-1" />
+			<!-- Necron -->
+			<Spawn MonsterIndex="335" Distance="30" StartX="82" StartY="85" Dir="-1" />
+			<!-- Necron -->
+			<Spawn MonsterIndex="335" Distance="30" StartX="82" StartY="77" Dir="-1" />
+			<!-- Necron -->
+			<Spawn MonsterIndex="335" Distance="30" StartX="74" StartY="76" Dir="-1" />
+			<!-- Death Centurion -->
+			<Spawn MonsterIndex="336" Distance="30" StartX="87" StartY="90" Dir="-1" />
+			<!-- Death Centurion -->
+			<Spawn MonsterIndex="336" Distance="30" StartX="68" StartY="77" Dir="-1" />
+			<!-- Death Centurion -->
+			<Spawn MonsterIndex="336" Distance="30" StartX="63" StartY="72" Dir="-1" />
+			<!-- Death Centurion -->
+			<Spawn MonsterIndex="336" Distance="30" StartX="58" StartY="78" Dir="-1" />
+			<!-- Death Angel -->
+			<Spawn MonsterIndex="334" Distance="30" StartX="120" StartY="75" Dir="-1" />
+			<!-- Death Centurion -->
+			<Spawn MonsterIndex="336" Distance="30" StartX="57" StartY="71" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="32" StartY="50" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="42" StartY="51" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="38" StartY="58" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="29" StartY="65" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="46" StartY="66" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="42" StartY="97" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="37" StartY="109" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="47" StartY="107" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="53" StartY="93" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="35" StartY="87" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="32" StartY="77" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="41" StartY="78" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="37" StartY="67" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="46" StartY="86" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="23" StartY="85" Dir="-1" />
+			<!-- Schriker -->
+			<Spawn MonsterIndex="337" Distance="30" StartX="23" StartY="70" Dir="-1" />
+			<!-- Kundun -->
+			<Spawn MonsterIndex="275" Distance="30" StartX="26" StartY="76" Dir="-1" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

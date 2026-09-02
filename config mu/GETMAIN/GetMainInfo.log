@@ -1,0 +1,83 @@
+[2026-08-30 08:19:12] ========================================
+[2026-08-30 08:19:12] GetMainInfo.exe - Iniciando ejecucion
+[2026-08-30 08:19:12] ========================================
+[2026-08-30 08:19:12] Directorio de trabajo actual: C:\Users\Lucky\Desktop\silentdev\MuServer\GETMAIN
+[2026-08-30 08:19:12] Ejecutando GetMainInfo()...
+[2026-08-30 08:19:12] === INICIO GetMainInfo() ===
+[2026-08-30 08:19:12] Verificando existencia del archivo MainInfo.ini...
+[2026-08-30 08:19:12] Archivo MainInfo.ini encontrado. Iniciando lectura...
+[2026-08-30 08:19:12] Lectura de MainInfo.ini completada.
+[2026-08-30 08:19:12] Cargando archivos de efectos...
+[2026-08-30 08:19:12]   - CustomEffectStatic.txt cargado
+[2026-08-30 08:19:12]   - CustomEffectDynamic.txt cargado
+[2026-08-30 08:19:12]   - CEffect.txt cargado
+[2026-08-30 08:19:12]   - CustomMonsterGlow.txt cargado
+[2026-08-30 08:19:12]   - CustomMonsterEffect.txt cargado
+[2026-08-30 08:19:12] Cargando archivos de items...
+[2026-08-30 08:19:12]   - CustomCape.txt cargado
+[2026-08-30 08:19:12]   - CustomClaws.txt cargado
+[2026-08-30 08:19:12]   - CustomCrossbow.txt cargado
+[2026-08-30 08:19:12]   - CustomItem.txt cargado
+[2026-08-30 08:19:12]   - CustomItemPosition.txt cargado
+[2026-08-30 08:19:12]   - CustomJewel.txt cargado
+[2026-08-30 08:19:12]   - CustomWing.txt cargado
+[2026-08-30 08:19:12]   - CustomLucChien.xml cargado
+[2026-08-30 08:19:12]   - CustomMessage.txt cargado
+[2026-08-30 08:19:12] Cargando ItemStack.txt...
+[2026-08-30 08:19:12]   - ItemStack.txt cargado correctamente
+[2026-08-30 08:19:12] Cargando CustomRingPen.txt...
+[2026-08-30 08:19:12]   - CustomRingPen.txt cargado correctamente
+[2026-08-30 08:19:12] Cargando CustomMonster.txt...
+[2026-08-30 08:19:12]   - CustomMonster.txt cargado
+[2026-08-30 08:19:12] Cargando CustomNPCName.txt...
+[2026-08-30 08:19:12]   - CustomNPCName.txt cargado
+[2026-08-30 08:19:12] Cargando archivos de mascotas...
+[2026-08-30 08:19:12]   - CustomPet.txt cargado
+[2026-08-30 08:19:12]   - CustomPetEffect.txt cargado
+[2026-08-30 08:19:12]   - CustomPetGlow.txt cargado
+[2026-08-30 08:19:12] Cargando CustomMapList.txt...
+[2026-08-30 08:19:12]   - CustomMapList.txt cargado
+[2026-08-30 08:19:12] Cargando CustomBuyVip.txt...
+[2026-08-30 08:19:12]   - CustomBuyVip.txt cargado
+[2026-08-30 08:19:12] Calculando CRC32 de archivos...
+[2026-08-30 08:19:12]   - AVISO: No se pudo calcular CRC32 de SilentDevs.exe
+[2026-08-30 08:19:12] Plugins configurados: 2
+[2026-08-30 08:19:12]   - CRC32 de opengl32.dll: 0xD0A77B40
+[2026-08-30 08:19:12]   - CRC32 de SDShield.dll: 0xE2A4368F
+[2026-08-30 08:19:12] Camara no configurada.
+[2026-08-30 08:19:12] Cifrando datos...
+[2026-08-30 08:19:12] Datos cifrados. Tamano: 1187680 bytes
+[2026-08-30 08:19:12] Directorio de destino leido del INI: [Path]
+[2026-08-30 08:19:12] Creando estructura de directorios...
+[2026-08-30 08:19:12]   - Intentando crear directorio: Path
+[2026-08-30 08:19:12]   - Directorio Path OK
+[2026-08-30 08:19:12] Ruta completa del archivo: Path\SilentDevsMain.bin
+[2026-08-30 08:19:12] Intentando crear archivo SilentDevsMain.bin...
+[2026-08-30 08:19:12] OK: Archivo creado: Path\SilentDevsMain.bin
+[2026-08-30 08:19:12] Escribiendo datos en el archivo...
+[2026-08-30 08:19:12] OK: 1187680 bytes escritos en el archivo
+[2026-08-30 08:19:12] === FIN GetMainInfo() ===
+[2026-08-30 08:19:12] Ejecutando GetTextInfo()...
+[2026-08-30 08:19:12] === INICIO GetTextInfo() ===
+[2026-08-30 08:19:12] Cargando archivos de texto...
+[2026-08-30 08:19:12]   - CustomBuffEffect_ENG.txt cargado
+[2026-08-30 08:19:12]   - CustomBuffEffect_VTM.txt cargado
+[2026-08-30 08:19:12]   - CustomBuffEffect_SPN.txt cargado
+[2026-08-30 08:19:12]   - CustomBuffEffect_POR.txt cargado
+[2026-08-30 08:19:12]   - CustomItemToolTip.txt cargado
+[2026-08-30 08:19:12]   - CustomTextTooltip.txt cargado
+[2026-08-30 08:19:12] Cifrando datos de texto...
+[2026-08-30 08:19:12] Datos cifrados. Tamano: 1770912 bytes
+[2026-08-30 08:19:12] Directorio de destino leido del INI: [Path]
+[2026-08-30 08:19:12] Creando estructura de directorios...
+[2026-08-30 08:19:12]   - Intentando crear directorio: Path
+[2026-08-30 08:19:12]   - Directorio Path OK
+[2026-08-30 08:19:12] Ruta completa del archivo: Path\SilentDevsText.bin
+[2026-08-30 08:19:12] Intentando crear archivo SilentDevsText.bin...
+[2026-08-30 08:19:12] OK: Archivo creado: Path\SilentDevsText.bin
+[2026-08-30 08:19:12] Escribiendo datos en el archivo...
+[2026-08-30 08:19:12] OK: 1770912 bytes escritos en el archivo
+[2026-08-30 08:19:12] === FIN GetTextInfo() ===
+[2026-08-30 08:19:12] ========================================
+[2026-08-30 08:19:12] Ejecucion finalizada correctamente!
+[2026-08-30 08:19:12] ========================================

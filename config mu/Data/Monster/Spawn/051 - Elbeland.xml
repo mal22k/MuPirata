@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="51" Name="Elbeland">
+		<Spot Type="0" Description="NPC">
+		    <Spawn MonsterIndex="253" Distance="0" StartX="44" StartY="229" Dir="1" />
+			<Spawn MonsterIndex="417" Distance="0" StartX="37" StartY="219" Dir="3" />
+			<Spawn MonsterIndex="452" Distance="0" StartX="46" StartY="243" Dir="1" />
+			<Spawn MonsterIndex="453" Distance="0" StartX="51" StartY="243" Dir="1" />
+			<Spawn MonsterIndex="257" Distance="0" StartX="43" StartY="191" Dir="3" />
+			<Spawn MonsterIndex="257" Distance="0" StartX="57" StartY="232" Dir="3" />
+			<Spawn MonsterIndex="257" Distance="0" StartX="73" StartY="220" Dir="1" />
+			<Spawn MonsterIndex="240" Distance="0" StartX="50" StartY="229" Dir="1" />
+		</Spot>
+		<Spot Type="1" Description="Multi~Spawn">
+			<Spawn MonsterIndex="418" Distance="4" StartX="53" StartY="154" EndX="53" EndY="154" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="418" Distance="4" StartX="24" StartY="147" EndX="24" EndY="147" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="418" Distance="4" StartX="78" StartY="155" EndX="78" EndY="155" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="421" Distance="4" StartX="115" StartY="218" EndX="115" EndY="218" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="421" Distance="4" StartX="103" StartY="190" EndX="103" EndY="190" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="421" Distance="4" StartX="125" StartY="169" EndX="125" EndY="169" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="419" Distance="4" StartX="96" StartY="43" EndX="96" EndY="43" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="419" Distance="4" StartX="74" StartY="65" EndX="74" EndY="65" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="419" Distance="4" StartX="84" StartY="19" EndX="84" EndY="19" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="422" Distance="4" StartX="116" StartY="91" EndX="116" EndY="91" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="422" Distance="4" StartX="97" StartY="110" EndX="97" EndY="110" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="422" Distance="4" StartX="132" StartY="119" EndX="132" EndY="119" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="423" Distance="4" StartX="176" StartY="177" EndX="176" EndY="177" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="423" Distance="4" StartX="200" StartY="151" EndX="200" EndY="151" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="423" Distance="4" StartX="211" StartY="120" EndX="211" EndY="120" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="424" Distance="4" StartX="192" StartY="96" EndX="192" EndY="96" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="424" Distance="4" StartX="232" StartY="151" EndX="232" EndY="151" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="424" Distance="4" StartX="170" StartY="78" EndX="170" EndY="78" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="425" Distance="4" StartX="175" StartY="32" EndX="175" EndY="32" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="425" Distance="4" StartX="206" StartY="28" EndX="206" EndY="28" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="425" Distance="4" StartX="225" StartY="91" EndX="225" EndY="91" Dir="-1" Count="7" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

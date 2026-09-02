@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="70" Name="Imperial Guardian 2">
+		<Spot Type="4" Description="Single Point Monster">
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="45" StartY="67" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="42" StartY="62" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="39" StartY="67" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="35" StartY="62" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="32" StartY="67" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="29" StartY="62" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="26" StartY="67" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="24" StartY="62" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="22" StartY="66" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="41" StartY="122" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="41" StartY="126" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="41" StartY="130" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="45" StartY="128" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="50" StartY="128" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="55" StartY="129" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="55" StartY="134" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="55" StartY="139" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="55" StartY="144" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="55" StartY="149" Dir="8" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

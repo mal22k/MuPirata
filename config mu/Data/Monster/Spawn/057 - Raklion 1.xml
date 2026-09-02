@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!--
+ ============================================================================ 
+  SilentDevs MonsterSetBase Configuration
+  ..........................................................................
+  Emulator : SilentDevs MU Online Emulator
+  Website  : https://www.SilentDevs.net
+  Author   : SilentDevs Development
+  Notice   : This file is part of the SilentDevs MuOnline Server files.
+  Editor   : Managed by SilentDevAdminTool Visual Spot Editor
+ ============================================================================ -->
+
+<MonsterSpawn>
+	<Map Number="57" Name="Raklion 1">
+	
+		<Spot Type="1" Description="Single Point Monster">
+			<!-- Dark Iron Knight -->
+			
+			<Spawn MonsterIndex="454" Distance="4" StartX="202" StartY="206" EndX="202" EndY="206" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="454" Distance="4" StartX="178" StartY="215" EndX="178" EndY="215" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="454" Distance="4" StartX="179" StartY="191" EndX="179" EndY="191" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="454" Distance="4" StartX="156" StartY="223" EndX="156" EndY="223" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="455" Distance="4" StartX="157" StartY="191" EndX="157" EndY="191" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="455" Distance="4" StartX="141" StartY="206" EndX="141" EndY="206" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="455" Distance="4" StartX="114" StartY="220" EndX="114" EndY="220" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="455" Distance="4" StartX="98" StartY="193" EndX="98" EndY="193" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="455" Distance="4" StartX="119" StartY="175" EndX="119" EndY="175" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="456" Distance="4" StartX="119" StartY="148" EndX="119" EndY="148" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="456" Distance="4" StartX="133" StartY="131" EndX="133" EndY="131" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="456" Distance="4" StartX="154" StartY="142" EndX="154" EndY="142" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="457" Distance="4" StartX="155" StartY="113" EndX="155" EndY="113" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="457" Distance="4" StartX="183" StartY="102" EndX="183" EndY="102" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="457" Distance="4" StartX="186" StartY="141" EndX="186" EndY="141" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="457" Distance="4" StartX="215" StartY="163" EndX="215" EndY="163" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="564" Distance="4" StartX="179" StartY="65" EndX="179" EndY="65" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="564" Distance="4" StartX="204" StartY="51" EndX="204" EndY="51" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="564" Distance="4" StartX="209" StartY="26" EndX="209" EndY="26" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="458" Distance="4" StartX="210" StartY="112" EndX="210" EndY="112" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="458" Distance="4" StartX="226" StartY="82" EndX="226" EndY="82" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="458" Distance="4" StartX="237" StartY="125" EndX="237" EndY="125" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="458" Distance="4" StartX="223" StartY="47" EndX="223" EndY="47" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="562" Distance="4" StartX="125" StartY="97" EndX="125" EndY="97" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="562" Distance="4" StartX="97" StartY="115" EndX="97" EndY="115" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="562" Distance="4" StartX="72" StartY="133" EndX="72" EndY="133" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="562" Distance="4" StartX="65" StartY="86" EndX="65" EndY="86" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="563" Distance="4" StartX="132" StartY="39" EndX="132" EndY="39" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="563" Distance="4" StartX="104" StartY="21" EndX="104" EndY="21" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="563" Distance="4" StartX="70" StartY="39" EndX="70" EndY="39" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="563" Distance="4" StartX="31" StartY="53" EndX="31" EndY="53" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="564" Distance="4" StartX="36" StartY="91" EndX="36" EndY="91" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="564" Distance="4" StartX="36" StartY="124" EndX="36" EndY="124" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="564" Distance="4" StartX="39" StartY="159" EndX="39" EndY="159" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="565" Distance="4" StartX="58" StartY="166" EndX="58" EndY="166" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="565" Distance="4" StartX="53" StartY="196" EndX="53" EndY="196" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="565" Distance="4" StartX="46" StartY="228" EndX="47" EndY="229" Dir="-1" Count="7" />
+			<Spawn MonsterIndex="565" Distance="4" StartX="25" StartY="214" EndX="25" EndY="214" Dir="-1" Count="7" />
+		</Spot>
+
+		<Spot Type="2" Description="Single Point Monster">
+			<!-- Dark Iron Knight -->
+			<Spawn MonsterIndex="565" Distance="30" StartX="66" StartY="137" Dir="-1" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

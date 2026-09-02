@@ -1,0 +1,69 @@
+0
+//**************************
+//index	MuunUtil rank	OptionIndex	evol   Comment
+6856	  1	      1	          1	     0      //Muun                    
+6857	  1	      1	          2	     0      //Muun	                    
+6858	  1	      1	          3	     0      //Muun                
+6859	  1	      1	          4	     0      //Muun                    
+6860	  1	      1	          5	     0      //Muun                
+6861	  1	      1	          6	     0      //Muun                
+6862	  1	      1	          7	     0      //Muun                    
+6863	  1	      1	          8	     0      //Muun            
+6864	  1	      1	          9	     0      //Muun            
+6865	  1	      1	          10	 0      //Muun            
+6866	  1	      1	          11	 0      //Muun            
+6867	  1	      1	          1	     0      //Muun            
+6868	  1	      1	          1	     0      //Muun            
+6869	  1	      1	          1	     0      //Muun            
+6870	  1	      1	          1	     0      //Muun            
+6871	  1	      1	          1	     0      //Muun            
+6872	  1	      1	          1	     0      //Muun            
+6873	  1	      1	          1	     0      //Muun                  
+6874	  1	      1	          1	     0      //Muun            
+6875	  1	      1	          1	     0      //Muun                                
+
+end                                        		                              
+                                                                          
+                                                                          
+1
+//==== Type này để nguyên khỏi config
+//index		opt1	opt2		opt3	opt4		opt5	MaxOpt	SpecialOpt	SpecialVal	Map		Time	DayOfWeek	MinHor	MaxHor	Minlvl	MaxLvl	MinML	MaxML
+	1	     1	     1	         1	     1	     		1	  13	   1		   150		*		*	      *		      *	     *	      *	      *	      *	      *
+end	
+//==== Option Dame Pet 
+2
+//OptionIndex = OptionIndex trên **************************
+//OptionIndex	AddHP		AddMP	DamageRate   AttackSpeed   DoubleDmgRate	TripleDmgRate	AddExp	ResistDoubleDmg	ResistIgnoreDefense	ResistIgnoreSD	ResistCriticalDMG	ResistExceDMG	BlockStuck	ReflectRate
+		1	    10000		10000	  40		    50		    10		          0	              50	   0			         0			     0		            0			        0			0		    0
+		2	    20000		20000	  40	        50		    11		          0	              60	   0			         0			     0		            0			        0			0		    0
+		3	    30000		30000	  40	        50		    12		          0	              70	   0			         0			     0		            0			        0			0		    0
+		4	    40000		40000	  40	        50		    13		          0	              80	   0			         0			     0		            0			        0			0		    0
+		5	    50000		50000	  40	        50		    14		          0	              90	   0			         0			     0		            0			        0			0		    0
+		6	    60000		60000	  40	        50		    15		          0	              100	   0			         0			     0		            0			        0			0		    0
+		7	    70000		70000	  40	        50		    16		          0	              110	   0			         0			     0		            0			        0			0		    0
+		8	    80000		80000	  40	        50		    17		          0	              120	   0			         0			     0		            0			        0			0		    0
+		9	    90000		90000	  40	        50		    18		          0	              130	   0			         0			     0		            0			        0			0		    0
+		10	    100000		100000	  40	        50		    19		          0	              140	   0			         0			     0		            0			        0			0		    0
+		11	    110000		110000	  40	        50		    20		          0	              150	   0			         0			     0		            0			        0			0		    0
+
+end                                                                         
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+
+
+
+
+
+
+
+
+
+
+

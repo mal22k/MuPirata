@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MonsterSpawn>
+	<Map Number="71" Name="Imperial Guardian 3">
+		<Spot Type="4" Description="Single Point Monster">
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="113" StartY="193" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="112" StartY="198" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="112" StartY="203" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="107" StartY="203" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="102" StartY="203" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="97" StartY="203" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="93" StartY="203" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="93" StartY="198" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="93" StartY="192" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="93" StartY="187" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="97" StartY="186" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="102" StartY="186" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="107" StartY="186" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="112" StartY="187" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="222" StartY="165" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="222" StartY="170" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="222" StartY="175" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="222" StartY="180" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="222" StartY="185" Dir="8" />
+			<!-- Trap -->
+			<Spawn MonsterIndex="523" Distance="0" StartX="222" StartY="190" Dir="8" />
+		</Spot>
+	</Map>
+</MonsterSpawn>

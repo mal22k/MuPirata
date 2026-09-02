@@ -1,0 +1,48 @@
+// ============================================================================
+// SILENTDEVS - CUSTOM ZONA PK / PK FREE
+// ============================================================================
+// ESTADO VALIDADO:
+// - ACTIVO Y SOPORTADO POR SOURCE.
+// - Cargado por GameServer desde: Data\Custom\CustomZonaPK.txt
+// - Source principal: CCustomPKFree::Load(), CMapManager::GetMapNonPK()
+//   y User.cpp usando gPKFree.CheckPKFree().
+//
+// FUNCION REAL:
+// Define rectangulos dentro de un mapa donde el comportamiento PK cambia.
+//
+// 1) COMBATE EN LA ZONA:
+//    Si atacante o objetivo estan dentro del rectangulo, MapManager trata esa
+//    zona como PK permitido aunque el mapa normalmente sea NonPK.
+//
+// 2) PENALIZACION PK:
+//    La columna PKFree controla si dentro del rectangulo se evita sumar PKCount.
+//    - PKFree = 1 : zona de PK libre; permite pelear sin sumar penalizacion PK.
+//    - PKFree = 0 : zona PK normal; puede permitir combate, pero conserva logica PK.
+//
+// FORMATO:
+// Map X1 Y1 X2 Y2 PKFree
+//
+// COLUMNAS:
+// Map    = numero del mapa.
+// X1     = coordenada X inicial, esquina superior/menor.
+// Y1     = coordenada Y inicial, esquina superior/menor.
+// X2/TX  = coordenada X final, esquina inferior/mayor.
+// Y2/TY  = coordenada Y final, esquina inferior/mayor.
+// PKFree = 1 sin penalizacion PK, 0 con penalizacion PK normal.
+//
+// REGLAS:
+// - X1 debe ser menor o igual que X2.
+// - Y1 debe ser menor o igual que Y2.
+// - No usar "*" en este archivo; el parser espera numeros reales.
+// - El archivo termina con end.
+//
+// EJEMPLOS COMENTADOS:
+// // Map X1  Y1  X2  Y2  PKFree
+// // 0   100 170 120 185 1    // Lorencia: zona PK libre sin sumar PK.
+// // 0   130 130 145 145 0    // Lorencia: zona PK con penalizacion normal.
+// // 2   220  40 240  60 1    // Devias: zona PK libre.
+// ============================================================================
+
+// Map    X1    Y1    X2    Y2    PKFree
+0        102   172   118   180   1
+end

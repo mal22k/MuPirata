@@ -1,0 +1,32 @@
+//=================================================================================================================
+// DOCUMENTACION SILENTDEVS
+// Archivo: CommonManager\CustomBuyVip.txt
+// Funcion: Planes VIP que se empaquetan dentro del cliente para mostrarse en la ventana F2.
+//
+// Mantener sincronizado con:
+//   C:\MuServer\Data\Custom\CustomBuyVip.txt
+//
+// Columnas:
+//   Index   = Plan interno 0, 1 o 2.
+//   Exp     = Bonus de experiencia mostrado en F2.
+//   Drop    = Bonus de drop mostrado en F2.
+//   Days    = Duracion mostrada en dias.
+//   Coin1   = Costo en moneda 1.
+//   Coin2   = Costo en moneda 2.
+//   Coin3   = Costo en moneda 3.
+//   VipName = Nombre visible del boton/plan.
+//
+// Despues de cambiar este archivo:
+//   Ejecute GetMainInfo.exe para regenerar SilentDevsMain.bin y SilentDevsText.bin,
+//   luego copie esos .bin al cliente.
+//
+// Nota:
+//   Estos valores son visuales del cliente. El GameServer aplica el beneficio real por AccountLevel
+//   usando los rates AL1/AL2/AL3 de GameServerInfo - Common.dat.
+//=================================================================================================================
+// Index   Exp   Drop   Days   Coin1   Coin2   Coin3   VipName
+//=================================================================================================================
+   0      10    10     30     10      0       0       "VIP Bronze"
+   1      20    20     30     15      0       0       "VIP Silver"
+   2      30    30     30     20      0       0       "VIP Gold"
+end

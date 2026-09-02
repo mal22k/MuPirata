@@ -1,0 +1,23 @@
+//SkillIndex   MinSpeed  MaxSpeed  MaxDelay  MaxCount   Comment
+// SilentDevs Shield baseline: bloquea rafagas imposibles de skills sin depender del nombre del hack.
+// Skills continuos compatibles con cliente FPS120: ventana de 1000 ms y margen de red hasta 150 paquetes.
+// Si algun skill legitimo queda muy sensible, revisar primero su FPS/paquetes antes de ampliar el limite.
+9              0         -1        1000      150        // Evil Spirit (FPS120 safe)
+14             0         -1        700       12         // Inferno
+39             0         -1        650       14         // Ice Storm
+41             0         -1        450       18         // Twisting Slash
+42             0         -1        600       14         // Rageful Blow
+43             0         -1        700       12         // Death Stab
+56             0         -1        500       16         // Power Slash / Ice Blade base
+78             0         -1        1000      150        // Fire Scream (FPS120 safe)
+215            0         -1        650       14         // Chain Lightning
+330            0         -1        450       18         // Master Twisting Slash Improved
+332            0         -1        450       18         // Master Twisting Slash Enhanced
+385            0         -1        1000      150        // Master Evil Spirit Improved (FPS120 safe)
+391            0         -1        650       14         // Master Ice Storm Improved
+393            0         -1        650       14         // Master Ice Storm Enhanced
+481            0         -1        450       18         // Master Twisting Slash Improved 2
+487            0         -1        1000      150        // Master Evil Spirit Improved 2 (FPS120 safe)
+518            0         -1        1000      150        // Master Fire Scream Improved (FPS120 safe)
+520            0         -1        1000      150        // Master Fire Scream Enhanced (FPS120 safe)
+end
