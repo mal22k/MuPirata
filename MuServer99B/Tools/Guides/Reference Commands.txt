@@ -1,0 +1,72 @@
+/move <MapName>: Move to a specified map.
+/guildwar <GuildTarget>: Initiate a guild war with a specific guild.
+/guildsoccer <GuildTarget>: Initiate a guild soccer match with a specific guild.
+/request <on-off-auto> <password>: Set request mode to on, off, or auto with a password.
+/post <message>: Post a message.
+/addstr <amount>: Add strength points to your character.
+/addagi <amount>: Add agility points to your character.
+/addvit <amount>: Add vitality points to your character.
+/addene <amount>: Add energy points to your character.
+/addcmd <amount>: Add command points to your character.
+/pkclear: Clear your PK status.
+/money <Amount>: Set your in-game currency to a specific amount.
+/evo: Evolution command.
+/ware <ChestNumber>: Access a specific warehouse chest.
+/reset: Reset your character.
+/reset auto <Str> <Agi> <Vit> <Ene> <Cmd>: Automatically reset your character's stats with specified parameters.
+/mreset: Master reset command.
+/clearinv: Clear your inventory.
+/readd: Re-add command.
+/treereset <0~3>: Perform a tree reset with a specified level.
+/rename <NewName>: Rename your character.
+/dcfriend <Target> <AccPassword>: Disconnect a friend using their account password.
+/store <syntax> config syntax on GameServerInfo - Custom.dat: Store items using a specific syntax.
+/offstore: Set up an offline store.
+/attack: Initiate an attack.
+/attack <state> <buff> <skill> config on CustomAttack.txt: Configure attack settings.
+/offattack: Set up an offline attack.
+/gift <code> config code on CustomGift.txt: Redeem a gift code.
+/marry <Target>: Marry another player.
+/accept: Accept a marriage proposal.
+/divorce: Divorce your spouse.
+/trackmarry: Track your spouse's location.
+/offhelper: Set up an offline helper.
+/buyvip <planname> config on CustomBuyVip.txt: Purchase a VIP plan.
+/pack <syntax> <10-20-30> config syntax on GameServerInfo - Custom.dat: Pack items using a specific syntax and quantity.
+/unpack <syntax>: Unpack items using a specific syntax.
+/pick: Pick up items.
+/pick <Zen> <Jewel> <Exc> <Set>: Pick up specific types of items.
+/pickset <syntax>: Pick up a set of items using a specific syntax.
+/pickclear: Clear your pick list.
+/gmmove <Target> <MapNumber> <PosX> <PosY>: Move another player to a specified location.
+/gmpost <Message>: Post a message as a Game Master.
+/track <Target>: Track a player's location.
+/trace <Target>: Trace a player's steps.
+/disconnect <Target>: Disconnect a player.
+/firework: Launch fireworks.
+/make <Section> <Index> <Level> <Skill> <Luck> <Option> <Exc> <Set> <JoH> <380> <Socket>: Create an item.
+/make <-Amount> <Section> <Index> <Level> <Skill> <Luck> <Option> <Exc> <Set> <JoH> <380> <Socket>: Create multiple items.
+/drop <Section> <Index> <Level> <Skill> <Luck> <Option> <Exc> <Set> <Socket>: Drop an item.
+/drop <-Amount> <Section> <Index> <Level> <Skill> <Luck> <Option> <Exc> <Set> <Socket>: Drop multiple items.
+/skin <Target> <MobIndex>: Change a player's appearance to that of a specific monster.
+/setmoney <Target> <Amount>: Set a player's in-game currency to a specific amount.
+/hide: Hide your character.
+/edit <Target> <Level> <LevelUpPoints> <Str> <Agi> <Vit> <Ene> <Cmd>: Edit another player's stats.
+/setcoin <Target> <Coin1> <Coin2> <Coin3>: Set a player's coins to specific amounts.
+/setpk <Target> <1~6>: Set a player's PK status.
+/setvip <Target> <Days>: Set VIP status for a player.
+/moveall <MapNumber> <PosX> <PosY>: Move all players to a specific location.
+/moveguild <GuildTarget>: Move a guild to a specific location.
+/makemob <MobIndex> <Amount>: Create a specified number of mobs.
+/makeset <Index> <Level> <Luck> <Option> <Exc> <Set> <JoH> <380> <Socket>: Create a set item.
+/banacc <Target>: Ban a player's account.
+/banchar <Target>: Ban a player's character.
+/banchat <Target> <Minutes>: Ban a player from chatting for a specific duration.
+/unbanacc <Target>: Unban a player's account.
+/unbanchar <Target>: Unban a player's character.
+/unbanchat <Target>: Unban a player from chatting.
+/bcstart: Start a battle event.
+/dsstart: Start a devil square event.
+/csstart: Start a chaos castle event.
+/itstart: Start an Illusion Temple event.
+/setbuff <Target> <BuffIndex> <0-1> <Duration> <Power1> <Power2> <Power3> <Power4>: Set buffs for a player.

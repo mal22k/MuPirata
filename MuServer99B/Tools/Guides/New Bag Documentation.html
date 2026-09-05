@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag System Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007BFF;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background: #007BFF;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bag System Guide</h1>
+    </header>
+    <div class="container">
+        <h2>Introduction</h2>
+        <p>This document describes how to configure the bag system in the SSeMU emulator for Mu Online. It allows you to customize drop rates, included items, and their specific attributes.</p>
+
+        <h2>Section 0: OLD BAG System Configuration</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ItemDropRate</td>
+                    <td>Item drop success rate, expressed as x/100.</td>
+                </tr>
+                <tr>
+                    <td>MoneyAmount</td>
+                    <td>Amount of zen dropped.</td>
+                </tr>
+                <tr>
+                    <td>ItemDropCount</td>
+                    <td>Maximum number of items that can drop. Use * to drop all.</td>
+                </tr>
+                <tr>
+                    <td>SetItemDropRate</td>
+                    <td>Drop rate for Ancient items, expressed as x/10000.</td>
+                </tr>
+                <tr>
+                    <td>ItemDropType</td>
+                    <td>(0) Fixed option values, (1) Random option values.</td>
+                </tr>
+                <tr>
+                    <td>EffectValue</td>
+                    <td>(0) None, (1) Fireworks, (2) Medal sound, (3) Effect 1, (4) Effect 2.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Section 1: Items Configuration in OLD BAG</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Index</td>
+                    <td>Item index.</td>
+                </tr>
+                <tr>
+                    <td>MinLevel</td>
+                    <td>Minimum item level.</td>
+                </tr>
+                <tr>
+                    <td>MaxLevel</td>
+                    <td>Maximum item level.</td>
+                </tr>
+                <tr>
+                    <td>Durability</td>
+                    <td>Item durability.</td>
+                </tr>
+                <tr>
+                    <td>SkillOption</td>
+                    <td>(0) No skill, (1) With skill.</td>
+                </tr>
+                <tr>
+                    <td>LuckOption</td>
+                    <td>(0) No luck, (1) With luck.</td>
+                </tr>
+                <tr>
+                    <td>Aditional</td>
+                    <td>Additional option value (Jewel of Life) multiplied by 4.</td>
+                </tr>
+                <tr>
+                    <td>Excellent</td>
+                    <td>Number of Excellent options.</td>
+                </tr>
+                <tr>
+                    <td>SetOption</td>
+                    <td>Ancient option value.</td>
+                </tr>
+                <tr>
+                    <td>SocketOption</td>
+                    <td>Number of free sockets.</td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td>Item duration in seconds, (0) for permanent items.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Section 2: EX BAG System Configuration</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Group</td>
+                    <td>Item drop group identification.</td>
+                </tr>
+                <tr>
+                    <td>GroupRate</td>
+                    <td>Proportional rate to select the chosen group.</td>
+                </tr>
+                <tr>
+                    <td>ItemDropRate</td>
+                    <td>Success rate for item drop, x/100.</td>
+                </tr>
+                <tr>
+                    <td>MoneyAmount</td>
+                    <td>Amount of zen dropped.</td>
+                </tr>
+                <tr>
+                    <td>SetItemDropRate</td>
+                    <td>Success rate for dropping Ancient items, x/10000.</td>
+                </tr>
+                <tr>
+                    <td>ItemDropCount</td>
+                    <td>Maximum number of items that can drop (use * to drop all items in the section).</td>
+                </tr>
+                <tr>
+                    <td>EffectValue</td>
+                    <td>(0) None, (1) Fireworks, (2) Medal sound, (3) Effect 1, (4) Effect 2.</td>
+                </tr>
+                <tr>
+                    <td>RewardType</td>
+                    <td>(0) Items only, (1) Reward by coins, (2) Items and coins.</td>
+                </tr>
+                <tr>
+                    <td>Coin1</td>
+                    <td>Amount of Coin1 awarded.</td>
+                </tr>
+                <tr>
+                    <td>Coin2</td>
+                    <td>Amount of Coin2 awarded.</td>
+                </tr>
+                <tr>
+                    <td>Coin3</td>
+                    <td>Amount of Coin3 awarded.</td>
+                </tr>
+                <tr>
+                    <td>DW, DK, FE, MG, DL, SU, RF</td>
+                    <td>(0) Drop disabled for that class, (1) Drop enabled.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Section 3: Items Configuration in EX BAG</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Group</td>
+                    <td>Item drop group identification.</td>
+                </tr>
+                <tr>
+                    <td>Index</td>
+                    <td>Item index.</td>
+                </tr>
+                <tr>
+                    <td>Level</td>
+                    <td>Fixed item level.</td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td>Fixed Excellent option.</td>
+                </tr>
+                <tr>
+                    <td>Durability</td>
+                    <td>Item durability.</td>
+                </tr>
+                <tr>
+                    <td>Option0 - Option6</td>
+                    <td>Option index from the corresponding "ItemOptionRate.txt" section, use * if not applicable.</td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td>Item duration in seconds (0 for permanent items).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

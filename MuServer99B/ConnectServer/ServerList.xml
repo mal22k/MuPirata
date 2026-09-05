@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ########################################################################
+     SSeMU MU Online Emulator
+     -----------------------------------------------------------------------
+     Website  : https://www.ssemu.com.ar
+     Forum    : https://www.ssemu.com.ar/forum
+     YouTube  : https://www.youtube.com/@ssemu
+     WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+     -----------------------------------------------------------------------
+     © 2025 SetecSoft Development
+     This file is part of the SSeMU MuOnline server package.
+     ########################################################################
+
+     Server List Configuration
+
+     Purpose:
+       This file defines the servers that the application will connect to.
+
+     Structure:
+       <ServerGroup> contains multiple <Group> entries.
+	   Each <Group> must include:
+         - Code     : Unique numeric ID (0–19)
+         - Name     : Max 32 characters
+     
+	 Example:
+       <Server Code="0" Name="SSeMU Classic" />
+	   <Server Code="1" Name="SSeMU Rebirth" />
+		 
+       <ServerList> contains multiple <Server> entries.
+       Each <Server> must include:
+         - Code     : Unique numeric ID (0+)
+         - Name     : Max 32 characters
+         - IP       : IPv4 address
+         - Port     : Port number (1-65535)
+         - Visible  : 0 (hidden) or 1 (visible)
+
+     Example:
+       <Server Code="0" Name="SSeMU Server 1" IP="192.168.1.10" Port="55900" Visible="1" />
+       <Server Code="1" Name="SSeMU Server 2" IP="192.168.1.11" Port="55901" Visible="0" />
+-->
+
+<ServerGroup>
+	<Server Code="0" Name="SSeMU Classic"/>
+</ServerGroup>
+
+<ServerList>
+    <Server Code="0" Name="SSeMU Server 1" IP="LAN/WAN IP" Port="55900" Visible="1" />
+</ServerList>

@@ -1,0 +1,44 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
+// # https://www.facebook.com/ssemuemulator
+// # https://www.youtube.com/@ssemu
+// # ---------------------------------------------------------------------------
+// # © 2024 SetecSoft Development
+// # This file is part of the SSeMU MuOnline Server files.
+// #############################################################################
+
+// -------------------------------------
+// Index   Name                MusicPath
+// -------------------------------------
+   0       "Lorencia"          ""
+   1       "Dungeon"           ""
+   2       "Devias"            ""
+   3       "Noria"             ""
+   4       "Lost Tower"        ""
+   6       "Arena"             ""
+   7       "Atlans"            ""
+   8       "Tarkan"            ""
+   9       "Devil Square"      ""
+   10      "Icarus"            ""
+   11      "Blood Castle"      ""
+   12      "Blood Castle"      ""
+   13      "Blood Castle"      ""
+   14      "Blood Castle"      ""
+   15      "Blood Castle"      ""
+   16      "Blood Castle"      ""
+   17      "Blood Castle"      ""
+   18      "Chaos Castle"      ""
+   19      "Chaos Castle"      ""
+   20      "Chaos Castle"      ""
+   21      "Chaos Castle"      ""
+   22      "Chaos Castle"      ""
+   23      "Chaos Castle"      ""
+   24      "Kalima"            ""
+   25      "Kalima"            ""
+   26      "Kalima"            ""
+   27      "Kalima"            ""
+   28      "Kalima"            ""
+   29      "Kalima"            ""
+   40      "Silent"            ""
+end

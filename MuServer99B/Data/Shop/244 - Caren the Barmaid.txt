@@ -1,0 +1,25 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Website  : https://www.ssemu.com.ar
+// # Forum    : https://www.ssemu.com.ar/forum
+// # YouTube  : https://www.youtube.com/@ssemu
+// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # © 2025 SetecSoft Development
+// # This file is part of the SSeMU MuOnline server package.
+// #############################################################################
+
+//Index   Level   Durability   SkillOption   LuckOption   JoLOption   ExcOption   SetOption   Comment
+14,009    0       1            0             0            0           0           0           //Ale
+14,010    0       1            0             0            0           0           0           //Town Portal Scroll
+13,016    1       1            0             0            0           0           0           //Scroll of Archangel
+13,016    2       1            0             0            0           0           0           //Scroll of Archangel
+13,017    1       1            0             0            0           0           0           //Blood Bone
+13,017    2       1            0             0            0           0           0           //Blood Bone
+14,017    1       1            0             0            0           0           0           //Devil's Eye
+14,017    2       1            0             0            0           0           0           //Devil's Eye
+14,018    1       1            0             0            0           0           0           //Devil's Key
+14,018    2       1            0             0            0           0           0           //Devil's Key
+13,029    0       1            0             0            0           0           0           //Armor of Guardsman
+end

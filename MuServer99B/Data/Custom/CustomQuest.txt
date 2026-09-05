@@ -1,0 +1,100 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Official Website : https://www.ssemu.com.ar
+// # YouTube          : https://www.youtube.com/@ssemu
+// # WhatsApp Channel : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # Copyright © SetecSoft Development. All rights reserved.
+// #############################################################################
+
+0
+// ------------------------------------------------------------
+// NpcClass   Enable_Al0   Enable_Al1   Enable_Al2   Enable_Al3
+// ------------------------------------------------------------
+   254        1            1            1            1
+end
+
+1
+// --------------------------------------------------------------------------------------------------------------------
+// QuestIndex   MinLevel   MaxLevel   MinReset   MaxReset   Repeatable   BagReward   DW   DK   FE   MG   DL   QuestName
+// --------------------------------------------------------------------------------------------------------------------
+   0            1          40         *          *          0            21          1    1    1    1    1    "The First Steps"
+   1            35         80         *          *          0            21          1    1    1    1    1    "Goblin Uprising"
+   2            75         120        *          *          0            21          1    1    1    1    1    "The Road of Lorencia"
+   3            115        160        *          *          0            21          1    1    1    1    1    "Defender of Lorencia"
+   4            155        200        *          *          0            21          1    1    1    1    1    "Into the Dungeon"
+   5            195        240        *          *          0            21          1    1    1    1    1    "The Bone Collector"
+   6            235        280        *          *          0            21          1    1    1    1    1    "Shadows of Lost Tower"
+   7            275        320        *          *          0            21          1    1    1    1    1    "Frozen Front"
+   8            315        360        *          *          0            21          1    1    1    1    1    "The Yeti Menace"
+   9            355        400        *          *          0            21          1    1    1    1    1    "Wings of Icarus"
+   10           300        *          *          *          1            21          1    1    1    1    1    "Kundun's Nemesis"
+end
+
+2
+// -------------------------------------------------------------------------------------------------------------------------------
+// QuestIndex   ObjectiveType   ObjectiveMap   ObjectiveIndex   ObjectiveLevel   ObjectiveCount   DW   DK   FE   MG   DL   Comment
+// -------------------------------------------------------------------------------------------------------------------------------
+
+// -- The First Steps
+   0            0               *              2                *                10               1    1    0    1    1    // Kill 10 Budge Dragons (DW/DK/MG/DL)
+   0            0               *              3                *                10               1    1    0    1    1    // Kill 10 Spiders (DW/DK/MG/DL)
+   0            0               *              26               *                10               0    0    1    0    0    // Kill 10 Goblins (FE)
+   0            0               *              27               *                10               0    0    1    0    0    // Kill 10 Chain Scorpions (FE)
+   0            1               *              448              0                5                1    1    1    1    1    // Collect 5 Apples
+   0            2               *              *                *                5000             1    1    1    1    1    // Deliver 5,000 Zen
+
+// -- Goblin Uprising
+   1            0               *              33               *                50               1    1    1    1    1    // Kill 50 Elite Goblins
+   1            2               *              *                *                8000             1    1    1    1    1    // Deliver 8,000 Zen
+
+// -- The Road of Lorencia
+   2            0               *              0                *                20               1    1    1    1    1    // Kill 20 Bull Fighters
+   2            0               *              4                *                20               1    1    1    1    1    // Kill 20 Elite Bull Fighter
+   2            0               *              6                *                20               1    1    1    1    1    // Kill 20 Lichs
+   2            2               *              *                *                10000            1    1    1    1    1    // Deliver 10,000 Zen
+
+// -- Defender of Lorencia
+   3            0               *              7                *                40               1    1    1    1    1    // Kill 40 Giants
+   3            0               *              14               *                40               1    1    1    1    1    // Kill 40 Skeletons
+   3            2               *              *                *                12000            1    1    1    1    1    // Deliver 12,000 Zen
+
+// -- Into the Dungeon
+   4            0               *              12               *                40               1    1    1    1    1    // Kill 40 Larvas
+   4            0               *              13               *                40               1    1    1    1    1    // Kill 40 Hell Spiders
+   4            0               *              14               *                40               1    1    1    1    1    // Kill 40 Skeletons
+   4            2               *              *                *                15000            1    1    1    1    1    // Deliver 15,000 Zen
+
+// -- The Bone Collector
+   5            0               *              15               *                50               1    1    1    1    1    // Kill 50 Skeleton Archers
+   5            0               *              16               *                50               1    1    1    1    1    // Kill 50 Chief Skeleton Warriors
+   5            0               *              17               *                50               1    1    1    1    1    // Kill 50 Cyclops
+   5            2               *              *                *                18000            1    1    1    1    1    // Deliver 18,000 Zen
+
+// -- Shadows of Lost Tower
+   6            0               *              8                *                60               1    1    1    1    1    // Kill 60 Poison Bulls
+   6            0               *              41               *                60               1    1    1    1    1    // Kill 60 Death Cows
+   6            2               *              *                *                22000            1    1    1    1    1    // Deliver 22,000 Zen
+
+// -- Frozen Front
+   7            0               *              22               *                50               1    1    1    1    1    // Kill 50 Ice Monsters
+   7            0               *              23               *                50               1    1    1    1    1    // Kill 50 Hommerds
+   7            2               *              *                *                25000            1    1    1    1    1    // Deliver 25,000 Zen
+
+// -- The Yeti Menace
+   8            0               *              19               *                60               1    1    1    1    1    // Kill 60 Yetis
+   8            0               *              20               *                60               1    1    1    1    1    // Kill 60 Elite Yetis
+   8            2               *              *                *                30000            1    1    1    1    1    // Deliver 30,000 Zen
+
+// -- Wings of Icarus
+   9            0               *              69               *                30               1    1    1    1    1    // Kill 30 Alquamos
+   9            0               *              71               *                30               1    1    1    1    1    // Kill 30 Mega Crusts
+   9            0               *              70               *                30               1    1    1    1    1    // Kill 30 Queen Rainiers
+   9            0               *              77               *                10               1    1    1    1    1    // Kill 10 Phoenixes of Darkness
+   9            2               *              *                *                40000            1    1    1    1    1    // Deliver 40,000 Zen
+
+// -- Kundun's Nemesis (Repeatable)
+   10           0               *              275              *                10               1    1    1    1    1    // Kill 10 Kunduns
+   10           2               *              *                *                1000000          1    1    1    1    1    // Deliver 1,000,000 Zen
+end

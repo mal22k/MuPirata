@@ -1,0 +1,56 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Website  : https://www.ssemu.com.ar
+// # Forum    : https://www.ssemu.com.ar/forum
+// # YouTube  : https://www.youtube.com/@ssemu
+// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # © 2025 SetecSoft Development
+// # This file is part of the SSeMU MuOnline server package.
+// #############################################################################
+
+// -----------------------------------------------------------
+// Blacklist Configuration File
+// -----------------------------------------------------------
+
+// Purpose:
+//  This file contains two separate blacklists:
+//   - IP addresses (marked by '0')
+//   - Hardware IDs (marked by '1')
+//
+// Behavior:
+//  Any IP address or HardwareId listed here will be blocked from
+//  connecting or accessing the server.
+//
+// Important:
+//  - The section for IP addresses must start with '0'
+//  - The section for Hardware IDs must start with '1'
+//  - Each section must end with the keyword 'end'
+//  - Lines starting with '//' are comments and ignored
+//  - Entries must be enclosed in double quotes
+//
+// Example usage:
+//
+// 0
+// "192.168.1.100"
+// "203.0.113.25"
+// end
+//
+// 1
+// "12BA1074-2265A228-D9B3B61D-2D3165BD-25CB2031"
+// end
+//
+// -----------------------------------------------------------
+
+// IP Address Blacklist
+0
+// List all blocked IP addresses below, one per line:
+"127.0.0.1"
+end
+
+// Hardware ID Blacklist
+1
+// List all blocked hardware IDs below, one per line:
+"12BA1074-2265A228-D9B3B61D-2D3165BD-25CB2031"
+end

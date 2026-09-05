@@ -1,0 +1,39 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Website  : https://www.ssemu.com.ar
+// # Forum    : https://www.ssemu.com.ar/forum
+// # YouTube  : https://www.youtube.com/@ssemu
+// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # © 2025 SetecSoft Development
+// # This file is part of the SSeMU MuOnline server package.
+// #############################################################################
+
+//Index   Level   Durability   SkillOption   LuckOption   JoLOption   ExcOption   SetOption   Comment
+06,000    0       0            0             1            1           0           0           //Small Shield
+06,004    1       0            0             1            1           0           0           //Buckler
+06,001    2       0            0             1            1           0           0           //Horn Shield
+06,002    3       0            0             1            1           0           0           //Kite Shield
+06,006    3       0            0             1            1           0           0           //Skull Shield
+06,010    3       0            0             1            1           0           0           //Large Round Shield
+06,009    3       0            0             1            1           0           0           //Plate Shield
+06,007    3       0            0             1            1           0           0           //Spiked Shield
+06,005    3       0            0             1            1           0           0           //Dragon Slayer Shield
+06,008    3       0            0             1            1           0           0           //Tower Shield
+06,011    3       0            0             1            1           0           0           //Serpent Shield
+06,012    3       0            0             1            1           0           0           //Bronze Shield
+00,001    0       0            0             1            1           0           0           //Short Sword
+01,001    1       0            0             1            1           0           0           //Hand Axe
+02,000    2       0            0             1            1           0           0           //Mace
+00,002    2       0            0             1            1           0           0           //Rapier
+01,002    2       0            0             1            1           0           0           //Double Axe
+00,004    3       0            0             1            1           0           0           //Sword of Assassin
+02,001    3       0            0             1            1           0           0           //Morning Star
+01,003    3       0            0             1            1           0           0           //Tomahawk
+00,000    2       0            0             1            1           0           0           //Kris
+00,006    3       0            1             1            1           0           0           //Gladius
+00,007    3       0            1             1            1           0           0           //Falchion
+00,008    3       0            1             1            1           0           0           //Serpent Sword
+00,005    3       0            1             1            1           0           0           //Blade
+end

@@ -1,2 +1,0 @@
-//Index	Mapa	Type	InfoX	InfoY	name
-end

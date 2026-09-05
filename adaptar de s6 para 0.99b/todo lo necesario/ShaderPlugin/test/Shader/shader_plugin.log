@@ -1,0 +1,76 @@
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+======================================================
+[ShaderPlugin] v0.2.0
+[ShaderPlugin] Proceso: 7692 Hilo: 7696
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[GLUpgrade] opengl32.dll no cargada aun: el upgrade se intentara cuando exista contexto GL.
+[ShaderPlugin] OpenGL moderno: NO instalado (se mantiene OpenGL 1.1). Ver logs de GLUpgrade.
+[ShaderPlugin] SwapBuffers hookeado en 0x75A68460 (trampolin 0x00F60000, 6 bytes: FF 25 3C F1 A7...)
+[ShaderPlugin] Inicializacion terminada.
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=0 toggleKey=0x32 inGameOnly=0 transition=0.50
+[Shader] Config creada: Shader\Shader.ini
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+======================================================
+[ShaderPlugin] v0.1.2
+[ShaderPlugin] Proceso: 8148 Hilo: 944
+[Shader] Preset 'Retro' aplicado.
+[Shader] Config: enabled=1 toggleKey=0x24 inGameOnly=1 transition=0.00
+[ShaderPlugin] SwapBuffers hookeado en 0x75A68460 (trampolin 0x02F20000, 6 bytes: FF 25 3C F1 A7...)
+[ShaderPlugin] Inicializacion terminada.

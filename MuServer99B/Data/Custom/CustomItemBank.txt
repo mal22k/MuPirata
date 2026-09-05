@@ -1,0 +1,19 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Official Website : https://www.ssemu.com.ar
+// # YouTube          : https://www.youtube.com/@ssemu
+// # WhatsApp Channel : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # Copyright © SetecSoft Development. All rights reserved.
+// #############################################################################
+
+// ------------------------------------------------------------------------------------------------------
+// Index   ItemIndex   ItemLevel   Enable_AL0   Enable_AL1   Enable_AL2   Enable_AL3   AutoSave   Comment
+// ------------------------------------------------------------------------------------------------------
+   0       12,015      0           1            1            1            1            1          // Jewel of Chaos
+   1       14,013      0           1            1            1            1            1          // Jewel of Bless
+   2       14,014      0           1            1            1            1            1          // Jewel of Soul
+   3       14,016      0           1            1            1            1            1          // Jewel of Life
+   4       14,022      0           1            1            1            1            1          // Jewel of Creation
+end

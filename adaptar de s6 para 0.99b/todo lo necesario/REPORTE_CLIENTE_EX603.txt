@@ -1,0 +1,692 @@
+================================================================================
+ REPORTE TECNICO - SOURCE VIEJO CLIENTE MU ONLINE EX603 (SSeMU)
+ Objetivo: documentar el source para construir una DLL inyectable con Lua embebido
+           (UI custom, alquimia con trade, shops, efectos, packets)
+================================================================================
+
+Ruta del source analizado:
+  SOURCE viejos/Source/Main_EX603/Main/        <- PROYECTO PRINCIPAL (el "Main")
+  SOURCE viejos/Source/GetMainInfo_EX603/      <- Tool que genera la config del cliente
+  SOURCE viejos/Source/Emulator/GameServer/    <- Source del GameServer (contraparte, S6)
+  SOURCE viejos/Source/MHPClient, MHPServer/   <- Anti-cheat cliente/servidor
+  SOURCE viejos/Util/                          <- Librerias (cryptopp, detours, mapm,
+                                                   pugixml, sha1)
+
+IMPORTANTE: El proyecto Main_EX603 NO es el cliente completo. Es una DLL de hooks
+("Main") que se inyecta/engancha al main.exe original del cliente EX603 (Season 6
+Episode 3). Esto es EXACTAMENTE la misma arquitectura que necesitas para tu DLL con
+Lua: en vez de recompilar el cliente, se parchea memoria y se instalan hooks.
+Todas las direcciones son del binario main.exe EX603 (build original del cliente).
+Si tu cliente actual es la misma familia S6 Evercion (MuServerS6Evercion maxima),
+las direcciones deberian coincidir. Si no, habria que re-localizarlas.
+
+================================================================================
+ SECCION 1: ARQUITECTURA GENERAL
+================================================================================
+
+1.1 QUE ES EL PROYECTO
+  - Solucion: Main.sln -> proyecto "Main" (Main.vcxproj)
+  - Tipo de salida: DynamicLibrary (DLL), Release Win32
+  - Toolset: v100 (Visual Studio 2010), formato proyecto VS2013 (ToolsVersion 12.0)
+  - Windows SDK: 8.1, charset MultiByte, /O2 (MaxSpeed), Runtime MultiThreadedDLL
+  - Definiciones: WIN32;NDEBUG;_WINDOWS;_USRDLL;MAIN_EXPORTS
+  - OutputDir: ..\..\..\Program\MuServerEX603\Tools\GetMainInfo\Path\
+  - Lenguaje: C++ (MSVC) con funciones __declspec(naked) en asm inline (patron
+    habitual en este source para parches de memoria).
+
+1.2 PUNTO DE ENTRADA
+  - DllMain(HANDLE hModule, DWORD ul_reason, LPVOID lpReserved): solo guarda hins.
+  - Funcion exportada que ejecuta TODO:
+        extern "C" _declspec(dllexport) void EntryProc()
+    (archivo Main.cpp). El cliente/launcher modificado la llama al arrancar.
+  - Flujo de EntryProc():
+      1) gProtect.ReadMainFile("ServerInfo.sse")  -> lee config cifrada del cliente
+      2) ~50 SetByte/SetWord/SetDword/MemorySet/MemoryCpy  -> parches de bytes:
+           - Cracks (mu.exe, GameGuard, ResourceGuard) y pantalla de login
+           - Version del cliente (0x00E61F68..), IP:puerto, serial, nombre ventana
+           - Limites de texto/items, fix de Ctrl, helper, etc.
+      3) SetCompleteHook(0xE8, 0x005B96E8, &DrawNewHealthBar)   -> hook de dibujo
+         SetCompleteHook(0xFF, 0x0065FD79, &ProtocolCoreEx)     -> hook de packets
+      4) LoadReferenceAddressTable(hins, IDR_BIN1/2/3, NewAddressData1/2/3)
+           -> aplica las tablas de direcciones embebidas como recursos "BIN"
+      5) gCustomXxx.Load(m_MainInfo.CustomXxxInfo)  -> carga tablas custom
+         (Effect, Item, ItemBow, ItemGlove, Jewel, Map, Monster, MonsterSkin,
+          Tooltip, Wing, ItemStack, ItemValue)
+      6) gPacketManager.LoadEncryptionKey("Data\\Enc1.dat")
+         gPacketManager.LoadDecryptionKey("Data\\Dec2.dat")
+      7) InitXxx() por modulo: ChaosBox, Common, EventEntryLevel, Font, HackCheck,
+         Item, ItemBow, ItemGlove, Jewel, Map, Monster, PrintPlayer, Reconnect,
+         Resolution, Shop, Wing.
+      8) gProtect.CheckLauncher/CheckInstance/CheckClientFile/CheckPluginFile
+      9) SetWindowsHookEx(WH_KEYBOARD, KeyboardProc, hins, GetCurrentThreadId())
+         SetWindowsHookEx(WH_MOUSE,    MouseProc,   hins, GetCurrentThreadId())
+     10) CreateThread(ReduceConsumeProc) -> libera working set cada 5s.
+
+1.3 CONFIGURACION DEL CLIENTE (ServerInfo.sse)
+  - La genera GetMainInfo_EX603 (GetMainInfo.cpp):
+      * Lee MainInfo.ini (IP, puerto, version, serial, nombres, teclas, tiempos)
+      * Lee Data\\CustomXxx.txt etc. y EventEntryLevel.txt, ItemStack.txt, ItemValue.txt
+      * Calcula CRC del main.exe y de 3 plugins (Path\\...)
+      * Ofusca todo el struct:  byte ^= 0xCC^LOBYTE(n); byte -= 0xBB^HIBYTE(n);
+                                byte += 0xAA^HIBYTE(n);
+      * Escribe Path\\ServerInfo.sse
+  - Struct resultante MAIN_FILE_INFO (Protect.h / GetMainInfo.cpp) contiene:
+      CustomerName[32], LauncherStart, LauncherMutex[32], IpAddress[32],
+      IpAddressPort, ClientVersion[8], ClientSerial[17], WindowName[32],
+      ScreenShotPath[50], ClientName[32], ClientNameCRC, PluginName[3][32],
+      PluginNameCRC[4], HelperActiveAlert/Level, MaxAttackSpeed[7],
+      AttackAnimationValue[7], KeyCodeHealthBarSwitch, KeyCodeCamera3DSwitch,
+      KeyCodeCamera3DRestore, KeyCodeTrayModeSwitch, ReconnectTime,
+      niveles de entrada a eventos, y todas las tablas custom
+      (CUSTOM_EFFECT/ITEM/ITEM_BOW/ITEM_GLOVE/JEWEL/MAP/MONSTER/MONSTER_SKIN/
+       TOOLTIP/WING_INFO, ITEM_STACK/ITEM_VALUE).
+
+1.4 MODULOS DEL PROYECTO MAIN (cada .cpp = un modulo con InitXxx())
+  - Main.cpp        : EntryProc, DllMain, hooks de teclado/mouse globales, tray icon
+  - Protocol.cpp/h  : ProtocolCoreEx (dispatcher de packets), DataSend (envio)
+  - PacketManager.* : cifrado/descifrado de packets (clave Enc1/Dec2)
+  - Offset.h        : TODAS las direcciones y firmas de funciones del cliente
+  - Util.cpp/h      : SetByte/SetWord/SetDword/SetCompleteHook/MemoryCpy/MemorySet/
+                      VirtualizeOffset/LoadReferenceAddressTable/GetHardwareId/
+                      SetExperienceTable
+  - Protect.cpp/h   : config ServerInfo.sse + verificaciones anti-tamper
+  - Font.cpp/h      : fuentes (CreateFont) hookeando las del cliente
+  - Resolution.cpp  : resoluciones 640x480..1920x1080 + tamano de fuente
+  - HealthBar.cpp   : OVERLAY custom de barras de vida (ejemplo clave de UI custom)
+  - Reconnect.cpp   : auto-reconexion con UI custom dibujada
+  - ChaosBox.cpp    : alquimia/caja del caos (rate, money, tax) - patrón "alquimia"
+  - Shop.cpp        : precios custom de tienda (buy/sell) via tablas
+  - Item.cpp/h      : items: modelos, texturas, colores, efectos, joyas, alas, arcos
+  - PrintPlayer.cpp : stats del personaje en pantalla (View* globals)
+  - Common.cpp      : clicks, GENS, login tab, master level, helper click
+  - Camera.cpp/h    : camara 3D (zoom/rotacion) - OpenGL
+  - Map.cpp/h       : nombres de mapas
+  - Monster.cpp/h   : creacion/setting de monstruos
+  - TrayMode.cpp    : minimizar a bandeja (subclass WndProc)
+  - HackCheck.cpp   : chequeos anti-hack (MAC, drivers, etc.)
+  - Custom*.cpp     : tablas custom (item/jewel/wing/map/monster/effect/tooltip...)
+  - EventEntryLevel.*, ItemStack.*, ItemValue.*, CCRC32.*
+
+1.5 LIBRERIAS EXTERNAS
+  - OpenGL (gl/GL.h + Opengl32.lib)  <- API grafica del cliente
+  - ws2_32.lib, Winmm.lib
+  - No usa Direct3D. (Util/detours disponible pero el source usa SetCompleteHook
+    propio; cryptopp/mapm/pugixml/sha1 son para otras herramientas del pack)
+
+1.6 OTROS PROYECTOS RELACIONADOS
+  - GetMainInfo_EX603 : genera ServerInfo.sse (ver 1.3). Usa ThemidaSDK.
+  - MHPClient (HackClient) : DLL anti-cheat del lado cliente (protecciones, CRC).
+  - MHPServer : servidor del anti-cheat.
+  - Emulator/GameServer : GameServer Season 6 con Lua embebido. OJO:
+    usa Lua 5.2 (pragma comment lib ..\\..\\..\\Util\\lua\\lua52.lib) ->
+    la DLL del cliente deberia embeber la MISMA version (5.2) para no
+    desincronizar APIs/estado.
+
+================================================================================
+ SECCION 2: RENDER Y GRAFICOS
+================================================================================
+
+2.1 API GRAFICA
+  - OpenGL (NO Direct3D). stdafx.h incluye <gl\\GL.h> y linkea Opengl32.lib.
+  - La DLL usa glColor4f/glColor3f directamente (ver HealthBar.cpp) y el resto de
+    la UI se dibuja con funciones del cliente expuestas via punteros (Offset.h).
+  - "GL" en los nombres (pGLSwitch, pGLSwitchBlend) = estados del renderer GL.
+
+2.2 FUNCIONES DE DIBUJO DISPONIBLES (definidas en Offset.h) - CLAVE PARA UI CUSTOM
+  Texto:
+    pTextThis()                         0x0041FE10  -> objeto texto
+    pSetTextColor(this,r,g,b,a)         0x00420040
+    pDrawText(this,x,y,text,?,?,int*,?) 0x00420150
+    pDrawMessage(text,int)              0x00597630  -> mensaje en chat/caja
+    pDrawToolTip(x,y,LPCSTR)            0x00597220  -> tooltip
+    pGetTextLine(x)                     macro        -> textos del cliente
+  Imagenes / sprites 2D:
+    pLoadImage(name,int,int,int,int,int) 0x00772330 -> carga textura, devuelve id
+    pDrawImage(model,x,y,w,h,u1,v1,u2,v2,alpha,int,GLfloat) 0x00637C60
+        -> dibuja quad con textura (el dibujador 2D principal)
+    DrawInterface(model,x,y,w,h)         0x00790B50  -> sprite de interfaz
+    DrawInterfaceText(...)               0x007D04D0
+  Primitivas:
+    pDrawBarForm(x,y,w,h,?,int)         0x006378A0  -> barras rellenas
+    pSetBlend(BYTE)                     0x00635FD0  -> alpha blend
+    pGLSwitchBlend()                    0x00636070  -> activar blend
+    pGLSwitch()                         0x00635F50  -> alternar estados GL
+  Efectos 3D / particulas:
+    pCreateSprite(idx,pos,scale,color,?,?,level)   0x00771310
+    pCreateParticle(idx,pos,?,color,level,scale,?) 0x0074CD30
+    pCreateEffect(idx,pos,?,color,level,?,?,?,?,?,?) 0x006D9070
+    pRenderPartObjectEffect(...)        0x00609E70
+    pTransformPosition(...)             0x00545030  -> world coords
+  Mundo -> pantalla:
+    pGetPosFromAngle(angle[3], int*x, int*y)  0x00635B00
+        -> convierte posicion 3D (angulo) en coords 2D de pantalla (para UI world-space)
+  Modelos de items:
+    pLoadItemModel(idx,folder,name,?)   0x00614D10
+    pLoadItemTexture(idx,folder,wrap,filter,?) 0x00614710
+
+2.3 DONDE HOOKEAR PARA DIBUJAR UI CUSTOM (el punto mas importante)
+  - Ejemplo canonico del propio source: DrawNewHealthBar (HealthBar.cpp)
+        SetCompleteHook(0xE8, 0x005B96E8, &DrawNewHealthBar);
+    La funcion llama primero al dibujo original ((void(*)())0x005BA770)() y luego
+    dibuja su overlay en el mundo (por cada viewport activo, con hit-test de
+    cursor y texto con pDrawText). Este es el hook "por frame" del mundo 3D.
+  - Para UI en pantalla (2D fullscreen, ventanas): usar el mismo patron sobre el
+    punto del loop de interfaz que prefieras (p.ej. enganchando donde el cliente
+    dibuja la interfaz; ReconnectDrawInterface es otro ejemplo de UI custom 2D).
+  - Estado de pantalla: MAIN_SCREEN_STATE 0x00E609E8 (5 = dentro del juego;
+    otros valores = login/select). Usalo para decidir que dibujar.
+  - Resolucion: MAIN_RESOLUTION_X 0x00E61E58, MAIN_RESOLUTION_Y 0x00E61E5C,
+    MAIN_RESOLUTION 0x00E8C240. Resolution.cpp ya soporta 1920x1080.
+
+2.4 FUENTES
+  - Font.cpp: crea fuentes GDI (CreateFont) y reemplaza las 4 fuentes del cliente
+    hookeando 0x004D2882/0x004D28EB/0x004D2957/0x004D29C1 (FontNormal/Bool/Big/Fixed).
+    Punteros de fuentes en 0x00E8C588..0x00E8C594. MAIN_FONT_SIZE 0x081C0380.
+  - Para tu DLL puedes usar pDrawText directamente con las fuentes del cliente.
+
+================================================================================
+ SECCION 3: UI E INTERFAZ
+================================================================================
+
+3.1 WINDOW MANAGER DEL CLIENTE (ventanas nativas, sin fuente; control via memoria)
+  - El cliente tiene un manager de interfaces; la DLL lo controla con:
+        pWindowThis()                      0x00861110  -> puntero a la interfaz
+        pCheckWindow(this,id)  -> bool     0x0085EC20  -> ventana abierta?
+        pOpenWindow(this,id)              0x0085EC50  -> abrir ventana por ID
+        pClosekWindow(this,id)            0x0085F9A0  -> cerrar ventana por ID
+    Ejemplo real: Common.cpp usa pCheckWindow(pWindowThis(), 8) y (9).
+  - No hay IDs de ventana enumerados en este source; se descubren por fuerza bruta
+    o por referencia (p.ej. la ventana del helper usa 8/9). Para trade/tienda
+    personal se usan los IDs del cliente original (a documentar al probar).
+
+3.2 VENTANAS CUSTOM REALES EN ESTE SOURCE (ejemplos a imitar)
+  - HealthBar.cpp : overlay world-space (barras de vida + texto al hacer hover).
+  - Reconnect.cpp : ventana de progreso de reconexion (ReconnectDrawInterface).
+  - ChaosBox.cpp  : modifica el TEXTO que imprime la ventana nativa del caos
+    (PrintPlayerChaosRate/Money hookean las llamadas wsprintf del cliente en
+    0x0082D1C3..0x0082D4D1 y reemplazan rate/money/tax) -> patron "text hook".
+
+3.3 TOOLTIPS
+  - pDrawToolTip(x, y, LPCSTR) 0x00597220 -> tooltip inmediato.
+  - CCustomTooltip (CustomTooltip.h): tabla de 2000 entradas
+        { Index, ItemIndex, ItemLevel, FontColor, FontValue, Text[64] }
+    cargada desde ServerInfo.sse (CustomTooltipInfo). Los hooks estan en
+    CustomTooltip.cpp. Util para tooltips custom por item.
+
+3.4 MENSAJES / CHAT
+  - GCNewMessageRecv (Protocol.cpp) muestra mensajes del servidor (C1:F3:E4/E5)
+    llamando a las funciones del cliente 0x00409A50 (crear mensaje) y
+    0x00790A10 (enviar a chat). pDrawMessage para mensajes directos.
+
+3.5 ARCHIVOS DE LOGICA DE UI
+  - La logica de UI del cliente original NO esta en el source (es codigo cerrado).
+  - Lo que SI hay: HealthBar.cpp, Reconnect.cpp, ChaosBox.cpp, Shop.cpp,
+    PrintPlayer.cpp (textos de stats), Common.cpp (LoginTab, clicks),
+    TrayMode.cpp (subclass WndProc con SetWindowLong).
+
+================================================================================
+ SECCION 4: INPUT
+================================================================================
+
+4.1 TECLADO (Main.cpp - KeyboardProc)
+  - Hook global: SetWindowsHookEx(WH_KEYBOARD, KeyboardProc, hins, GetCurrentThreadId())
+  - Solo actua si: lParam bit30+bit31 (keyup) y GetForegroundWindow()==MAIN_WINDOW
+    (MAIN_WINDOW = 0x00E8C578, puntero al HWND del cliente).
+  - Teclas configurables (desde ServerInfo.sse -> KeyInfo):
+        KeyCodeHealthBarSwitch (def 120=F9)  -> HealthBarToggle()
+        KeyCodeCamera3DSwitch  (def 121=F10) -> gCamera.Toggle()
+        KeyCodeCamera3DRestore (def 122=F11) -> gCamera.Restore()
+        KeyCodeTrayModeSwitch  (def 123=F12) -> gTrayMode.Toggle()
+  - Para tu DLL: extiende este dispatcher para teclas de tus ventanas Lua.
+
+4.2 MOUSE (Main.cpp - MouseProc)
+  - Hook global WH_MOUSE:
+        WM_MOUSEMOVE   -> gCamera.Move
+        WM_MBUTTONDOWN -> camara drag (SetIsMove+SetCursorX/Y)
+        WM_MBUTTONUP   -> camara release
+        WM_MOUSEWHEEL  -> gCamera.Zoom
+        WM_RBUTTONDOWN -> ClicMouseProc() (ataca: envia C1:04 si estado==5,
+                          throttled 1000ms) (Common.cpp)
+  - Cursor en pantalla: pCursorX 0x0879340C / pCursorY 0x08793410
+    (usados en HealthBar.cpp para hover - esencial para botones custom).
+
+4.3 SUSTITUCION DE FUNCIONES DE API
+  - KeysProc (Main.cpp): reemplaza GetAsyncKeyState del cliente
+        SetDword(0x00D226C8, (DWORD)KeysProc)
+  - IconProc: reemplaza LoadIcon para el icono (0x00D2265C).
+
+4.4 WNDPROC (TrayMode.cpp) - patron de subclass
+  - CTrayMode::GetMainWndProc() hace SetWindowLong(MAIN_WINDOW, GWL_WNDPROC,
+    TrayModeWndProc) guardando el WndProc original; el nuevo maneja mensajes
+    propios (WM_TRAY_MODE_MESSAGE) y delega todo al original con CallWindowProc.
+  - Este es el patron para interceptar mensajes de ventana del cliente
+    (WM_KEYDOWN, WM_LBUTTONDOWN, WM_COMMAND, etc.) desde tu DLL.
+
+================================================================================
+ SECCION 5: PACKETS Y RED
+================================================================================
+
+5.1 ENVIO CLIENTE -> SERVIDOR (Protocol.cpp - DataSend)
+  - Firmas: void DataSend(BYTE* lpMsg, DWORD size)  <- USAR ESTA para tus packets
+  - Flujo interno:
+      1) gPacketManager.AddData(lpMsg,size) -> copia a buffer interno (max 2048)
+      2) gPacketManager.ExtractPacket(EncBuff):
+            - Cabeceras: C1/C3 -> size=buff[1]; C2/C4 -> size=WORD(buff[1..2])
+            - Aplica XOR header: m_buff[n] ^= m_buff[n-1] ^ m_XorFilter[n%32]
+              (tabla fija de 32 bytes en PacketManager.cpp)
+      3) Si es C3/C4 (encriptado):
+            - Escribe serial: buff[1] o buff[2] = (*(BYTE*)MAIN_PACKET_SERIAL)++
+              (MAIN_PACKET_SERIAL = 0x08793700)
+            - gPacketManager.Encrypt(&send[2], &EncBuff[1], size-1)  (C3)
+              o Encrypt(&send[3], &EncBuff[2], size-2)               (C4)
+              -> expande cada bloque de 8 bytes a 11 bytes (bit-packing)
+            - Reconstruye cabecera con el nuevo tamaño
+      4) MySend(*(SOCKET*)(MAIN_ACTIVE_SOCKET+0x0C), send, size, 0)
+            (MAIN_ACTIVE_SOCKET = 0x08793750)
+  - Regla de oro: los packets C1/C2 van SIN encriptar; C3/C4 van encriptados.
+
+5.2 RECEPCION SERVIDOR -> CLIENTE (Protocol.cpp - ProtocolCoreEx)
+  - El cliente original despacha con ProtocolCore(head, msg, size, key) en 0x00663B20.
+  - La DLL reemplaza la llamada en 0x0065FD79:
+        SetCompleteHook(0xFF, 0x0065FD79, &ProtocolCoreEx);
+  - ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key):
+        switch(head) { case X: ... } ; y para cabeceras con sub-head usa
+        lpMsg[3] (si C1) o lpMsg[4] (si C2).
+        Al final: return ProtocolCore(head, lpMsg, size, key);  // deja pasar el resto
+  - ESTE es el punto de hook para interceptar/inyectar opcodes custom.
+
+5.3 CIFRADO (PacketManager.cpp - CPacketManager) - algoritmo MU clasico
+  - Claves: Data\\Enc1.dat (encriptar) y Data\\Dec2.dat (desencriptar).
+    Formato archivo: header WORD 4370 + size DWORD; luego 3 tablas de 4 DWORDs
+    (Modulus, Key, Xor) cada una XOR-eada con m_SaveLoadXor =
+    {0x3F08A79B, 0xE25CC287, 0x93D27AB9, 0x20DEA7BF}.
+  - EncryptBlock: 8 bytes -> 11 bytes. 4 DWORDs calculados con
+    Enc = (((Xor^palabra)^valor)*Key) % Modulus (encadenado), empaquetados
+    a bits (16 bits + 2 bits) y checksum (XOR de los 8 bytes ^ size ^ 0x3D).
+  - DecryptBlock: inversa + verificacion de checksum.
+  - XorData: filtro XOR de cabecera (m_XorFilter[32] fijo).
+
+5.4 ESTRUCTURAS DE PACKET (Protocol.h)
+  - PBMSG_HEAD  : type(C1), size(BYTE), head        ; set()=plano, setE()=C3
+  - PSBMSG_HEAD : type, size, head, subh            ; set()=C1, setE()=C3
+  - PWMSG_HEAD  : type(C2), size[2], head           ; set()=C2, setE()=C4
+  - PSWMSG_HEAD : type, size[2], head, subh         ; set()=C2, setE()=C4
+  - Macros de numero: SET_NUMBERHB/LB/HW/LW/HDW/LDW y MAKE_NUMBERW/DW/QW.
+  - Todos los structs de recv usan campos "//EXTRA" (DWORD View*) que el cliente
+    guarda en variables globales para dibujar la UI (ver 6.6).
+
+5.5 OPCODES CONOCIDOS (EX603 / S6 - confirmados en Protocol.h y GameServer)
+  Servidor -> Cliente (recv, via ProtocolCoreEx):
+    C1:11  dano recibido              C1:16  monstruo muere
+    C1:17  jugador muere              C3:22  item recogido (result/ItemInfo[12])
+    C1:26  vida (tipo FE/FF)          C1:27  mana/BP
+    C1:2C  resultado fruta            C1:88  rate de la caja del caos
+    C1:9C  recompensa exp             C1:A3  recompensa quest
+    C1:B1:00 mover de mapa            C1:B1:01 auth mover de mapa
+    C1:DE  habilitar creacion          C1:D2:02 abrir cash shop
+    C1:F1:00 conectar cliente         C1:F1:01 cuenta conectada
+    C1:F1:02 cerrar cliente           C1:F3:00 lista de personajes
+    C3:F3:03 info personaje           C1:F3:04 regen personaje
+    C1:F3:05 level up                 C1:F3:06 puntos de level
+    C1:F3:07 dano a monstruo          C1:F3:50 info master
+    C1:F3:51 master level up          C1:F3:E0 info personaje (nuevo)
+    C1:F3:E1 calc personaje           C2:F3:E2 health bars (custom)
+    C1:F3:E3 info GENS                C1:F3:E4/E5 mensaje nuevo
+    C1:F3:E7 lista de precios shop    C1:F3:EA nombre de servidores
+  Cliente -> Servidor (send, via DataSend):
+    C1:04  ataque (click derecho)     C1:88  peticion rate caos
+    C1:BF:51 helper start             C3:F1:01 conectar cuenta
+    C1:F3:00 lista personajes         C1:F3:03 entrar personaje
+    C1:F3:09 hardware id              C1:22  item get
+    C1:23  item drop                  C1:24  item move (flag 2 = trade)
+    C1:26  item use
+  Trade (confirmado en GameServer Trade.h/cpp + Protocol.cpp):
+    C1:36  request trade (index[2])   C3:36  request trade (server->client)
+    C1:37  respuesta trade            C1:38  item trade borrado (slot)
+    C1:39  item trade anadido         C1:3A  resultado trade (completo)
+    C1:3B  dinero trade (DWORD)       C1:3C  boton OK (flag)
+    C1:3D  cancelar / resultado
+  Tienda NPC (GameServer Protocol.cpp):
+    C1:30  hablar NPC / abrir shop    C1:31  cerrar talk
+    C1:32  comprar item               C1:33  vender item
+    C1:34  reparar item
+  Personal Shop (GameServer PersonalShop.h/cpp):
+    C2:3F:00 viewport shops           C1:3F:01 poner precio (slot+price[4])
+    C1:3F:02 abrir (text[36])         C1:3F:03 cerrar
+    C2:3F:05/13 lista de items        C1:3F:06 comprar
+    C1:3F:07 salir                    C1:3F:08 vender
+    C1:3F:10 cambiar texto            C1:3F:12 leave
+    C2:EC:31 busqueda                 C2:EC:32 valores (comision)
+    C3:EC:33 log de busqueda
+
+================================================================================
+ SECCION 6: SISTEMAS DE JUEGO IMPORTANTES
+================================================================================
+
+6.1 INVENTARIO (cliente: sin modulo propio; todo via hooks + memoria)
+  - Archivo principal: Item.cpp (InitItem, InitItemBow, InitItemGlove, InitJewel,
+    InitWing). No hay funciones de slots en el source: el manejo de slots es del
+    cliente original; la DLL hookea puntos de item (modelo, textura, color,
+    efecto, texto de socket) y lee/escribe la estructura de item en memoria.
+  - Layout de un item en memoria (usado por los hooks de Item.cpp/Shop.cpp):
+        +0x00  index  (WORD)             +0x02  level/opciones (DWORD)
+        +0x16  durabilidad (BYTE)        +0x17  excellent (GET_ITEM_OPT_EXC)
+        +0x22  byte arco especial        +0x25/0x26/0x36  opciones (alas)
+        +0x49  flag socket               +0x4A..+0x4E  socket options (5)
+    Macros: GET_ITEM(x,y), GET_ITEM_MODEL(x,y), ITEM_BASE_MODEL=1171,
+            MAX_ITEM_TYPE=512, GET_ITEM_OPT_LEVEL(x)=((x>>3)&0xF),
+            GET_ITEM_OPT_EXC(x)=x-(x&0x40)
+  - Tabla global de items: *(DWORD*)0x08128AC0 + 0x54*index
+    (ej: ItemBowReloadArrow lee 0x08128AC0 + 0x54*(*address)).
+  - Personaje: MAIN_CHARACTER_STRUCT 0x08128AC8 (puntero). Offsets usados:
+        +0x00 nombre, +0x0E level, +0x10 exp, +0x14 next exp, +0x18 str,
+        +0x1A dex, +0x1C vit, +0x1E energy, +0x20 leadership, +0x22 life,
+        +0x24 mana, +0x26 max life, +0x28 max mana, +0x2A shield, +0x2C max shield,
+        +0x40 BP, +0x42 max BP, +0x4C/+0x4E/+0x50/+0x52 puntos de fruta
+    (escritura directa en GCNewCharacterInfoRecv, Protocol.cpp).
+  - Mover items (cliente -> servidor): C1:24 con SourceSlot, TargetSlot, TargetFlag
+    (flag 2 = destino trade; ver GameServer Protocol.cpp ~1856). Servidor:
+    CItemManager::CGItemMoveRecv(PMSG_ITEM_MOVE_RECV*, aIndex) en ItemManager.cpp.
+  - Precios/valor de item: gItemValue (ItemValue.cpp) + Shop.cpp (ver 6.4).
+
+6.2 TRADE
+  - Cliente: NO hay modulo de trade en el source EX603 (la ventana y la logica
+    estan en el main.exe original). Se accede interceptando los opcodes en
+    ProtocolCoreEx (0x36..0x3D) o abriendo/cerrando la ventana con
+    pOpenWindow/pClosekWindow (los IDs de la ventana de trade no estan en este
+    source; se obtienen por ingenieria inversa del binario).
+  - Servidor (contraparte - util para saber que espera el servidor):
+        CTrade (Trade.h / Trade.cpp), funciones:
+          CGTradeRequestRecv(PMSG_TRADE_REQUEST_RECV*, aIndex)   C1:36
+          CGTradeResponseRecv(PMSG_TRADE_RESPONSE_RECV*, aIndex) C1:37
+          CGTradeMoneyRecv(PMSG_TRADE_MONEY_RECV*, aIndex)       C1:3B
+          CGTradeOkButtonRecv(PMSG_TRADE_OK_BUTTON_RECV*, aIndex) C1:3C
+          CGTradeCancelButtonRecv(aIndex)                        C1:3D
+          GCTrade*Send: Request(C3:36), Response(C1:37), ItemDel(C1:38,slot),
+                        ItemAdd(C1:39,slot+ItemInfo[MAX_ITEM_INFO]),
+                        Money(C1:3B), OkButton(C1:3C,flag), Result(C1:3A/3D)
+        Constantes: TRADE_SIZE=32 (slots), MAX_TRADE_MONEY=1000000000.
+        Estado por jugador (User.h): Trade[32], TradeMap, TradeMoney, TradeOk,
+        TargetNumber, PShopTrade (critical section), TradeOkTime.
+  - Para tu sistema de alquimia con trade: intercepta C1:36..3D en ProtocolCoreEx
+    para detectar apertura/items/OK y dispara tu script Lua; o usa la ventana
+    nativa de trade para pedir los ingredientes.
+
+6.3 PERSONAL SHOP
+  - Cliente: ventana nativa; la parte custom visible del source es Shop.cpp
+    (precios) + la lista de precios que manda el servidor:
+        GCShopPriceListRecv(PMSG_SHOP_PRICE_LIST_RECV*)  // C1:F3:E7
+          -> ClearShopPriceList(); ShopValueType = lpMsg->type;
+             por cada item: InsertShopPrice(ItemIndex, ItemLevel, ItemDur,
+                                            ItemNewOption, ItemPrice)
+        gShopPrice[MAX_ITEM_SHOP_PRICE=120]  +  ShopValueType (DWORD global)
+        Hooks instalados en InitShop():
+          SetCompleteHook(0xE8, 0x007E4449, &GetBuyPrice);   (2x)
+          SetCompleteHook(0xE8, 0x007E4497, &GetBuyPrice);
+          SetCompleteHook(0xE8, 0x007E44EC, &GetSellPrice);
+          SetCompleteHook(0xFF, 0x007E44D3, &ShowBuyPrice);
+        GetBuyPrice(address): si ShopValueType!=0 busca en gShopPrice (por index,
+        level, dur, exc) y devuelve el precio custom; si no, calcula con
+        gItemValue o llama al original 0x0058E3B0.
+        GetSellPrice(address): valor/3 redondeado o original.
+  - Servidor: CPersonalShop (PersonalShop.h/cpp) con todos los opcodes C1:3F (ver
+    tabla 5.5). CCustomStore (CustomStore.h/cpp) extiende el personal shop con
+    precios en joyas/coins (JoB/JoS/JoL/JoC/JCR/JoG/JoH, Coin1..3) y shop offline.
+  - Para tu DLL: usa GCShopPriceListRecv como modelo para listas de precios
+    custom y los hooks de Shop.cpp para sobreescribir el precio mostrado/calculado.
+
+6.4 SHOP NPC (comprar/vender)
+  - Cliente: Shop.cpp (mismos hooks de precio que 6.3).
+  - Servidor: C1:32 comprar (CItemManager::CGItemBuyRecv), C1:33 vender
+    (CGItemSellRecv), C1:34 reparar (CGItemRepairRecv). Estructuras PMSG_ITEM_BUY/
+    SELL/REPAIR_RECV en ItemManager.h.
+
+6.5 CAJA DEL CAOS / ALQUIMIA (el mejor modelo para "alquimia custom")
+  - ChaosBox.h/cpp:
+        InitChaosBox(): hooks de texto en 0x0082D1C3, 0x0082D2E6, 0x0082D325,
+                        0x0082D361, 0x0082D39D (PrintPlayerChaosRate) y
+                        0x0082D4A2, 0x0082D4D1 (PrintPlayerChaosMoney).
+        ChaosBoxMainProc(): si ChaosBoxMixCheck() envia C1:88 (pide rate):
+            PMSG_CHAOS_MIX_RATE_SEND { PBMSG_HEAD C1:88; DWORD type; }
+            type = pChaosMixIndex  (macro: ((DWORD(*)(DWORD*))0x0079DEA0)
+                                     con &*(DWORD*)0x00EBB848)
+        ChaosBoxMixCheck(): valida el tipo de mix contra el enum eChaosMixNumber
+            (CHAOS_MIX_CHAOS_ITEM=1 ... CHAOS_MIX_LUCKY_ITEM_REFINE=52; lista
+            completa en ChaosBox.h). Devuelve 1 si el mix es valido.
+        GCChaosMixRateRecv(PMSG_CHAOS_MIX_RATE_RECV*): guarda MixRate/MixMoney/
+            MixTax (C1:88 del servidor).
+        PrintPlayerChaosRate/Money: reemplazan el texto que el cliente imprime en
+            la ventana del caos (rate %, money, money+tax formateados).
+  - Para alquimia custom: duplica este patron - pide config con un opcode, recibe
+    rate/money, y usa hooks de texto para pintar en la ventana nativa.
+
+6.6 PERSONAJE / STATS EN PANTALLA (PrintPlayer.cpp)
+  - Variables globales View* (PrintPlayer.h) que la DLL mantiene y usa para UI:
+    ViewIndex, ViewReset, ViewValue, ViewPoint, ViewCurHP/MaxHP, ViewCurMP/MaxMP,
+    ViewCurBP/MaxBP, ViewCurSD/MaxSD, ViewDamageHP/SD, ViewDamageTable[4],
+    ViewExperience, ViewNextExperience, ViewMasterExperience/Next (QWORD),
+    ViewStrength/Dexterity/Vitality/Energy/Leadership, ViewAdd*, ViewPhysi/Magic/
+    CurseDamage*, ViewMul*/Div*, ViewRFDamageMultiplierA..C, ViewDarkSpirit*.
+  - Funciones hookeadas: PrintDamageOnScreenHP/SD/RF (numeros de dano),
+    PrintPlayerViewHP1/2, MP1/2, BP1/2, SD1/2, LevelUpExperience1/2,
+    ViewText, SetAttackSpeed, GetSkillMagicDamage, ViewStrength/Dexterity/...
+  - Estas son las que alimentan la ventana de personaje del cliente.
+
+6.7 MAPA Y MONSTRUOS (para "ecosistemas de mapa con efectos")
+  - Map.cpp/h: InitMap(), LoadMapName(index), LoadMapTitle(path,index,c,d,e,f).
+    MAIN_CURRENT_MAP 0x00E61E18. CustomMap (tabla custom de mapas).
+  - Monster.cpp/h: CreateMonster(index,x,y,key) (pCreateMonster 0x00901460),
+    SettingMonster(o,index) (0x00580BB0), pCreateCharacter 0x0057EEC0,
+    pSetCharacterScale 0x0057F020. CustomMonster/CustomMonsterSkin para skins.
+  - Efectos: pCreateSprite/pCreateParticle/pCreateEffect (2.2) + CustomEffect
+    (tabla CUSTOM_EFFECT_INFO con EffectType 0=sprite,1=particula,2=efecto).
+
+6.8 OTROS
+  - HealthBar.cpp: MAX_MAIN_VIEWPORT=400, gNewHealthBar[], HealthBarToggle(),
+    DrawNewHealthBar() (hook 0x005B96E8; llama original 0x005BA770).
+  - Reconnect.cpp: auto-reconexion (enum eReconnectStatus/Progress), usa
+    ReconnectDrawInterface() y se dispara desde los recv C1:B1, F1:01, F1:02,
+    F3:00, F3:03.
+  - Camera.cpp: camara OpenGL (CAMERA_ZOOM/ADDR/INFO), Toggle/Restore/Zoom/Move.
+  - Common.cpp: ClicMouseProc (C1:04 ataque), CheckGensBattleMap, LoginTab,
+    CheckMasterLevel (asm naked, compara level contra CharacterMaxLevel),
+    HelperMouseClick (bloquea click helper con ventanas 8/9 abiertas).
+  - Util.cpp: SetExperienceTable(MaxLevel,ConstA,ConstB,DeleteLevel) -> genera
+    gLevelExperience[1001] con (((n+9)*n)*n)*ConstA (+ConstB si n>255).
+  - GetHardwareId(): HWID de 45 chars (volumen + CPU) enviado en C1:F3:09.
+
+================================================================================
+ SECCION 7: GUIA DE IMPLEMENTACION PARA TU DLL CON LUA
+================================================================================
+
+7.1 EL SOURCE MAIN_EX603 YA ES CASI TU DLL
+  - Reutiliza su arquitectura 1:1:
+      * EntryProc exportada + DllMain
+      * gProtect.ReadMainFile (o tu propio formato de config)
+      * Util.cpp: SetByte/SetWord/SetDword/SetCompleteHook/MemoryCpy/MemorySet
+      * LoadReferenceAddressTable + AddressTable*.bin (recursos BIN) para
+        parches de punteros
+      * Hooks de entrada: SetCompleteHook(0xFF, 0x0065FD79, &ProtocolCoreEx)
+        (packets) y SetCompleteHook(0xE8, 0x005B96E8, &DrawLuaUI) (render por frame)
+  - ADVERTENCIA DE VERSION: las direcciones son del EX603. Verifica contra tu
+    main.exe actual (si es S6 Evercion deberian encajar; si no, recalcular con
+    un tool como GetMainInfo o con Cheat Engine/IDA).
+
+7.2 EMBEBER LUA
+  - Usa Lua 5.2 (el GameServer usa lua52.lib en Util\\lua). Mantener la misma
+    version facilita compartir estructuras y evita conflictos.
+  - Inicializa lua_State en EntryProc (despues de instalar hooks).
+  - Registra tus funciones C++ -> Lua (UI, input, packets, character, item).
+
+7.3 MAPA DE EXPOSICION SUGERIDO (funciones Lua del cliente)
+  - Dibujo (por frame, dentro del hook de render):
+      Draw.Text(x, y, str, color)   -> pSetTextColor + pDrawText(pTextThis(),...)
+      Draw.Image(id, x, y, w, h)    -> pLoadImage + pDrawImage
+      Draw.Rect/Bar(x,y,w,h,color)  -> pDrawBarForm + pSetBlend/pGLSwitchBlend
+      Draw.Tooltip(x,y,str)         -> pDrawToolTip
+      Draw.WorldBar(obj, rate)      -> patron DrawNewHealthBar + pGetPosFromAngle
+      Draw.Message(str)             -> pDrawMessage
+  - Ventanas nativas:
+      Interface.Open(id) / Interface.Close(id) / Interface.IsOpen(id)
+        -> pOpenWindow/pClosekWindow/pCheckWindow(pWindowThis(), id)
+  - Input (usa los WH_KEYBOARD/WH_MOUSE hooks):
+      Input.GetCursorX()/GetCursorY() -> pCursorX/pCursorY
+      Input.OnKey(key) -> callback Lua
+      Input.OnClick(x, y, button) -> callback Lua (hit-test de tus ventanas)
+  - Packets:
+      SendPacket(hexstring)         -> construir PBMSG_HEAD y DataSend
+      OnPacket(head, sub) -> callback Lua (extension de ProtocolCoreEx)
+  - Personaje / items (lectura de MAIN_CHARACTER_STRUCT y 0x08128AC0):
+      Character.GetLevel/GetStats/Money, Item.Get(index/slot), etc.
+  - Trade / PShop: interceptar 0x36..0x3D y 0x3F en ProtocolCoreEx y disparar
+    callbacks Lua; usar pOpenWindow para mostrar ventanas.
+
+7.4 COMUNICACION SERVIDOR <-> CLIENTE
+  - El GameServer YA tiene Lua (LuaFunction.cpp: InitLuaFunction(lua_State*),
+    lua_register con funciones como GetMaxIndex, GetObjectExtraDexterity...).
+  - Para features server-side custom que necesiten UI: servidor envia un opcode
+    nuevo (elige uno libre, p.ej. C1:FA/0xFB/0xFC con sub-head) -> ProtocolCoreEx
+    lo captura -> lo pasa a Lua -> Lua dibuja la ventana con las funciones de 7.3.
+  - El cliente responde con DataSend del mismo opcode -> el servidor lo procesa
+    en su Lua (los bridges que ya tienes funcionando).
+
+7.5 NOTAS DE SEGURIDAD / ANTICHEAT
+  - El pack trae MHPClient/MHPServer (anti-cheat) y Themida (GetMainInfo).
+    Si tu server usa el anti-cheat, tu DLL debera registrarse como plugin
+    (PluginName[3][32] + PluginNameCRC en ServerInfo.sse) o las verificaciones
+    de gProtect.CheckPluginFile() fallaran. Testea primero con anti-cheat off.
+
+7.6 COMPILACION
+  - Clona Main.vcxproj (v100, Release Win32, MultiByte, /O2, WIN32;NDEBUG;
+    _WINDOWS;_USRDLL;MAIN_EXPORTS), agrega lua52.lib (o compila lua.c + libs
+    estatico) y enlaza Opengl32.lib, ws2_32.lib, Winmm.lib.
+
+================================================================================
+ SECCION 8: INVENTARIO DE ARCHIVOS RELEVANTES
+================================================================================
+  Main_EX603/Main/
+    Main.cpp/h, Offset.h, Util.cpp/h, Protect.cpp/h, Protocol.cpp/h,
+    PacketManager.cpp/h, Font.cpp/h, Resolution.cpp/h, HealthBar.cpp/h,
+    Reconnect.cpp/h, ChaosBox.cpp/h, Shop.cpp/h, Item.cpp/h, PrintPlayer.cpp/h,
+    Common.cpp/h, Camera.cpp/h, Map.cpp/h, Monster.cpp/h, TrayMode.cpp/h,
+    HackCheck.cpp/h, Custom*.cpp/h, EventEntryLevel.*, ItemStack.*, ItemValue.*,
+    CCRC32.*, stdafx.*, Main.rc (recursos BIN IDR_BIN1..3), Main.vcxproj,
+    AddressTable1.bin/2.bin/3.bin
+  GetMainInfo_EX603/GetMainInfo/GetMainInfo.cpp   (genera ServerInfo.sse)
+  Emulator/GameServer/ (contraparte - Trade.h/cpp, PersonalShop.h/cpp,
+    CustomStore.h/cpp, ItemManager.h/cpp, Protocol.cpp/h, LuaFunction.cpp/h,
+    ScriptLoader.cpp/h - Lua 5.2)
+
+================================================================================
+ SECCION 9: METODO DE INYECCION / SISTEMA DE PLUGINS (via GetMainInfo)
+================================================================================
+
+9.1 FLUJO COMPLETO DE CARGA (quien llama a quien)
+
+  1) main.exe (cliente EX603 PARCHEADO, "cracked") arranca. El binario esta
+     modificado para cargar la DLL "main.dll" (el proyecto Main) y llamar a su
+     funcion exportada EntryProc(). Por eso el OutputDir del proyecto Main es
+     ..\..\..\Program\MuServerEX603\Tools\GetMainInfo\Path\ (junto al main.exe).
+
+  2) EntryProc() (Main.cpp) hace TODO el setup del cliente:
+       - gProtect.ReadMainFile("ServerInfo.sse")  -> lee la config cifrada
+       - Parches de bytes (cracks, limites, version, IP, serial...)
+       - Hooks base: SetCompleteHook(0xE8,0x005B96E8,&DrawNewHealthBar)
+                     SetCompleteHook(0xFF,0x0065FD79,&ProtocolCoreEx)
+       - LoadReferenceAddressTable(IDR_BIN1..3)   -> tablas de direcciones
+       - gCustomXxx.Load(...)  y  gPacketManager.LoadEncryption/DecryptionKey
+       - InitXxx() de todos los modulos
+       - gProtect.CheckLauncher(); CheckInstance(); CheckClientFile()
+       - gProtect.CheckPluginFile()   <-- AQUI SE CARGAN TUS DLLs
+       - SetWindowsHookEx(WH_KEYBOARD/WH_MOUSE)   (despues de los plugins)
+       - CreateThread(ReduceConsumeProc)
+
+  3) gProtect.CheckPluginFile() (Protect.cpp) = EL METODO DE INYECCION:
+       for(i=0..2):
+         if(PluginNameCRC[i]==0) continue;              // no registrado -> no carga
+         CRC32.FileCRC(PluginName[i], &crc, 1024);      // CRC de los PRIMEROS 1024 bytes
+         if(crc != PluginNameCRC[i]) ExitProcess(0);    // CRC mal -> mata el cliente
+         HMODULE mod = LoadLibrary(PluginName[i]);      // carga TU DLL en el proceso
+         if(mod == 0) ExitProcess(0);
+         EntryProc = (void(*)())GetProcAddress(mod, "EntryProc");
+         if(EntryProc != 0) EntryProc();                // ejecuta tu EntryProc
+
+  IMPORTANTE: tu plugin corre DENTRO del proceso del cliente (main.exe), en el
+  MISMO hilo que main.dll (el hilo principal). Por eso dentro de tu EntryProc
+  puedes usar SetCompleteHook, SetWindowsHookEx(...,GetCurrentThreadId()), leer
+  las direcciones de Offset.h, etc. Los hooks de main.dll YA estan instalados
+  cuando corre tu plugin (los keyboard/mouse hooks globales todavia no, se
+  instalan justo despues).
+
+9.2 PASOS PARA REGISTRAR TU DLL LUA CON GETMAININFO
+
+  1) Compila tu DLL como plugin:
+       - Debe exportar:  extern "C" _declspec(dllexport) void EntryProc()
+       - Mismo toolset v100, Release Win32, charset MultiByte, /O2
+       - Enlaza Opengl32.lib, ws2_32.lib, Winmm.lib (+ lua52)
+       - Nombrala p.ej. "Lua.dll"
+  2) Copia Lua.dll a la carpeta .\Path\ de GetMainInfo (la misma donde estan
+     main.exe y main.dll).
+  3) En MainInfo.ini (carpeta de GetMainInfo) anade:
+       [MainInfo]
+       ClientName=main.exe
+       PluginName1=Lua.dll
+       (PluginName2/3 disponibles para hasta 3 plugins)
+  4) Ejecuta GetMainInfo.exe -> genera .\Path\ServerInfo.sse con el CRC de
+     main.exe (ClientNameCRC) y el de Lua.dll (PluginNameCRC[0]).
+  5) Distribuye la carpeta Path al jugador (main.exe + main.dll + Lua.dll +
+     ServerInfo.sse + Data\...). Al arrancar, main.dll hara LoadLibrary de
+     Lua.dll y llamara su EntryProc.
+
+  OJO: CADA VEZ QUE RECOMPILES Lua.dll debes volver a ejecutar GetMainInfo
+  (el CRC cambia). Si no lo registras (PluginNameCRC==0) la DLL NO se carga.
+
+9.3 REQUISITOS / CAMPOS CLAVE DE ServerInfo.sse (MAIN_FILE_INFO)
+
+  ClientName[32]   : nombre del main.exe (p.ej. "main.exe")
+  ClientNameCRC    : CRC32 (1024 bytes) de main.exe  -> CheckClientFile()
+  PluginName[3][32]: nombres de hasta 3 DLLs plugin
+  PluginNameCRC[4] : CRC32 (1024 bytes) de cada plugin -> CheckPluginFile()
+  LauncherStart    : bit0 = exige launcher (mutex LauncherMutex)  -> CheckLauncher()
+                     bit1 = control de instancia unica (mutex "SSEMU_MAIN_S6ENG_<IP>")
+  LauncherMutex[32]: nombre del mutex del launcher
+  (todos los demas campos: IP, puerto, version, serial, teclas, tablas custom...)
+
+  Detalles del CRC: CRC32.FileCRC(name,&crc,1024) calcula el CRC de los primeros
+  1024 bytes del archivo. Se usa para main.exe y para cada plugin.
+
+9.4 METODOS ALTERNATIVOS DE INYECCION (si algun dia no usas GetMainInfo)
+
+  A) METODO PLUGIN (recomendado, nativo SSeMU): el de 9.2. Zero friccion con el
+     anti-cheat del pack porque es el mecanismo oficial del emulador.
+  B) FORK DEL MAIN: copia el proyecto Main_EX603 y mete tu codigo Lua DENTRO
+     (EntryProc del propio main.dll). No necesitas plugin: el cliente ya carga
+     main.dll. Ideal si quieres controlar todo en un solo binario.
+  C) INYECTOR GENERICO: CreateRemoteThread + LoadLibrary en main.exe desde un
+     proceso externo (o launcher propio). Funciona, pero el anti-cheat
+     MHPClient/MHPServer puede bloquearlo y perderias la integridad del flujo
+     GetMainInfo (CRC de main.exe/plugins).
+  D) IMPORT TABLE PATCH: anadir la importacion de tu DLL en la tabla de imports
+     de main.exe (como hace el propio patch del emulador). Es lo que ya hace el
+     main.exe parcheado con main.dll.
+
+9.5 GOTCHAS / NOTAS
+
+  - La DLL plugin debe poder cargarse con LoadLibrary: misma carpeta que
+    main.exe, sin dependencias faltantes (lua52 estatica o junto a la DLL).
+  - El anti-cheat MHPClient verifica librerias/procesos (LibraryCheck,
+    ProcessCheck...). Si tu server lo usa activo, registra la DLL como plugin
+    oficial (PluginName) o desactiva las comprobaciones durante el desarrollo.
+  - EntryProc de los plugins se ejecuta en el hilo principal del cliente; si
+    necesitas un hilo propio para Lua, crealo dentro de tu EntryProc (patron
+    CreateThread como ReduceConsumeProc).
+  - No hagas Sleep largo ni llamadas bloqueantes dentro de EntryProc: el cliente
+    sigue arrancando.
+  - El orden real en EntryProc (Main.cpp): CheckPluginFile se llama ANTES de
+    SetWindowsHookEx. Si tu plugin necesita el cursor/teclado, instala tus
+    propios hooks dentro de tu EntryProc (o usa los ya instalados de main.dll
+    via pCursorX/pCursorY y el WndProc de TrayMode).
+
+================================================================================
+ FIN DEL REPORTE
+================================================================================

@@ -1,0 +1,107 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Website  : https://www.ssemu.com.ar
+// # Forum    : https://www.ssemu.com.ar/forum
+// # YouTube  : https://www.youtube.com/@ssemu
+// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # © 2026 SetecSoft Development
+// # This file is part of the SSeMU MuOnline server package.
+// #############################################################################
+
+2
+// -------------------------------------------------------------
+// Index   MapNumber   Rate_AL0   Rate_AL1   Rate_AL2   Rate_AL3
+// -------------------------------------------------------------
+   0       *           10000      10000      10000      10000
+end
+
+3
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Index   Group   SectionRate   ItemDropRate   MoneyAmount   SetItemDropRate   ItemDropCount   EffectValue   DW   DK   FE   MG   DL
+// ---------------------------------------------------------------------------------------------------------------------------------
+   0       0       10000         100            0             0                 1               0             1    1    1    1    1
+end
+
+4
+// -----------------------------------------------------------------------------------------------------------------------------
+// Group   Index     Level   Grade   Durability   Option0   Option1   Option2   Option3   Option4   Option5   Duration   Comment
+// -----------------------------------------------------------------------------------------------------------------------------
+   0       00,016    0       0       0            39        *         *         *         *         *         0          //Sword of Destruction [Level: +6~8]
+   0       00,018    0       0       0            39        *         *         *         *         *         0          //Thunder Blade [Level: +6~8]
+   0       04,017    0       0       0            39        *         *         *         *         *         0          //Celestial Bow [Level: +6~8]
+   0       04,019    0       0       0            39        *         *         *         *         *         0          //Great Reign Crossbow [Level: +6~8]
+   0       02,012    0       0       0            39        *         *         *         *         *         0          //Great Lord Scepter [Level: +6~8]
+   0       07,021    0       0       0            39        *         *         *         *         *         0          //Great Dragon Helm [Level: +6~8]
+   0       08,021    0       0       0            39        *         *         *         *         *         0          //Great Dragon Armor [Level: +6~8]
+   0       09,021    0       0       0            39        *         *         *         *         *         0          //Great Dragon Pants [Level: +6~8]
+   0       10,021    0       0       0            39        *         *         *         *         *         0          //Great Dragon Gloves [Level: +6~8]
+   0       11,021    0       0       0            39        *         *         *         *         *         0          //Great Dragon Boots [Level: +6~8]
+   0       07,022    0       0       0            39        *         *         *         *         *         0          //Dark Soul Helm [Level: +6~8]
+   0       08,022    0       0       0            39        *         *         *         *         *         0          //Dark Soul Armor [Level: +6~8]
+   0       09,022    0       0       0            39        *         *         *         *         *         0          //Dark Soul Pants [Level: +6~8]
+   0       10,022    0       0       0            39        *         *         *         *         *         0          //Dark Soul Gloves [Level: +6~8]
+   0       11,022    0       0       0            39        *         *         *         *         *         0          //Dark Soul Boots [Level: +6~8]
+   0       07,024    0       0       0            39        *         *         *         *         *         0          //Red Spirit Helm [Level: +6~8]
+   0       08,024    0       0       0            39        *         *         *         *         *         0          //Red Sprit Armor [Level: +6~8]
+   0       09,024    0       0       0            39        *         *         *         *         *         0          //Red Spirit Pants [Level: +6~8]
+   0       10,024    0       0       0            39        *         *         *         *         *         0          //Red Spirit Gloves [Level: +6~8]
+   0       11,024    0       0       0            39        *         *         *         *         *         0          //Red Spirit Boots [Level: +6~8]
+   0       08,023    0       0       0            39        *         *         *         *         *         0          //Hurricane Armor [Level: +6~8]
+   0       09,023    0       0       0            39        *         *         *         *         *         0          //Hurricane Pants [Level: +6~8]
+   0       10,023    0       0       0            39        *         *         *         *         *         0          //Hurricane Gloves [Level: +6~8]
+   0       11,023    0       0       0            39        *         *         *         *         *         0          //Hurricane Boots [Level: +6~8]
+   0       00,016    0       0       0            *         12        12        12        12        *         0          //Sword of Destruction [Skill Luck Option: +4 Exc: 1]
+   0       00,017    0       0       0            *         12        12        12        12        *         0          //Dark Breaker [Skill Luck Option: +4 Exc: 1]
+   0       00,018    0       0       0            *         12        12        12        12        *         0          //Thunder Blade [Skill Luck Option: +4 Exc: 1]
+   0       04,017    0       0       0            *         12        12        12        12        *         0          //Celestial Bow [Skill Luck Option: +4 Exc: 1]
+   0       05,009    0       0       0            *         12        12        12        12        *         0          //Dragon Soul Staff [Skill Luck Option: +4 Exc: 1]
+   0       07,017    0       0       0            *         12        12        12        12        *         0          //Dark Phoenix Helm [Skill Luck Option: +4 Exc: 1]
+   0       08,017    0       0       0            *         12        12        12        12        *         0          //Dark Phoenix Armor [Skill Luck Option: +4 Exc: 1]
+   0       09,017    0       0       0            *         12        12        12        12        *         0          //Dark Phoenix Pants [Skill Luck Option: +4 Exc: 1]
+   0       10,017    0       0       0            *         12        12        12        12        *         0          //Dark Phoenix Gloves [Skill Luck Option: +4 Exc: 1]
+   0       11,017    0       0       0            *         12        12        12        12        *         0          //Dark Phoenix Boots [Skill Luck Option: +4 Exc: 1]
+   0       07,018    0       0       0            *         12        12        12        12        *         0          //Grand Soul Helm [Skill Luck Option: +4 Exc: 1]
+   0       08,018    0       0       0            *         12        12        12        12        *         0          //Grand Soul Armor [Skill Luck Option: +4 Exc: 1]
+   0       09,018    0       0       0            *         12        12        12        12        *         0          //Grand Soul Pants [Skill Luck Option: +4 Exc: 1]
+   0       10,018    0       0       0            *         12        12        12        12        *         0          //Grand Soul Gloves [Skill Luck Option: +4 Exc: 1]
+   0       11,018    0       0       0            *         12        12        12        12        *         0          //Grand Soul Boots [Skill Luck Option: +4 Exc: 1]
+   0       07,019    0       0       0            *         12        12        12        12        *         0          //Divine Helm [Skill Luck Option: +4 Exc: 1]
+   0       08,019    0       0       0            *         12        12        12        12        *         0          //Divine Armor [Skill Luck Option: +4 Exc: 1]
+   0       09,019    0       0       0            *         12        12        12        12        *         0          //Divine Pants [Skill Luck Option: +4 Exc: 1]
+   0       10,019    0       0       0            *         12        12        12        12        *         0          //Divine Gloves [Skill Luck Option: +4 Exc: 1]
+   0       11,019    0       0       0            *         12        12        12        12        *         0          //Divine Boots [Skill Luck Option: +4 Exc: 1]
+   0       08,020    0       0       0            *         12        12        12        12        *         0          //Thunder Hawk Armor [Skill Luck Option: +4 Exc: 1]
+   0       09,020    0       0       0            *         12        12        12        12        *         0          //Thunder Hawk Pants [Skill Luck Option: +4 Exc: 1]
+   0       10,020    0       0       0            *         12        12        12        12        *         0          //Thunder Hawk Gloves [Skill Luck Option: +4 Exc: 1]
+   0       11,020    0       0       0            *         12        12        12        12        *         0          //Thunder Hawk Boots [Skill Luck Option: +4 Exc: 1]
+   0       07,027    0       0       0            *         12        12        12        12        *         0          //Dark Steel Mask [Skill Luck Option: +4 Exc: 1]
+   0       08,027    0       0       0            *         12        12        12        12        *         0          //Dark Steel Armor [Skill Luck Option: +4 Exc: 1]
+   0       09,027    0       0       0            *         12        12        12        12        *         0          //Dark Steel Pants [Skill Luck Option: +4 Exc: 1]
+   0       10,027    0       0       0            *         12        12        12        12        *         0          //Dark Steel Gloves [Skill Luck Option: +4 Exc: 1]
+   0       11,027    0       0       0            *         12        12        12        12        *         0          //Dark Steel Boots [Skill Luck Option: +4 Exc: 1]
+   0       06,013    0       0       0            *         12        12        12        12        *         0          //Dragon Shield [Skill Luck Option: +4 Exc: 1]
+   0       06,016    0       0       0            *         12        12        12        12        *         0          //Elemental Shield [Skill Luck Option: +4 Exc: 1]
+   0       06,015    0       0       0            *         12        12        12        12        *         0          //Grand Soul Shield [Skill Luck Option: +4 Exc: 1]
+   0       13,008    0       0       0            *         *         *         *         12        *         0          //Ring of Ice [Exc: 1]
+   0       13,009    0       0       0            *         *         *         *         12        *         0          //Ring of Poison [Exc: 1]
+   0       13,012    0       0       0            *         *         *         *         12        *         0          //Pendant of Lighting [Exc: 1]
+   0       13,013    0       0       0            *         *         *         *         12        *         0          //Pendant of Fire [Exc: 1]
+   0       13,025    0       0       0            *         *         *         *         12        *         0          //Pendant of Ice [Exc: 1]
+   0       13,026    0       0       0            *         *         *         *         12        *         0          //Pendant of Wind [Exc: 1]
+   0       13,027    0       0       0            *         *         *         *         12        *         0          //Pendant of Water [Exc: 1]
+   0       13,022    0       0       0            *         *         *         *         12        *         0          //Ring of Earth [Exc: 1]
+   0       13,023    0       0       0            *         *         *         *         12        *         0          //Ring of Wind [Exc: 1]
+   0       13,021    0       0       0            *         *         *         *         12        *         0          //Ring of Fire [Exc: 1]
+   0       13,024    0       0       0            *         *         *         *         12        *         0          //Ring of Magic [Exc: 1]
+   0       13,028    0       0       0            *         *         *         *         12        *         0          //Pendant of Ability [Exc: 1]
+   0       12,015    0       0       0            *         *         *         *         *         *         0          //Jewel of Chaos
+   0       14,014    0       0       0            *         *         *         *         *         *         0          //Jewel of Soul
+   0       14,013    0       0       0            *         *         *         *         *         *         0          //Jewel of Bless
+   0       14,016    0       0       0            *         *         *         *         *         *         0          //Jewel of Life
+   0       14,022    0       0       0            *         *         *         *         *         *         0          //Jewel of Creation
+   0       14,019    0       0       0            31        *         *         *         *         *         0          //Devil's Invitation [Level: +2~4]
+   0       13,018    0       0       0            35        *         *         *         *         *         0          //Invisibility Cloak [Level: +4~6]
+   0       14,028    0       0       0            33        *         *         *         *         *         0          //Lost Map [Level: +3~5]
+end

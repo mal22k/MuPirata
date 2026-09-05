@@ -1,0 +1,117 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset0 Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl240\slmult1\qc\ul\b\fs32\lang22 MUSERVER SETUP GUIDE\fs28\par
+\par
+
+\pard\sa200\sl240\slmult1 REQUIREMENTS\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl240\slmult1\b0\fs24 Memory:\ulnone  1 GB (4GB recommended).\ul\b\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs24 Hard Drive:\ulnone  5 GB (10GB recommended).\ul\b\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs24 Operating system:\ulnone  Windows Server 2008 x64 or newer (Newer the better).\ul\b\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs24 Database:\ulnone  Microsoft SQL Server 2008 or newer (Newer the better).\ul\b\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs24 NET Framework 4.5.2:\ulnone  {{\field{\*\fldinst{HYPERLINK https://dotnet.microsoft.com/download/dotnet-framework-runtime/net452 }}{\fldrslt{https://dotnet.microsoft.com/download/dotnet-framework-runtime/net452\ul0\cf0}}}}\ul\b\f0\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs24 MVC++ Redistributable 2010 x86:\ulnone  {{\field{\*\fldinst{HYPERLINK http://download.microsoft.com/download/5/B/C/5BC5DBB3-652D-4DCE-B14A-475AB85EEF6E/vcredist_x86.exe }}{\fldrslt{http://download.microsoft.com/download/5/B/C/5BC5DBB3-652D-4DCE-B14A-475AB85EEF6E/vcredist_x86.exe\ul0\cf0}}}}\ul\b\f0\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs24 MVC++ Redistributable 2015 x64:\ulnone  {{\field{\*\fldinst{HYPERLINK https://www.microsoft.com/en-us/download/details.aspx?id=52685 }}{\fldrslt{https://www.microsoft.com/en-us/download/details.aspx?id=52685\ul0\cf0}}}}\ul\b\f0\fs28\par
+{\pntext\f2\'B7\tab}\b0\fs24 Notepad++:\ulnone  {{\field{\*\fldinst{HYPERLINK https://notepad-plus-plus.org/downloads/ }}{\fldrslt{https://notepad-plus-plus.org/downloads/\ul0\cf0}}}}\ul\b\f0\fs28\par
+
+\pard\sa200\sl240\slmult1\par
+LICENSE SETUP\ulnone\fs24\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl240\slmult1\b0 Go to client area and select "Edit" at your license.\b\par
+{\pntext\f0 2.\tab}\b0 Put the machine ip address at "Ip Address" field.\b\par
+{\pntext\f0 3.\tab}\b0 Go to "MuServer\\Tools" folder and run "GetHardwareId.exe".\b\par
+{\pntext\f0 4.\tab}\b0 Open "HardwareId.txt" and copy and put it at "Hardware Id" field.\b\par
+{\pntext\f0 5.\tab}\b0 Click "Save changes".\b\par
+{\pntext\f0 6.\tab}\b0 Go to "MuServer\\ConnectServer" and open "ConnectServer.ini".\b\par
+{\pntext\f0 7.\tab}\b0 Put the license number at "CustomerLicenseId".\b\par
+{\pntext\f0 8.\tab}\b0 Go to "MuServer\\DataServer" and open "DataServer.ini".\b\par
+{\pntext\f0 9.\tab}\b0 Put the license number at "CustomerLicenseId".\b\par
+{\pntext\f0 10.\tab}\b0 Go to "MuServer\\JoinServer" and open "JoinServer.ini".\b\par
+{\pntext\f0 11.\tab}\b0 Put the license number at "CustomerLicenseId".\b\par
+{\pntext\f0 12.\tab}\b0 Go to "MuServer\\GameServer\\DATA" and open "GameServerInfo - Common.dat".\b\par
+{\pntext\f0 13.\tab}\b0 Put the license number at "CustomerLicenseId".\b\par
+{\pntext\f0 14.\tab}\b0 Go to "MuServer\\GameServerCS\\DATA" and open "GameServerInfo - Common.dat".\b\par
+{\pntext\f0 15.\tab}\b0 Put the license number at "CustomerLicenseId".\b\par
+{\pntext\f0 16.\tab}\b0 Go to "MuServer\\MHPServer" and open "MHPServer.ini".\b\par
+{\pntext\f0 17.\tab}\b0 Put the license number at "CustomerLicenseId".\b\par
+{\pntext\f0 18.\tab}\b0 Done, if you had any errors check FAQ section.\b\par
+
+\pard\sa200\sl240\slmult1\par
+\ul\fs28 IP ADDRESS SETUP\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl240\slmult1\ulnone\b0\fs24 Go to "ConnectServer" and open "ServerList.dat".\b\par
+{\pntext\f0 2.\tab}\b0 Put the machine ip address at "IpAddress" column.\b\par
+{\pntext\f0 3.\tab}\b0 Go to "Data" and open "MapServerInfo.txt".\b\par
+{\pntext\f0 4.\tab}\b0 Put the machine ip address at "IpAddress" column.\b\par
+{\pntext\f0 5.\tab}\b0 The following ports should be opened at the Firewall: 44405, 55900, 55919,55999.\b\par
+{\pntext\f0 6.\tab}\b0 Done, if you had any errors check FAQ section.\b\par
+
+\pard\sa200\sl240\slmult1\par
+\ul\fs28 DATABASE SETUP\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl240\slmult1\ulnone\b0\fs24 Open "SQL Server Management Studio.exe".\b\par
+{\pntext\f0 2.\tab}\b0 Click "Connect".\b\par
+{\pntext\f0 3.\tab}\b0 On the top left side, right click "Databases".\b\par
+{\pntext\f0 4.\tab}\b0 Click "New database...".\b\par
+{\pntext\f0 5.\tab}\b0 On "Database name:" field put "MuOnline".\b\par
+{\pntext\f0 6.\tab}\b0 Click "OK".\b\par
+{\pntext\f0 7.\tab}\b0 Go to "MuServer\\DB" and double click "MuOnline.reg" and click "Yes" or "OK" to all windows.\b\par
+{\pntext\f0 8.\tab}\b0 Double click "MuOnline.sql" and wait for a "SQL Server Management Studio" window open.\b\par
+{\pntext\f0 9.\tab}\b0 On the top left dropbox select "MuOnline'.\b\par
+{\pntext\f0 10.\tab}\b0 Click at "Execute" button.\b\par
+{\pntext\f0 11.\tab}\b0 Done, if you had any errors check FAQ section.\b\par
+
+\pard\sa200\sl240\slmult1\par
+\ul\fs28 RUNNING THE SERVER\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl240\slmult1\ulnone\b0\fs24 Go to "MuServer\\ConnectServer" and run "ConnectServer.exe".\ul\b\fs28\par
+{\pntext\f0 2.\tab}\ulnone\b0\fs24 Go to "MuServer\\JoinServer" and run "JoinServer.exe".\ul\b\fs28\par
+{\pntext\f0 3.\tab}\ulnone\b0\fs24 Go to "MuServer\\DataServer" and run "DataServer.exe".\ul\b\fs28\par
+{\pntext\f0 4.\tab}\ulnone\b0\fs24 Go to "MuServer\\GameServer" and run "GameServer.exe".\ul\b\fs28\par
+{\pntext\f0 5.\tab}\ulnone\b0\fs24 Go to "MuServer\\GameServerCS" and run "GameServer.exe".\ul\b\fs28\par
+{\pntext\f0 6.\tab}\ulnone\b0\fs24 Go to "MuServer\\MHPServer" and run "MHPServer.exe".\ul\b\fs28\par
+{\pntext\f0 7.\tab}\ulnone\b0\fs24 Done, if you had any errors check FAQ section.\ul\b\fs28\par
+
+\pard\sa200\sl240\slmult1\par
+CLIENT SETUP\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl240\slmult1\ulnone\b0\fs24 Go to "MuServer\\Tools\\GetMainInfo" and open "GetClientInfo.ini".\b\par
+{\pntext\f0 2.\tab}\b0 Put the customername at "CustomerName".\b\par
+{\pntext\f0 3.\tab}\b0 Put the the machine ip address at "IpAddress".\ul\b\fs28\par
+{\pntext\f0 4.\tab}\ulnone\b0\fs24 Go to "MuServer\\Tools\\GetMainInfo" and open "GetMainInfo.ini".\ul\b\fs28\par
+{\pntext\f0 5.\tab}\ulnone\b0\fs24 Put the customername at "CustomerName".\b\par
+{\pntext\f0 6.\tab}\b0 Put the the machine ip address at "IpAddress".\ul\b\fs28\par
+{\pntext\f0 7.\tab}\ulnone\b0\fs24 Go to "MuServer\\Tools\\GetMainInfo" and run "GetClientInfo.exe".\ul\b\fs28\par
+{\pntext\f0 8.\tab}\ulnone\b0\fs24 Go to "MuServer\\Tools\\GetMainInfo" and run "GetMainInfo.exe".\ul\b\fs28\par
+{\pntext\f0 9.\tab}\ulnone\b0\fs24 Now the folder "Tools\\GetMainInfo\\Path" is your client patch, copy its contents to the full client.\ul\b\fs28\par
+{\pntext\f0 10.\tab}\ulnone\b0\fs24 Done, if you had any errors check FAQ section.\ul\b\fs28\par
+
+\pard\sa200\sl240\slmult1\par
+FAQ (Frequently Asked Questions)\par
+\ulnone\b0\fs24 Q: The error message box "Could not authenticate the machine" appears.\par
+A: Redo the "LICENSE SETUP" part of the guide with more attention.\par
+\par
+Q: The error message box "The file is codified in UTF-8 BOM and cannot be read. Change it to UTF-8 and try again" appears.\par
+A: Restore the file mentioned in the message and edit it with NOTEPAD++, do not use Windows Notepad.\par
+\par
+Q: At "DataServer" or "JoinServer" the message "Could not connect to database" appears.\par
+A: Redo the "DATABASE SETUP" part of the guide with more attention.\par
+\par
+Q: There's a way to open the server faster?\par
+A: You can use the StartUp located at "StartUp".\par
+\par
+Q: My "main.exe" isn't opening.\par
+A: Redo the "CLIENT SETUP" part of the guide with more attention.\f1\fs22\lang10\par
+}
+ 

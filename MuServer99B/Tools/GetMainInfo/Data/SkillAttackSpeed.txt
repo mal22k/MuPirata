@@ -1,0 +1,24 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Website  : https://www.ssemu.com.ar
+// # Forum    : https://www.ssemu.com.ar/forum
+// # YouTube  : https://www.youtube.com/@ssemu
+// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # © 2025 SetecSoft Development
+// # This file is part of the SSeMU MuOnline server package.
+// #############################################################################
+
+// --------------------------------------------------------------------
+// SkillIndex   MaxPhysiSpeed   MaxMagicSpeed  AnimationValue   Comment
+// --------------------------------------------------------------------
+   5            *               850            3                // Flame
+   9            *               900            3                // Evil Spirit
+   12           *               1200           3                // Aqua Beam
+   24           1200            *              15               // Triple Shot
+   41           2400            *              3                // Twisting Slash
+   52           500             *              3                // Penetration
+   55           2400            *              3                // Fire Slash
+   56           1600            *              15               // Power Slash
+end
