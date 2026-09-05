@@ -1,0 +1,41 @@
+```
+# Build artifacts
+*.obj
+*.exe
+*.dll
+*.lib
+*.pdb
+*.exp
+*.ilk
+*.iobj
+*.ipdb
+*.tlog
+*.lastbuildstate
+
+# Visual Studio files
+*.vcxproj.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+ipch/
+*.VC.VC.opendb/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Dependencies
+lua/
+
+# OS specific
+.DS_Store
+Thumbs.db
+```
