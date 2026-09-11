@@ -1,0 +1,50 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
+// # https://www.facebook.com/ssemuemulator
+// # https://www.youtube.com/@ssemu
+// # ---------------------------------------------------------------------------
+// # © 2024 SetecSoft Development
+// # This file is part of the SSeMU MuOnline Server files.
+// #############################################################################
+
+// --------------------------------------------------------------
+// Index   Name                   MusicPath             TitlePath
+// --------------------------------------------------------------
+   0       "Lorencia"             ""                    "Interface\\ImgsMapName\\Lorencia.tga"
+   1       "Dungeon"              ""                    "Interface\\ImgsMapName\\Dungeon.tga"
+   2       "Devias"               ""                    "Interface\\ImgsMapName\\Devias.tga"
+   3       "Noria"                ""                    "Interface\\ImgsMapName\\Noria.tga"
+   4       "Lost Tower"           ""                    "Interface\\ImgsMapName\\LostTower.tga"
+   6       "Arena"                ""                    "Interface\\ImgsMapName\\Arena.tga"
+   7       "Atlans"               ""                    "Interface\\ImgsMapName\\Atlans.tga"
+   8       "Tarkan"               ""                    "Interface\\ImgsMapName\\Tarkan.tga"
+   9       "Devil Square"         ""                    "Interface\\ImgsMapName\\DevilSquare.tga"
+   10      "Icarus"               ""                    "Interface\\ImgsMapName\\Icarus.tga"
+   11      "Blood Castle"         ""                    "Interface\\ImgsMapName\\BloodCastle.tga"
+   12      "Blood Castle"         ""                    "Interface\\ImgsMapName\\BloodCastle.tga"
+   13      "Blood Castle"         ""                    "Interface\\ImgsMapName\\BloodCastle.tga"
+   14      "Blood Castle"         ""                    "Interface\\ImgsMapName\\BloodCastle.tga"
+   15      "Blood Castle"         ""                    "Interface\\ImgsMapName\\BloodCastle.tga"
+   16      "Blood Castle"         ""                    "Interface\\ImgsMapName\\BloodCastle.tga"
+   17      "Blood Castle"         ""                    "Interface\\ImgsMapName\\BloodCastle.tga"
+   18      "Chaos Castle"         ""                    "Interface\\ImgsMapName\\ChaosCastle.tga"
+   19      "Chaos Castle"         ""                    "Interface\\ImgsMapName\\ChaosCastle.tga"
+   20      "Chaos Castle"         ""                    "Interface\\ImgsMapName\\ChaosCastle.tga"
+   21      "Chaos Castle"         ""                    "Interface\\ImgsMapName\\ChaosCastle.tga"
+   22      "Chaos Castle"         ""                    "Interface\\ImgsMapName\\ChaosCastle.tga"
+   23      "Chaos Castle"         ""                    "Interface\\ImgsMapName\\ChaosCastle.tga"
+   24      "Kalima"               ""                    "Interface\\ImgsMapName\\Kalima.tga"
+   25      "Kalima"               ""                    "Interface\\ImgsMapName\\Kalima.tga"
+   26      "Kalima"               ""                    "Interface\\ImgsMapName\\Kalima.tga"
+   27      "Kalima"               ""                    "Interface\\ImgsMapName\\Kalima.tga"
+   28      "Kalima"               ""                    "Interface\\ImgsMapName\\Kalima.tga"
+   29      "Kalima"               ""                    "Interface\\ImgsMapName\\Kalima.tga"
+   30      "Valley of Loren"      ""                    "Interface\\ImgsMapName\\ValleyofLoren.tga"
+   31      "Land of Trial"        ""                    "Interface\\ImgsMapName\\LandofTrial.tga"
+   32      "Devil Square"         ""                    "Interface\\ImgsMapName\\DevilSquare.tga"
+   33      "Aida"                 ""                    "Interface\\ImgsMapName\\Aida.tga"
+   34      "Crywolf"              ""                    "Interface\\ImgsMapName\\Crywolf.tga"
+   36      "Lost Kalima"          ""                    "Interface\\ImgsMapName\\Kalima.tga"
+   40      "Silent"               ""                    "Interface\\ImgsMapName\\Silent.tga"
+end

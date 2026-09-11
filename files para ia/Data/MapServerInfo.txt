@@ -1,0 +1,33 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
+// # https://www.facebook.com/ssemuemulator
+// # https://www.youtube.com/@ssemu
+// # ---------------------------------------------------------------------------
+// # © 2024 SetecSoft Development
+// # This file is part of the SSeMU MuOnline Server files.
+// #############################################################################
+
+0
+// ---------------------------------------------
+// [0~399]      [0/1]
+// ServerCode   LoadMaps   IpAddress        Port
+// ---------------------------------------------
+   0            1          "LAN/WAN IP"     55900
+   19           0          "LAN/WAN IP"     55919
+end
+
+1
+// -----------------------------------------------
+// [0~399]      [Index]     [*/N]
+// ServerCode   MapNumber   MoveToServer   Comment
+// -----------------------------------------------
+//- CommonServer to EventServer
+   0            30          19             // Valley of Loren
+   0            31          19             // Land of Trial
+   0            34          19             // Crywolf
+//- EventServer to CommonServer
+   19           30          *              // Valley of Loren
+   19           31          *              // Land of Trial
+   19           34          *              // Crywolf
+end

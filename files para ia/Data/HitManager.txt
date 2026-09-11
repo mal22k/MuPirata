@@ -1,0 +1,19 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Website  : https://www.ssemu.com.ar
+// # Forum    : https://www.ssemu.com.ar/forum
+// # YouTube  : https://www.youtube.com/@ssemu
+// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # © 2026 SetecSoft Development
+// # This file is part of the SSeMU MuOnline server package.
+// #############################################################################
+
+// ----------------------------------------------------------
+// [*/N]          [*/N]      [0~2]        [0/1]
+// MonsterClass   MapIndex   RewardMode   DebugMode   Comment
+// ----------------------------------------------------------
+// DEMOSTRATION
+// 275            0          2            1           // Kundun on Lorencia Mode Point
+end

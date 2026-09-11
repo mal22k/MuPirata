@@ -1,0 +1,74 @@
+// #############################################################################
+// # SSeMU MU Online Emulator
+// # ---------------------------------------------------------------------------
+// # Website  : https://www.ssemu.com.ar
+// # Forum    : https://www.ssemu.com.ar/forum
+// # YouTube  : https://www.youtube.com/@ssemu
+// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
+// # ---------------------------------------------------------------------------
+// # © 2026 SetecSoft Development
+// # This file is part of the SSeMU MuOnline server package.
+// #############################################################################
+
+2
+// -------------------------------------------------------------
+// Index   MapNumber   Rate_AL0   Rate_AL1   Rate_AL2   Rate_AL3
+// -------------------------------------------------------------
+   0       *           10000      10000      10000      10000
+end
+
+3
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Index   Group   SectionRate   ItemDropRate   MoneyAmount   SetItemDropRate   ItemDropCount   EffectValue   DW   DK   FE   MG   DL
+// ---------------------------------------------------------------------------------------------------------------------------------
+   0       0       10000         100            0             0                 1               0             1    1    1    1    1
+end
+
+4
+// -----------------------------------------------------------------------------------------------------------------------------
+// Group   Index     Level   Grade   Durability   Option0   Option1   Option2   Option3   Option4   Option5   Duration   Comment
+// -----------------------------------------------------------------------------------------------------------------------------
+   0       00,020    0       0       0            37        12        12        *        12         *         0          //Knight Blade [Level: +5~7 Skill Luck Exc: 1]
+   0       00,021    0       0       0            37        12        12        *        12         *         0          //Dark Reign Blade [Level: +5~7 Skill Luck Exc: 1]
+   0       04,020    0       0       0            37        12        12        *        12         *         0          //Arrow Viper Bow [Level: +5~7 Skill Luck Exc: 1]
+   0       00,016    0       0       0            *         12        12        *        12         *         0          //Sword of Destruction [Skill Luck Exc: 1]
+   0       00,031    0       0       0            *         12        12        *        12         *         0          //Rune Blade [Skill Luck Exc: 1]
+   0       02,011    0       0       0            *         12        12        *        12         *         0          //Lord Scepter [Skill Luck Exc: 1]
+   0       03,010    0       0       0            *         12        12        *        12         *         0          //Dragon Spear [Skill Luck Exc: 1]
+   0       04,019    0       0       0            *         12        12        *        12         *         0          //Great Reign Crossbow [Skill Luck Exc: 1]
+   0       05,006    0       0       0            *         12        12        *        12         *         0          //Staff of Resurrection [Skill Luck Exc: 1]
+   0       05,009    0       0       0            *         12        12        *        12         *         0          //Dragon Soul Staff [Skill Luck Exc: 1]
+   0       05,011    0       0       0            *         12        12        *        *          *         0          //Staff of Kundun [Skill Luck]
+   0       00,020    0       0       0            *         12        12        *        *          *         0          //Knight Blade [Skill Luck]
+   0       00,021    0       0       0            *         12        12        *        *          *         0          //Dark Reign Blade [Skill Luck]
+   0       04,020    0       0       0            *         12        12        *        *          *         0          //Arrow Viper Bow [Skill Luck]
+   0       07,021    0       0       0            *         *         12        *        12         *         0          //Great Dragon Helm [Luck Exc: 1]
+   0       08,021    0       0       0            *         *         12        *        12         *         0          //Great Dragon Armor [Luck Exc: 1]
+   0       09,021    0       0       0            *         *         12        *        12         *         0          //Great Dragon Pants [Luck Exc: 1]
+   0       10,021    0       0       0            *         *         12        *        12         *         0          //Great Dragon Gloves [Luck Exc: 1]
+   0       11,021    0       0       0            *         *         12        *        12         *         0          //Great Dragon Boots [Luck Exc: 1]
+   0       07,024    0       0       0            *         *         12        *        12         *         0          //Red Spirit Helm [Luck Exc: 1]
+   0       08,024    0       0       0            *         *         12        *        12         *         0          //Red Sprit Armor [Luck Exc: 1]
+   0       09,024    0       0       0            *         *         12        *        12         *         0          //Red Spirit Pants [Luck Exc: 1]
+   0       10,024    0       0       0            *         *         12        *        12         *         0          //Red Spirit Gloves [Luck Exc: 1]
+   0       11,024    0       0       0            *         *         12        *        12         *         0          //Red Spirit Boots [Luck Exc: 1]
+   0       07,022    0       0       0            *         *         12        *        12         *         0          //Dark Soul Helm [Luck Exc: 1]
+   0       08,022    0       0       0            *         *         12        *        12         *         0          //Dark Soul Armor [Luck Exc: 1]
+   0       09,022    0       0       0            *         *         12        *        12         *         0          //Dark Soul Pants [Luck Exc: 1]
+   0       10,022    0       0       0            *         *         12        *        12         *         0          //Dark Soul Gloves [Luck Exc: 1]
+   0       11,022    0       0       0            *         *         12        *        12         *         0          //Dark Soul Boots [Luck Exc: 1]
+   0       07,028    0       0       0            *         *         12        *        12         *         0          //Dark Master Mask [Luck Exc: 1]
+   0       08,028    0       0       0            *         *         12        *        12         *         0          //Dark Master Armor [Luck Exc: 1]
+   0       09,028    0       0       0            *         *         12        *        12         *         0          //Dark Master Pants [Luck Exc: 1]
+   0       10,028    0       0       0            *         *         12        *        12         *         0          //Dark Master Gloves [Luck Exc: 1]
+   0       11,028    0       0       0            *         *         12        *        12         *         0          //Dark Master Boots [Luck Exc: 1]
+   0       08,023    0       0       0            *         *         12        *        12         *         0          //Hurricane Armor [Luck Exc: 1]
+   0       09,023    0       0       0            *         *         12        *        12         *         0          //Hurricane Pants [Luck Exc: 1]
+   0       10,023    0       0       0            *         *         12        *        12         *         0          //Hurricane Gloves [Luck Exc: 1]
+   0       11,023    0       0       0            *         *         12        *        12         *         0          //Hurricane Boots [Luck Exc: 1]
+   0       08,021    0       0       0            *         *         12        *        *          *         0          //Great Dragon Armor [Luck]
+   0       08,024    0       0       0            *         *         12        *        *          *         0          //Red Sprit Armor [Luck]
+   0       08,022    0       0       0            *         *         12        *        *          *         0          //Dark Soul Armor [Luck]
+   0       08,028    0       0       0            *         *         12        *        *          *         0          //Dark Master Armor [Luck]
+   0       08,023    0       0       0            *         *         12        *        *          *         0          //Hurricane Armor [Luck]
+end
