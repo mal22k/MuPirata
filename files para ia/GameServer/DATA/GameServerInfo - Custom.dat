@@ -2,7 +2,7 @@
 ;==================================================
 ; Custom Arena Settings
 ;==================================================
-CustomArenaSwitch = 0
+CustomArenaSwitch = 1
 CustomArenaMapNumber = 40
 CustomArenaVictimScoreDecrease = 0
 CustomArenaKillerScoreIncrease = 1
@@ -91,17 +91,17 @@ CustomBotLootEnable_AL3 = 1
 ;==================================================
 ; Custom Event Drop Settings
 ;==================================================
-CustomEventDropSwitch = 0
+CustomEventDropSwitch = 1
 
 ;==================================================
 ; Custom Gift Settings
 ;==================================================
-CustomGiftSwitch = 0
+CustomGiftSwitch = 1
 
 ;==================================================
 ; Custom Luke Helper Settings
 ;==================================================
-CustomLukeHelperSwitch = 0
+CustomLukeHelperSwitch = 1
 
 ;==================================================
 ; Custom Marriage Settings
@@ -138,15 +138,15 @@ CustomStoreOfflineMapZone = -1
 ;==================================================
 ; Custom Item Bank Settings
 ;==================================================
-CustomItemBankSwitch_AL0 = 0
-CustomItemBankSwitch_AL1 = 0
-CustomItemBankSwitch_AL2 = 0
-CustomItemBankSwitch_AL3 = 0
+CustomItemBankSwitch_AL0 = 1
+CustomItemBankSwitch_AL1 = 1
+CustomItemBankSwitch_AL2 = 1
+CustomItemBankSwitch_AL3 = 1
 
 ;==================================================
 ; Custom Jewel Pack Settings
 ;==================================================
-CustomJewelPackSwitch = 0
+CustomJewelPackSwitch = 1
 CustomJewelPackCommandJoBSyntax = bless
 CustomJewelPackCommandJoSSyntax = soul
 CustomJewelPackCommandJoLSyntax = life
@@ -157,7 +157,7 @@ CustomJewelPackCommandJoCSyntax = chaos
 ;==================================================
 ; Custom Pick Settings
 ;==================================================
-CustomPickSwitch = 0
+CustomPickSwitch = 1
 CustomPickMapZone = -1
 CustomPickMaxRange = 5
 CustomPickMoneyPick = 1

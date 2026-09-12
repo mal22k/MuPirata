@@ -19,16 +19,16 @@ end
 // --------------------------------------------------------------------------------------------------------------------
 // QuestIndex   MinLevel   MaxLevel   MinReset   MaxReset   Repeatable   BagReward   DW   DK   FE   MG   DL   QuestName
 // --------------------------------------------------------------------------------------------------------------------
-   0            1          40         *          *          0            21          1    1    1    1    1    "The First Steps"
-   1            35         80         *          *          0            21          1    1    1    1    1    "Goblin Uprising"
-   2            75         120        *          *          0            21          1    1    1    1    1    "The Road of Lorencia"
-   3            115        160        *          *          0            21          1    1    1    1    1    "Defender of Lorencia"
-   4            155        200        *          *          0            21          1    1    1    1    1    "Into the Dungeon"
-   5            195        240        *          *          0            21          1    1    1    1    1    "The Bone Collector"
-   6            235        280        *          *          0            21          1    1    1    1    1    "Shadows of Lost Tower"
-   7            275        320        *          *          0            21          1    1    1    1    1    "Frozen Front"
-   8            315        360        *          *          0            21          1    1    1    1    1    "The Yeti Menace"
-   9            355        400        *          *          0            21          1    1    1    1    1    "Wings of Icarus"
+   0            1          15         *          *          0            21          1    1    1    1    1    "The First Steps"
+   1            10         30         *          *          0            21          1    1    1    1    1    "Goblin Uprising"
+   2            20         50         *          *          0            21          1    1    1    1    1    "The Road of Lorencia"
+   3            35         70         *          *          0            21          1    1    1    1    1    "Defender of Lorencia"
+   4            50         100        *          *          0            21          1    1    1    1    1    "Into the Dungeon"
+   5            70         130        *          *          0            21          1    1    1    1    1    "The Bone Collector"
+   6            100        170        *          *          0            21          1    1    1    1    1    "Shadows of Lost Tower"
+   7            140        220        *          *          0            21          1    1    1    1    1    "Frozen Front"
+   8            180        280        *          *          0            21          1    1    1    1    1    "The Yeti Menace"
+   9            240        400        *          *          0            21          1    1    1    1    1    "Wings of Icarus"
    10           300        *          *          *          1            21          1    1    1    1    1    "Kundun's Nemesis"
 end
 

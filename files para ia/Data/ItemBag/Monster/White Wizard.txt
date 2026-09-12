@@ -1,13 +1,9 @@
 // #############################################################################
 // # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
 // # ---------------------------------------------------------------------------
-// # Website  : https://www.ssemu.com.ar
-// # Forum    : https://www.ssemu.com.ar/forum
-// # YouTube  : https://www.youtube.com/@ssemu
-// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
-// # ---------------------------------------------------------------------------
-// # © 2026 SetecSoft Development
-// # This file is part of the SSeMU MuOnline server package.
+// # MU PIRATA - FAST SERVER: White Wizard (invasion)
+// # 100%: Bless x1 + Soul + Wizard's Ring o zen
 // #############################################################################
 
 2
@@ -21,7 +17,8 @@ end
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Index   Group   SectionRate   ItemDropRate   MoneyAmount   SetItemDropRate   ItemDropCount   EffectValue   DW   DK   FE   MG   DL
 // ---------------------------------------------------------------------------------------------------------------------------------
-   0       0       10000         100            0             0                 1               0             1    1    1    1    1
+   0       0       8000          100            0             0                 2               0             1    1    1    1    1
+   1       0       2000          100            500000        0                 1               0             1    1    1    1    1
 end
 
 4
@@ -29,4 +26,6 @@ end
 // Group   Index     Level   Grade   Durability   Option0   Option1   Option2   Option3   Option4   Option5   Duration   Comment
 // -----------------------------------------------------------------------------------------------------------------------------
    0       14,013    0       0       0            *         *         *         *         *         *         0          //Jewel of Bless
+   0       14,014    0       0       0            *         *         *         *         *         *         0          //Jewel of Soul
+   0       13,010    0       0       0            *         *         *         *         *         *         0          //Ring of Wizard
 end

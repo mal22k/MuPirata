@@ -4,12 +4,30 @@
 // # https://www.facebook.com/ssemuemulator
 // # https://www.youtube.com/@ssemu
 // # ---------------------------------------------------------------------------
-// # © 2023 SetecSoft Development
-// # This file is part of the SSeMU MuOnline Server files.
+// # MU PIRATA - FAST SERVER: Mid armor (Tier 2) - Dragon sets, zen sink
 // #############################################################################
 
 // -----------------------------------------------------------------------------------------------------------
 // [00,000]    [0~13]      [0~255]      [0-1]         [0-1]        [0~7]       [0~63]      [Index]
 // ItemIndex   ItemLevel   Durability   SkillSwitch   LuckSwitch   Aditional   Excellent   SetOption   Comment
 // -----------------------------------------------------------------------------------------------------------
-end
+   07,001      4           0            0             1            2           0           0           //Dragon Helm
+   08,001      4           0            0             1            2           0           0           //Dragon Armor
+   09,001      4           0            0             1            2           0           0           //Dragon Pants
+   10,001      4           0            0             1            2           0           0           //Dragon Gloves
+   11,001      4           0            0             1            2           0           0           //Dragon Boots
+   07,016      4           0            0             1            1           0           0           //Black Dragon Helm
+   08,016      4           0            0             1            1           0           0           //Black Dragon Armor
+   09,016      4           0            0             1            1           0           0           //Black Dragon Pants
+   10,016      4           0            0             1            1           0           0           //Black Dragon Gloves
+   11,016      4           0            0             1            1           0           0           //Black Dragon Boots
+   07,015      4           0            0             1            1           0           0           //Thunder Hawk Helm
+   08,015      4           0            0             1            1           0           0           //Thunder Hawk Armor
+   09,015      4           0            0             1            1           0           0           //Thunder Hawk Pants
+   10,015      4           0            0             1            1           0           0           //Thunder Hawk Gloves
+   11,015      4           0            0             1            1           0           0           //Thunder Hawk Boots
+   07,018      4           0            0             1            1           0           0           //Grand Soul Helm
+   08,018      4           0            0             1            1           0           0           //Grand Soul Armor
+   09,018      4           0            0             1            1           0           0           //Grand Soul Pants
+   10,018      4           0            0             1            1           0           0           //Grand Soul Gloves
+   11,018      4           0            0             1            1           0           0           //Grand Soul Boots

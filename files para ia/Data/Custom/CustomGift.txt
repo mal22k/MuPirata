@@ -1,13 +1,10 @@
 // #############################################################################
 // # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
 // # ---------------------------------------------------------------------------
-// # Website  : https://www.ssemu.com.ar
-// # Forum    : https://www.ssemu.com.ar/forum
-// # YouTube  : https://www.youtube.com/@ssemu
-// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
-// # ---------------------------------------------------------------------------
-// # © 2025 SetecSoft Development
-// # This file is part of the SSeMU MuOnline server package.
+// # MU PIRATA - FAST SERVER: Packs canjeables (/gift <code> <personaje>)
+// # El pack se compra como CODIGO en el panel web (donacion) -> mismo loot
+// # para todos, sin stats ni items exclusivos: acelera, no reemplaza.
 // #############################################################################
 
 0
@@ -15,8 +12,8 @@
 // [0~32767]   [*/0~4]   [Switch]                [*/N]      [*/N]      [*/N]      [*/N]      [*/N]      [0~32767]      [0~2000000000]  [Max 32 Char]
 // GiftIndex   Class     AL0   AL1   AL2   AL3   MinLevel   MaxLevel   MinReset   MaxReset   MaxCount   LevelUpPoint   Money           Code
 // -------------------------------------------------------------------------------------------------------------------------------------------------
-// DEMOSTRATION
-// 0           *         1     1     1     1     *          *          *          *          1          0              0               "beginner"
+   0           *         1     1     1     1     *          *          *          *          1          0              0               "welcome"
+   1           *         1     1     1     1     *          *          *          *          1          0              0               "vipmes"
 end
 
 1
@@ -24,8 +21,23 @@ end
 // [0~32767]   [00,000]    [0~13]      [0~255]      [0-1]         [0-1]        [0~7]       [0~63]      [Index]     [InSec]
 // GiftIndex   ItemIndex   ItemLevel   Durability   SkillSwitch   LuckSwitch   Aditional   Excellent   SetOption   Duration   Comment
 // ----------------------------------------------------------------------------------------------------------------------------------
-// DEMOSTRATION
-// 0           12,015      0           0            0             0            0           0           0           0          // Jewel of Chaos
+// -- Pack Bienvenida (nuevo jugador)
+   0           12,015      0           0            0             0            0           0           0           0          // Jewel of Chaos
+   0           14,013      0           0            0             0            0           0           0           0          // Jewel of Bless
+   0           14,014      0           0            0             0            0           0           0           0          // Jewel of Soul
+   0           14,019      1           0            0             0            0           0           0           0          // Devil's Invitation +1
+   0           13,018      1           0            0             0            0           0           0           0          // Invisibility Cloak +1
+// -- Pack Donador mensual (mismas joyas que farmear, en un solo click)
+   1           14,013      0           0            0             0            0           0           0           0          // Jewel of Bless x2
+   1           14,013      0           0            0             0            0           0           0           0          // Jewel of Bless x2
+   1           14,014      0           0            0             0            0           0           0           0          // Jewel of Soul x2
+   1           14,014      0           0            0             0            0           0           0           0          // Jewel of Soul x2
+   1           14,016      0           0            0             0            0           0           0           0          // Jewel of Life
+   1           14,022      0           0            0             0            0           0           0           0          // Jewel of Creation
+   1           14,011      12          0            0             0            0           0           0           0          // Box of Kundun +5
+   1           14,019      2           0            0             0            0           0           0           0          // Devil's Invitation +2
+   1           13,018      2           0            0             0            0           0           0           0          // Invisibility Cloak +2
+   1           14,028      7           0            0             0            0           0           0           0          // Lost Map +7
 end
 
 2
@@ -33,6 +45,9 @@ end
 // [0~32767]   [Index]       [0-1]        [0~65536]  [0~65536]  [0~65536]  [0~65536]  [InSec]
 // GiftIndex   EffectIndex   EffectType   Power1     Power2     Power3     Power4     Duration   Comment
 // -----------------------------------------------------------------------------------------------------
-// 0           3             0            100        50         0          0          900        //Shadow Phantom effect 15 minutes
-// 0           29            1            0          0          0          0          604800     //Seal of Ascension 7 Days
+// -- Pack Bienvenida: buff de arranque
+   0           3             0            100        50         0          0          900        // Shadow Phantom effect 15 min
+   0           29            1            0          0          0          0          604800     // Seal of Ascension 7 dias
+// -- Pack Donador: sellos de QoL (sin stats de combate)
+   1           29            1            0          0          0          0          2592000    // Seal of Ascension 30 dias
 end

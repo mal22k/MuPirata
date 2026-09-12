@@ -1,13 +1,9 @@
 // #############################################################################
 // # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
 // # ---------------------------------------------------------------------------
-// # Website  : https://www.ssemu.com.ar
-// # Forum    : https://www.ssemu.com.ar/forum
-// # YouTube  : https://www.youtube.com/@ssemu
-// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
-// # ---------------------------------------------------------------------------
-// # © 2026 SetecSoft Development
-// # This file is part of the SSeMU MuOnline server package.
+// # MU PIRATA - FAST SERVER: Gold Medal
+// # Gear +2~4 (50% Skill, 50% Luck, +4, 0~2 Exc) + pets + joyas
 // #############################################################################
 
 2
@@ -28,43 +24,69 @@ end
 // -----------------------------------------------------------------------------------------------------------------------------
 // Group   Index     Level   Grade   Durability   Option0   Option1   Option2   Option3   Option4   Option5   Duration   Comment
 // -----------------------------------------------------------------------------------------------------------------------------
-   0       00,015    3       0       0            *         *         *         *         *         *         0          //Giant Sword [Level: 3]
-   0       00,012    3       0       0            *         *         *         *         *         *         0          //Heliacal Sword [Level: 3]
-   0       01,008    3       0       0            *         *         *         *         *         *         0          //Crescent Axe [Level: 3]
-   0       03,008    3       0       0            *         *         *         *         *         *         0          //Great Scythe [Level: 3]
-   0       04,004    3       0       0            *         *         *         *         *         *         0          //Tiger Bow [Level: 3]
-   0       04,012    3       0       0            *         *         *         *         *         *         0          //Serpent Crossbow [Level: 3]
-   0       05,004    3       0       0            *         *         *         *         *         *         0          //Gorgon Staff [Level: 3]
-   0       06,008    3       0       0            *         *         *         *         *         *         0          //Tower Shield [Level: 3]
-   0       06,011    3       0       0            *         *         *         *         *         *         0          //Serpent Shield [Level: 3]
-   0       07,009    3       0       0            *         *         *         *         *         *         0          //Plate Helm [Level: 3]
-   0       08,009    3       0       0            *         *         *         *         *         *         0          //Plate Armor [Level: 3]
-   0       09,009    3       0       0            *         *         *         *         *         *         0          //Plate Pants [Level: 3]
-   0       10,009    3       0       0            *         *         *         *         *         *         0          //Plate Gloves [Level: 3]
-   0       11,009    3       0       0            *         *         *         *         *         *         0          //Plate Boots [Level: 3]
-   0       07,007    3       0       0            *         *         *         *         *         *         0          //Sphinx Mask [Level: 3]
-   0       08,007    3       0       0            *         *         *         *         *         *         0          //Sphinx Armor [Level: 3]
-   0       09,007    3       0       0            *         *         *         *         *         *         0          //Sphinx Pants [Level: 3]
-   0       10,007    3       0       0            *         *         *         *         *         *         0          //Sphinx Gloves [Level: 3]
-   0       11,007    3       0       0            *         *         *         *         *         *         0          //Sphinx Boots [Level: 3]
-   0       07,012    3       0       0            *         *         *         *         *         *         0          //Wind Helm [Level: 3]
-   0       08,012    3       0       0            *         *         *         *         *         *         0          //Wind Armor [Level: 3]
-   0       09,012    3       0       0            *         *         *         *         *         *         0          //Wind Pants [Level: 3]
-   0       10,012    3       0       0            *         *         *         *         *         *         0          //Wind Gloves [Level: 3]
-   0       11,012    3       0       0            *         *         *         *         *         *         0          //Wind Boots [Level: 3]
-   0       07,013    3       0       0            *         *         *         *         *         *         0          //Spirit Helm [Level: 3]
-   0       08,013    3       0       0            *         *         *         *         *         *         0          //Spirit Armor [Level: 3]
-   0       09,013    3       0       0            *         *         *         *         *         *         0          //Spirit Pants [Level: 3]
-   0       10,013    3       0       0            *         *         *         *         *         *         0          //Spirit Gloves [Level: 3]
-   0       11,013    3       0       0            *         *         *         *         *         *         0          //Spirit Boots [Level: 3]
+   0       00,009    0       0       0            31        13        13        12        19        *         0          //Sword of Salamander [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       00,010    0       0       0            31        13        13        12        19        *         0          //Light Saber [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       00,011    0       0       0            31        13        13        12        19        *         0          //Legendary Sword [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       00,012    0       0       0            31        13        13        12        19        *         0          //Heliacal Sword [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       00,013    0       0       0            31        13        13        12        19        *         0          //Double Blade [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       00,015    0       0       0            31        13        13        12        19        *         0          //Giant Sword [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       01,005    0       0       0            31        13        13        12        19        *         0          //Battle Axe [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       01,006    0       0       0            31        13        13        12        19        *         0          //Nikea Axe [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       01,007    0       0       0            31        13        13        12        19        *         0          //Larkan Axe [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       01,008    0       0       0            31        13        13        12        19        *         0          //Crescent Axe [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       02,002    0       0       0            31        13        13        12        19        *         0          //Flail [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       02,003    0       0       0            31        13        13        12        19        *         0          //Great Hammer [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       02,008    0       0       0            31        13        13        12        19        *         0          //Battle Scepter [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       03,003    0       0       0            31        13        13        12        19        *         0          //Giant Trident [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       03,004    0       0       0            31        13        13        12        19        *         0          //Serpent Spear [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       03,007    0       0       0            31        13        13        12        19        *         0          //Berdysh [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       03,008    0       0       0            31        13        13        12        19        *         0          //Great Scythe [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       04,003    0       0       0            31        13        13        12        19        *         0          //Battle Bow [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       04,004    0       0       0            31        13        13        12        19        *         0          //Tiger Bow [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       04,011    0       0       0            31        13        13        12        19        *         0          //Light Crossbow [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       04,012    0       0       0            31        13        13        12        19        *         0          //Serpent Crossbow [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       05,002    0       0       0            31        13        13        12        19        *         0          //Serpent Staff [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       05,003    0       0       0            31        13        13        12        19        *         0          //Thunder Staff [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       05,004    0       0       0            31        13        13        12        19        *         0          //Gorgon Staff [Level: +2~4 Skill50 Luck50 Option: +4 Exc: 0~2]
+   0       06,005    0       0       0            31        *         13        12        19        *         0          //Dragon Slayer Shield [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       06,008    0       0       0            31        *         13        12        19        *         0          //Tower Shield [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       06,009    0       0       0            31        *         13        12        19        *         0          //Plate Shield [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       06,011    0       0       0            31        *         13        12        19        *         0          //Serpent Shield [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       07,000    0       0       0            31        *         13        12        19        *         0          //Bronze Helm [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       08,000    0       0       0            31        *         13        12        19        *         0          //Bronze Armor [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       09,000    0       0       0            31        *         13        12        19        *         0          //Bronze Pants [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       10,000    0       0       0            31        *         13        12        19        *         0          //Bronze Gloves [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       11,000    0       0       0            31        *         13        12        19        *         0          //Bronze Boots [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       07,006    0       0       0            31        *         13        12        19        *         0          //Scale Helm [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       08,006    0       0       0            31        *         13        12        19        *         0          //Scale Armor [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       09,006    0       0       0            31        *         13        12        19        *         0          //Scale Pants [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       10,006    0       0       0            31        *         13        12        19        *         0          //Scale Gloves [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       11,006    0       0       0            31        *         13        12        19        *         0          //Scale Boots [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       07,004    0       0       0            31        *         13        12        19        *         0          //Bone Helm [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       08,004    0       0       0            31        *         13        12        19        *         0          //Bone Armor [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       09,004    0       0       0            31        *         13        12        19        *         0          //Bone Pants [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       10,004    0       0       0            31        *         13        12        19        *         0          //Bone Gloves [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       11,004    0       0       0            31        *         13        12        19        *         0          //Bone Boots [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       07,011    0       0       0            31        *         13        12        19        *         0          //Silk Helm [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       08,011    0       0       0            31        *         13        12        19        *         0          //Silk Armor [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       09,011    0       0       0            31        *         13        12        19        *         0          //Silk Pants [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       10,011    0       0       0            31        *         13        12        19        *         0          //Silk Gloves [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       11,011    0       0       0            31        *         13        12        19        *         0          //Silk Boots [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       07,012    0       0       0            31        *         13        12        19        *         0          //Wind Helm [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       08,012    0       0       0            31        *         13        12        19        *         0          //Wind Armor [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       09,012    0       0       0            31        *         13        12        19        *         0          //Wind Pants [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       10,012    0       0       0            31        *         13        12        19        *         0          //Wind Gloves [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       11,012    0       0       0            31        *         13        12        19        *         0          //Wind Boots [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       07,013    0       0       0            31        *         13        12        19        *         0          //Spirit Helm [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       08,013    0       0       0            31        *         13        12        19        *         0          //Spirit Armor [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       09,013    0       0       0            31        *         13        12        19        *         0          //Spirit Pants [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       10,013    0       0       0            31        *         13        12        19        *         0          //Spirit Gloves [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
+   0       11,013    0       0       0            31        *         13        12        19        *         0          //Spirit Boots [Level: +2~4 Luck50 Option: +4 Exc: 0~2]
    0       13,000    0       0       0            *         *         *         *         *         *         0          //Guardian Angel
    0       13,001    0       0       0            *         *         *         *         *         *         0          //Imp
    0       13,002    0       0       0            *         *         *         *         *         *         0          //Horn of Uniria
-   0       13,008    0       0       0            *         *         *         *         *         *         0          //Ring of Ice
-   0       13,009    0       0       0            *         *         *         *         *         *         0          //Ring of Poison
-   0       13,012    0       0       0            *         *         *         *         *         *         0          //Pendant of Lighting
-   0       13,013    0       0       0            *         *         *         *         *         *         0          //Pendant of Fire
    0       14,013    0       0       0            *         *         *         *         *         *         0          //Jewel of Bless
    0       14,014    0       0       0            *         *         *         *         *         *         0          //Jewel of Soul
    0       12,015    0       0       0            *         *         *         *         *         *         0          //Jewel of Chaos
+   0       14,016    0       0       0            *         *         *         *         *         *         0          //Jewel of Life
 end

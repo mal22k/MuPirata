@@ -4,44 +4,35 @@
 // # https://www.facebook.com/ssemuemulator
 // # https://www.youtube.com/@ssemu
 // # ---------------------------------------------------------------------------
-// # © 2023 SetecSoft Development
-// # This file is part of the SSeMU MuOnline Server files.
+// # MU PIRATA - FAST SERVER: Top gear shop (Tier 3/4) - zen sink mayor
 // #############################################################################
 
 // -----------------------------------------------------------------------------------------------------------
 // [00,000]    [0~13]      [0~255]      [0-1]         [0-1]        [0~7]       [0~63]      [Index]
 // ItemIndex   ItemLevel   Durability   SkillSwitch   LuckSwitch   Aditional   Excellent   SetOption   Comment
 // -----------------------------------------------------------------------------------------------------------
-   14,000      0           1            0             0            0           0           0           //Apple
-   14,001      0           1            0             0            0           0           0           //Small Healing Potion
-   14,002      0           1            0             0            0           0           0           //Healing Potion
-   14,003      0           1            0             0            0           0           0           //Large Healing Potion
-   14,004      0           1            0             0            0           0           0           //Small Mana Potion
-   14,005      0           1            0             0            0           0           0           //Mana Potion
-   14,006      0           1            0             0            0           0           0           //Large Mana Potion
-   14,008      0           1            0             0            0           0           0           //Antidote
-   14,000      0           3            0             0            0           0           0           //Apple
-   14,001      0           3            0             0            0           0           0           //Small Healing Potion
-   14,002      0           3            0             0            0           0           0           //Healing Potion
-   14,003      0           3            0             0            0           0           0           //Large Healing Potion
-   14,004      0           3            0             0            0           0           0           //Small Mana Potion
-   14,005      0           3            0             0            0           0           0           //Mana Potion
-   14,006      0           3            0             0            0           0           0           //Large Mana Potion
-   14,008      0           3            0             0            0           0           0           //Antidote
-   14,000      1           1            0             0            0           0           0           //Apple
-   14,001      1           1            0             0            0           0           0           //Small Healing Potion
-   14,002      1           1            0             0            0           0           0           //Healing Potion
-   14,003      1           1            0             0            0           0           0           //Large Healing Potion
-   14,000      1           3            0             0            0           0           0           //Apple
-   14,001      1           3            0             0            0           0           0           //Small Healing Potion
-   14,002      1           3            0             0            0           0           0           //Healing Potion
-   14,003      1           3            0             0            0           0           0           //Large Healing Potion
-   04,007      0           255            0             0            0           0           0           //Bolt
-   04,007      1           255            0             0            0           0           0           //Bolt
-   04,007      2           255            0             0            0           0           0           //Bolt
-   04,015      0           255            0             0            0           0           0           //Arrow
-   04,015      1           255            0             0            0           0           0           //Arrow
-   04,015      2           255            0             0            0           0           0           //Arrow
-   13,029      0           1            0             0            0           0           0           //Armor of Guardsman
-   14,010      0           1            0             0            0           0           0           //Town Portal Scroll
-end
+   07,021      4           0            0             1            3           0           0           //Great Dragon Helm
+   08,021      4           0            0             1            3           0           0           //Great Dragon Armor
+   09,021      4           0            0             1            3           0           0           //Great Dragon Pants
+   10,021      4           0            0             1            3           0           0           //Great Dragon Gloves
+   11,021      4           0            0             1            3           0           0           //Great Dragon Boots
+   07,022      4           0            0             1            3           0           0           //Dark Soul Helm
+   08,022      4           0            0             1            3           0           0           //Dark Soul Armor
+   09,022      4           0            0             1            3           0           0           //Dark Soul Pants
+   10,022      4           0            0             1            3           0           0           //Dark Soul Gloves
+   11,022      4           0            0             1            3           0           0           //Dark Soul Boots
+   07,023      4           0            0             1            2           0           0           //Hurricane Helm
+   08,023      4           0            0             1            2           0           0           //Hurricane Armor
+   09,023      4           0            0             1            2           0           0           //Hurricane Pants
+   10,023      4           0            0             1            2           0           0           //Hurricane Gloves
+   11,023      4           0            0             1            2           0           0           //Hurricane Boots
+   07,024      4           0            0             1            2           0           0           //Red Spirit Helm
+   08,024      4           0            0             1            2           0           0           //Red Spirit Armor
+   09,024      4           0            0             1            2           0           0           //Red Spirit Pants
+   10,024      4           0            0             1            2           0           0           //Red Spirit Gloves
+   11,024      4           0            0             1            2           0           0           //Red Spirit Boots
+   07,020      4           0            0             1            2           0           0           //Dark Phoenix Helm
+   08,020      4           0            0             1            2           0           0           //Dark Phoenix Armor
+   09,020      4           0            0             1            2           0           0           //Dark Phoenix Pants
+   10,020      4           0            0             1            2           0           0           //Dark Phoenix Gloves
+   11,020      4           0            0             1            2           0           0           //Dark Phoenix Boots

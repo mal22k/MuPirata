@@ -4,21 +4,40 @@
 // # https://www.facebook.com/ssemuemulator
 // # https://www.youtube.com/@ssemu
 // # ---------------------------------------------------------------------------
-// # © 2023 SetecSoft Development
-// # This file is part of the SSeMU MuOnline Server files.
+// # MU PIRATA - FAST SERVER: Starter weapons (Tier 0)
 // #############################################################################
 
 // -----------------------------------------------------------------------------------------------------------
 // [00,000]    [0~13]      [0~255]      [0-1]         [0-1]        [0~7]       [0~63]      [Index]
 // ItemIndex   ItemLevel   Durability   SkillSwitch   LuckSwitch   Aditional   Excellent   SetOption   Comment
 // -----------------------------------------------------------------------------------------------------------
-   03,005      3           0            1             1            1           0           0           //Double Poleaxe
-   03,001      3           0            1             1            1           0           0           //Spear
-   03,003      3           0            1             1            1           0           0           //Giant Trident
-   03,007      3           0            1             1            1           0           0           //Berdysh
-   03,004      3           0            1             1            1           0           0           //Serpent Spear
-   03,000      3           0            1             1            1           0           0           //Light Spear
-   00,010      3           0            1             1            1           0           0           //Light Saber
-   02,003      3           0            1             1            1           0           0           //Great Hammer
-end
-
+   00,001      0           0            1             0            0           0           0           //Short Sword
+   00,002      0           0            0             0            0           0           0           //Rapier
+   00,003      0           0            1             0            0           0           0           //Katana
+   00,004      0           0            0             0            0           0           0           //Sword of Assassin
+   00,000      0           0            0             0            0           0           0           //Kris
+   01,000      0           0            0             0            0           0           0           //Small Axe
+   01,001      0           0            0             0            0           0           0           //Hand Axe
+   02,000      0           0            0             0            0           0           0           //Mace
+   04,000      0           0            0             0            0           0           0           //Short Bow
+   04,001      0           0            0             0            0           0           0           //Bow
+   04,008      0           0            0             0            0           0           0           //Crossbow
+   05,000      0           0            0             0            0           0           0           //Skull Staff
+   06,000      0           0            0             0            0           0           0           //Small Shield
+   06,004      0           0            0             0            0           0           0           //Buckler
+   06,001      0           0            0             0            0           0           0           //Horn Shield
+   07,005      0           0            0             0            0           0           0           //Leather Helm
+   08,005      0           0            0             0            0           0           0           //Leather Armor
+   09,005      0           0            0             0            0           0           0           //Leather Pants
+   10,005      0           0            0             0            0           0           0           //Leather Gloves
+   11,005      0           0            0             0            0           0           0           //Leather Boots
+   07,002      0           0            0             0            0           0           0           //Pad Helm
+   08,002      0           0            0             0            0           0           0           //Pad Armor
+   09,002      0           0            0             0            0           0           0           //Pad Pants
+   10,002      0           0            0             0            0           0           0           //Pad Gloves
+   11,002      0           0            0             0            0           0           0           //Pad Boots
+   07,010      0           0            0             0            0           0           0           //Vine Helm
+   08,010      0           0            0             0            0           0           0           //Vine Armor
+   09,010      0           0            0             0            0           0           0           //Vine Pants
+   10,010      0           0            0             0            0           0           0           //Vine Gloves
+   11,010      0           0            0             0            0           0           0           //Vine Boots

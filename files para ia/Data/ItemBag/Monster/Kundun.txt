@@ -1,13 +1,9 @@
 // #############################################################################
 // # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
 // # ---------------------------------------------------------------------------
-// # Website  : https://www.ssemu.com.ar
-// # Forum    : https://www.ssemu.com.ar/forum
-// # YouTube  : https://www.youtube.com/@ssemu
-// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
-// # ---------------------------------------------------------------------------
-// # © 2026 SetecSoft Development
-// # This file is part of the SSeMU MuOnline server package.
+// # MU PIRATA - FAST SERVER: Kundun (Kalima boss)
+// # 30%: SET ancient +7~9 (2 piezas), 50%: exc top +7~9, 20%: joyas premium
 // #############################################################################
 
 2
@@ -21,52 +17,56 @@ end
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Index   Group   SectionRate   ItemDropRate   MoneyAmount   SetItemDropRate   ItemDropCount   EffectValue   DW   DK   FE   MG   DL
 // ---------------------------------------------------------------------------------------------------------------------------------
-   0       0       10000         100            0             7500              7               0             1    1    1    1    1
+   0       0       3000          100            0             10000             1               0             1    1    1    1    1
+   1       0       5000          100            0             0                 1               0             1    1    1    1    1
+   2       0       2000          100            1000000       0                 1               0             1    1    1    1    1
 end
 
 4
 // -----------------------------------------------------------------------------------------------------------------------------
 // Group   Index     Level   Grade   Durability   Option0   Option1   Option2   Option3   Option4   Option5   Duration   Comment
 // -----------------------------------------------------------------------------------------------------------------------------
-   0       00,017    0       0       0            27        12        12        *         *         *         0          //Dark Breaker [Level: +0~2 Skill Luck]
-   0       00,018    0       0       0            27        12        12        *         *         *         0          //Thunder Blade [Level: +0~2 Skill Luck]
-   0       00,031    0       0       0            27        12        12        *         *         *         0          //Rune Blade [Level: +0~2 Skill Luck]
-   0       00,020    0       0       0            27        12        12        *         *         *         0          //Knight Blade [Level: +0~2 Skill Luck]
-   0       00,021    0       0       0            27        12        12        *         *         *         0          //Dark Reign Blade [Level: +0~2 Skill Luck]
-   0       04,019    0       0       0            27        12        12        *         *         *         0          //Great Reign Crossbow [Level: +0~2 Skill Luck]
-   0       04,020    0       0       0            27        12        12        *         *         *         0          //Arrow Viper Bow [Level: +0~2 Skill Luck]
-   0       05,009    0       0       0            27        12        12        *         *         *         0          //Dragon Soul Staff [Level: +0~2 Skill Luck]
-   0       05,011    0       0       0            27        12        12        *         *         *         0          //Staff of Kundun [Level: +0~2 Skill Luck]
-   0       02,014    0       0       0            27        12        12        *         *         *         0          //Soleil Sceptor [Level: +0~2 Skill Luck]
-   0       00,022    0       0       0            27        12        12        *         *         *         0          //Bone Blade [Level: +0~2 Skill Luck]
-   0       00,023    0       0       0            27        12        12        *         *         *         0          //Explosion Blade [Level: +0~2 Skill Luck]
-   0       04,021    0       0       0            27        12        12        *         *         *         0          //Sylph Wind Bow [Level: +0~2 Skill Luck]
-   0       05,012    0       0       0            27        12        12        *         *         *         0          //Grand Viper Staff [Level: +0~2 Skill Luck]
-   0       00,016    0       0       0            *         12        12        *         12        *         0          //Sword of Destruction [Skill Luck Exc: 1]
-   0       02,010    0       0       0            *         12        12        *         12        *         0          //Great Scepter [Skill Luck Exc: 1]
-   0       03,010    0       0       0            *         12        12        *         12        *         0          //Dragon Spear [Skill Luck Exc: 1]
-   0       04,016    0       0       0            *         12        12        *         12        *         0          //Saint Crossbow [Skill Luck Exc: 1]
-   0       04,017    0       0       0            *         12        12        *         12        *         0          //Celestial Bow [Skill Luck Exc: 1]
-   0       05,008    0       0       0            *         12        12        *         12        *         0          //Staff of Destruction [Skill Luck Exc: 1]
-   0       07,021    0       0       0            27        *         12        *         *         *         0          //Great Dragon Helm [Level: +0~2 Luck]
-   0       07,022    0       0       0            27        *         12        *         *         *         0          //Dark Soul Helm [Level: +0~2 Luck]
-   0       07,028    0       0       0            27        *         12        *         *         *         0          //Dark Master Mask [Level: +0~2 Luck]
-   0       08,017    0       0       0            27        *         12        *         *         *         0          //Dark Phoenix Armor [Level: +0~2 Luck]
-   0       08,020    0       0       0            27        *         12        *         *         *         0          //Thunder Hawk Armor [Level: +0~2 Luck]
-   0       08,021    0       0       0            27        *         12        *         *         *         0          //Great Dragon Armor [Level: +0~2 Luck]
-   0       08,022    0       0       0            27        *         12        *         *         *         0          //Dark Soul Armor [Level: +0~2 Luck]
-   0       08,023    0       0       0            27        *         12        *         *         *         0          //Hurricane Armor [Level: +0~2 Luck]
-   0       08,024    0       0       0            27        *         12        *         *         *         0          //Red Sprit Armor [Level: +0~2 Luck]
-   0       08,028    0       0       0            27        *         12        *         *         *         0          //Dark Master Armor [Level: +0~2 Luck]
-   0       08,030    0       0       0            27        12        12        *         *         *         0          //Venom Mist Armor [Level: +0~2 Skill Luck]
-   0       08,031    0       0       0            27        12        12        *         *         *         0          //Sylphid Ray Armor [Level: +0~2 Skill Luck]
-   0       08,032    0       0       0            27        12        12        *         *         *         0          //Volcano Armor [Level: +0~2 Skill Luck]
-   0       08,033    0       0       0            27        12        12        *         *         *         0          //Sunlight Armor [Level: +0~2 Skill Luck]
-   0       09,021    0       0       0            27        *         12        *         *         *         0          //Great Dragon Pants [Level: +0~2 Luck]
-   0       09,022    0       0       0            27        *         12        *         *         *         0          //Dark Soul Pants [Level: +0~2 Luck]
-   0       09,023    0       0       0            27        *         12        *         *         *         0          //Hurricane Pants [Level: +0~2 Luck]
-   0       09,024    0       0       0            27        *         12        *         *         *         0          //Red Spirit Pants [Level: +0~2 Luck]
-   0       09,028    0       0       0            27        *         12        *         *         *         0          //Dark Master Pants [Level: +0~2 Luck]
-   0       10,023    0       0       0            27        *         12        *         *         *         0          //Hurricane Gloves [Level: +0~2 Luck]
-   0       11,023    0       0       0            27        *         12        *         *         *         0          //Hurricane Boots [Level: +0~2 Luck]
+   0       00,016    0       0       0            41        13        12        21        21        *         0          //Sword of Destruction [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       00,017    0       0       0            41        13        12        21        21        *         0          //Dark Breaker [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       00,018    0       0       0            41        13        12        21        21        *         0          //Thunder Blade [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       02,010    0       0       0            41        13        12        21        21        *         0          //Great Scepter [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       03,010    0       0       0            41        13        12        21        21        *         0          //Dragon Spear [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       04,016    0       0       0            41        13        12        21        21        *         0          //Saint Crossbow [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       04,017    0       0       0            41        13        12        21        21        *         0          //Celestial Bow [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       05,008    0       0       0            41        13        12        21        21        *         0          //Staff of Destruction [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       05,009    0       0       0            41        13        12        21        21        *         0          //Dragon Soul Staff [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       05,011    0       0       0            41        13        12        21        21        *         0          //Staff of Kundun [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3] (SET)
+   0       07,001    0       0       0            41        *         12        21        21        *         0          //Dragon Helm [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       07,003    0       0       0            41        *         12        21        21        *         0          //Legendary Helm [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       08,001    0       0       0            41        *         12        21        21        *         0          //Dragon Armor [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       08,003    0       0       0            41        *         12        21        21        *         0          //Legendary Armor [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       08,015    0       0       0            41        *         12        21        21        *         0          //Storm Crow Armor [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       08,014    0       0       0            41        *         12        21        21        *         0          //Guardian Armor [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       09,001    0       0       0            41        *         12        21        21        *         0          //Dragon Pants [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       09,003    0       0       0            41        *         12        21        21        *         0          //Legendary Pants [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       09,015    0       0       0            41        *         12        21        21        *         0          //Storm Crow Pants [Level: +7~9 Luck JoL:1~2 Exc:1~3] (SET)
+   0       13,021    0       0       0            *         *         *         *         *         *         0          //Ring of Fire (SET)
+   0       13,025    0       0       0            *         *         *         *         *         *         0          //Pendant of Ice (SET)
+   1       00,016    0       0       0            41        13        12        21        21        *         0          //Sword of Destruction [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       00,017    0       0       0            41        13        12        21        21        *         0          //Dark Breaker [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       00,018    0       0       0            41        13        12        21        21        *         0          //Thunder Blade [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       02,010    0       0       0            41        13        12        21        21        *         0          //Great Scepter [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       03,010    0       0       0            41        13        12        21        21        *         0          //Dragon Spear [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       04,016    0       0       0            41        13        12        21        21        *         0          //Saint Crossbow [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       04,017    0       0       0            41        13        12        21        21        *         0          //Celestial Bow [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       05,008    0       0       0            41        13        12        21        21        *         0          //Staff of Destruction [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       05,009    0       0       0            41        13        12        21        21        *         0          //Dragon Soul Staff [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       05,011    0       0       0            41        13        12        21        21        *         0          //Staff of Kundun [Level: +7~9 Skill50 Luck JoL:1~2 Exc:1~3]
+   1       07,001    0       0       0            41        *         12        21        21        *         0          //Dragon Helm [Level: +7~9 Luck JoL:1~2 Exc:1~3]
+   1       07,003    0       0       0            41        *         12        21        21        *         0          //Legendary Helm [Level: +7~9 Luck JoL:1~2 Exc:1~3]
+   1       08,001    0       0       0            41        *         12        21        21        *         0          //Dragon Armor [Level: +7~9 Luck JoL:1~2 Exc:1~3]
+   1       08,003    0       0       0            41        *         12        21        21        *         0          //Legendary Armor [Level: +7~9 Luck JoL:1~2 Exc:1~3]
+   1       09,001    0       0       0            41        *         12        21        21        *         0          //Dragon Pants [Level: +7~9 Luck JoL:1~2 Exc:1~3]
+   1       09,003    0       0       0            41        *         12        21        21        *         0          //Legendary Pants [Level: +7~9 Luck JoL:1~2 Exc:1~3]
+   1       10,001    0       0       0            41        *         12        21        21        *         0          //Dragon Gloves [Level: +7~9 Luck JoL:1~2 Exc:1~3]
+   1       11,001    0       0       0            41        *         12        21        21        *         0          //Dragon Boots [Level: +7~9 Luck JoL:1~2 Exc:1~3]
+   1       14,013    0       0       0            *         *         *         *         *         *         0          //Jewel of Bless
+   1       14,014    0       0       0            *         *         *         *         *         *         0          //Jewel of Soul
+   2       14,016    0       0       0            *         *         *         *         *         *         0          //Jewel of Life
+   2       14,022    0       0       0            *         *         *         *         *         *         0          //Jewel of Creation
 end

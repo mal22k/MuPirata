@@ -4,8 +4,7 @@
 // # https://www.facebook.com/ssemuemulator
 // # https://www.youtube.com/@ssemu
 // # ---------------------------------------------------------------------------
-// # © 2023 SetecSoft Development
-// # This file is part of the SSeMU MuOnline Server files.
+// # MU PIRATA - FAST SERVER: Starter kit por clase (igual para todos)
 // #############################################################################
 
 0
@@ -13,11 +12,11 @@
 // [0~6]   [0~2000000000] [0~65535]
 // Class   InitialMoney   InitialPoint   Comment
 // ---------------------------------------------
-   0       0              0              // Dark Wizard
-   1       0              0              // Dark Knight
-   2       0              0              // Fairy Elf 
-   3       0              0              // Magic Gladiator
-   4       0              0              // Dark Lord
+   0       500000         0              // Dark Wizard
+   1       500000         0              // Dark Knight
+   2       500000         0              // Fairy Elf
+   3       500000         0              // Magic Gladiator
+   4       500000         0              // Dark Lord
 end
 
 1
@@ -25,7 +24,72 @@ end
 // [0~4]   [00,000]    [0~13]      [0~255]      [0-1]         [0-1]        [0~7]       [0~63]      [Index]     [InSec]
 // Class   ItemIndex   ItemLevel   Durability   SkillSwitch   LuckSwitch   Aditional   Excellent   SetOption   Duration   Comment
 // ------------------------------------------------------------------------------------------------------------------------------
-// 0       12,015      0           0            0             0            0           0           0           0          // Jewel of Chaos
+// == Comun (todas las clases) ==
+   0       14,003      0           3            0             0            0           0           0           0          // Large Healing Potion x3
+   0       14,006      0           3            0             0            0           0           0           0          // Large Mana Potion x3
+   0       14,010      0           1            0             0            0           0           0           0          // Town Portal Scroll
+   0       12,015      0           0            0             0            0           0           0           0          // Jewel of Chaos
+   0       14,013      0           0            0             0            0           0           0           0          // Jewel of Bless
+   0       14,014      0           0            0             0            0           0           0           0          // Jewel of Soul
+   1       14,003      0           3            0             0            0           0           0           0          // Large Healing Potion x3
+   1       14,006      0           3            0             0            0           0           0           0          // Large Mana Potion x3
+   1       14,010      0           1            0             0            0           0           0           0          // Town Portal Scroll
+   1       12,015      0           0            0             0            0           0           0           0          // Jewel of Chaos
+   1       14,013      0           0            0             0            0           0           0           0          // Jewel of Bless
+   1       14,014      0           0            0             0            0           0           0           0          // Jewel of Soul
+   2       14,003      0           3            0             0            0           0           0           0          // Large Healing Potion x3
+   2       14,006      0           3            0             0            0           0           0           0          // Large Mana Potion x3
+   2       14,010      0           1            0             0            0           0           0           0          // Town Portal Scroll
+   2       12,015      0           0            0             0            0           0           0           0          // Jewel of Chaos
+   2       14,013      0           0            0             0            0           0           0           0          // Jewel of Bless
+   2       14,014      0           0            0             0            0           0           0           0          // Jewel of Soul
+   3       14,003      0           3            0             0            0           0           0           0          // Large Healing Potion x3
+   3       14,006      0           3            0             0            0           0           0           0          // Large Mana Potion x3
+   3       14,010      0           1            0             0            0           0           0           0          // Town Portal Scroll
+   3       12,015      0           0            0             0            0           0           0           0          // Jewel of Chaos
+   3       14,013      0           0            0             0            0           0           0           0          // Jewel of Bless
+   3       14,014      0           0            0             0            0           0           0           0          // Jewel of Soul
+   4       14,003      0           3            0             0            0           0           0           0          // Large Healing Potion x3
+   4       14,006      0           3            0             0            0           0           0           0          // Large Mana Potion x3
+   4       14,010      0           1            0             0            0           0           0           0          // Town Portal Scroll
+   4       12,015      0           0            0             0            0           0           0           0          // Jewel of Chaos
+   4       14,013      0           0            0             0            0           0           0           0          // Jewel of Bless
+   4       14,014      0           0            0             0            0           0           0           0          // Jewel of Soul
+// == Dark Wizard ==
+   0       05,000      0           0            1             0            0           0           0           0          // Skull Staff +0 Skill
+   0       07,002      0           0            0             0            0           0           0           0          // Pad Helm
+   0       08,002      0           0            0             0            0           0           0           0          // Pad Armor
+   0       09,002      0           0            0             0            0           0           0           0          // Pad Pants
+   0       10,002      0           0            0             0            0           0           0           0          // Pad Gloves
+   0       11,002      0           0            0             0            0           0           0           0          // Pad Boots
+// == Dark Knight ==
+   1       00,001      0           0            1             0            0           0           0           0          // Short Sword +0 Skill
+   1       07,005      0           0            0             0            0           0           0           0          // Leather Helm
+   1       08,005      0           0            0             0            0           0           0           0          // Leather Armor
+   1       09,005      0           0            0             0            0           0           0           0          // Leather Pants
+   1       10,005      0           0            0             0            0           0           0           0          // Leather Gloves
+   1       11,005      0           0            0             0            0           0           0           0          // Leather Boots
+// == Fairy Elf ==
+   2       04,002      0           0            1             0            0           0           0           0          // Elven Bow +0 Skill
+   2       07,010      0           0            0             0            0           0           0           0          // Vine Helm
+   2       08,010      0           0            0             0            0           0           0           0          // Vine Armor
+   2       09,010      0           0            0             0            0           0           0           0          // Vine Pants
+   2       10,010      0           0            0             0            0           0           0           0          // Vine Gloves
+   2       11,010      0           0            0             0            0           0           0           0          // Vine Boots
+// == Magic Gladiator ==
+   3       00,005      0           0            1             0            0           0           0           0          // Blade +0 Skill
+   3       07,004      0           0            0             0            0           0           0           0          // Bone Helm
+   3       08,004      0           0            0             0            0           0           0           0          // Bone Armor
+   3       09,004      0           0            0             0            0           0           0           0          // Bone Pants
+   3       10,004      0           0            0             0            0           0           0           0          // Bone Gloves
+   3       11,004      0           0            0             0            0           0           0           0          // Bone Boots
+// == Dark Lord ==
+   4       00,001      0           0            1             0            0           0           0           0          // Short Sword +0 Skill
+   4       07,000      0           0            0             0            0           0           0           0          // Bronze Helm
+   4       08,000      0           0            0             0            0           0           0           0          // Bronze Armor
+   4       09,000      0           0            0             0            0           0           0           0          // Bronze Pants
+   4       10,000      0           0            0             0            0           0           0           0          // Bronze Gloves
+   4       11,000      0           0            0             0            0           0           0           0          // Bronze Boots
 end
 
 2
@@ -33,6 +97,4 @@ end
 // [0~6]   [Index]       [0-1]        [0~65536]  [0~65536]  [0~65536]  [0~65536]  [InSec]
 // Class   EffectIndex   EffectType   Power1     Power2     Power3     Power4     Duration   Comment
 // -------------------------------------------------------------------------------------------------
-// 0       3             0            100        50         0          0          900        //Shadow Phantom effect 15 minutes
-// 0       29            1            0          0          0          0          604800     //Seal of Ascension 7 Days
 end

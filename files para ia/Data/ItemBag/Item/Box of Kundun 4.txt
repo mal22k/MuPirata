@@ -1,13 +1,9 @@
 // #############################################################################
 // # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
 // # ---------------------------------------------------------------------------
-// # Website  : https://www.ssemu.com.ar
-// # Forum    : https://www.ssemu.com.ar/forum
-// # YouTube  : https://www.youtube.com/@ssemu
-// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
-// # ---------------------------------------------------------------------------
-// # © 2026 SetecSoft Development
-// # This file is part of the SSeMU MuOnline server package.
+// # MU PIRATA - FAST SERVER: Box of Kundun +4
+// # 12% SET tier4 (Dragon/Legendary/StormCrow/Plate/SilverBow), 68% exc +7~9, 20% joyas
 // #############################################################################
 
 2
@@ -21,19 +17,50 @@ end
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Index   Group   SectionRate   ItemDropRate   MoneyAmount   SetItemDropRate   ItemDropCount   EffectValue   DW   DK   FE   MG   DL
 // ---------------------------------------------------------------------------------------------------------------------------------
-   0       0       10000         100            0             0                 1               0             1    1    1    1    1
+   0       0       1200          100            0             10000             1               0             1    1    1    1    1
+   1       0       6800          100            0             0                 1               0             1    1    1    1    1
+   2       0       2000          100            200000        0                 1               0             1    1    1    1    1
 end
 
 4
 // -----------------------------------------------------------------------------------------------------------------------------
 // Group   Index     Level   Grade   Durability   Option0   Option1   Option2   Option3   Option4   Option5   Duration   Comment
 // -----------------------------------------------------------------------------------------------------------------------------
-   0       12,015    0       0       0            *         *         *         *         *         *         0          //Jewel of Chaos
-   0       14,014    0       0       0            *         *         *         *         *         *         0          //Jewel of Soul
+   0       07,001    0       0       0            41        13        12        19        19        *         0          //Dragon Helm [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2] (SET)
+   0       10,001    0       0       0            41        *         12        19        19        *         0          //Dragon Gloves [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       11,001    0       0       0            41        *         12        19        19        *         0          //Dragon Boots [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       07,003    0       0       0            41        *         12        19        19        *         0          //Legendary Helm [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       08,003    0       0       0            41        *         12        19        19        *         0          //Legendary Armor [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       09,003    0       0       0            41        *         12        19        19        *         0          //Legendary Pants [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       10,003    0       0       0            41        *         12        19        19        *         0          //Legendary Gloves [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       08,015    0       0       0            41        *         12        19        19        *         0          //Storm Crow Armor [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       09,015    0       0       0            41        *         12        19        19        *         0          //Storm Crow Pants [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       11,015    0       0       0            41        *         12        19        19        *         0          //Storm Crow Boots [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       00,014    0       0       0            41        13        12        19        19        *         0          //Lighting Sword [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2] (SET)
+   0       04,005    0       0       0            41        13        12        19        19        *         0          //Silver Bow [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2] (SET)
+   0       06,009    0       0       0            41        *         12        19        19        *         0          //Plate Shield [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       08,000    0       0       0            41        *         12        19        19        *         0          //Bronze Armor [Level: +7~9 Luck JoL:0~1 Exc:0~2] (SET)
+   0       13,027    0       0       0            *         *         *         *         *         *         0          //Pendant of Water (SET)
+   0       13,025    0       0       0            *         *         *         *         *         *         0          //Pendant of Ice (SET)
+   0       00,015    0       0       0            41        13        12        19        19        *         0          //Giant Sword [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2]
+   0       01,008    0       0       0            41        13        12        19        19        *         0          //Crescent Axe [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2]
+   0       02,010    0       0       0            41        13        12        19        19        *         0          //Great Scepter [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2]
+   0       03,008    0       0       0            41        13        12        19        19        *         0          //Great Scythe [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2]
+   0       04,012    0       0       0            41        13        12        19        19        *         0          //Serpent Crossbow [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2]
+   0       04,014    0       0       0            41        13        12        19        19        *         0          //Aquaglow Crossbow [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2]
+   0       05,006    0       0       0            41        13        12        19        19        *         0          //Chaos Lightning Staff [Level: +7~9 Skill50 Luck JoL:0~1 Exc:0~2]
+   0       07,009    0       0       0            41        *         12        19        19        *         0          //Plate Helm [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       08,009    0       0       0            41        *         12        19        19        *         0          //Plate Armor [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       09,009    0       0       0            41        *         12        19        19        *         0          //Plate Pants [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       10,009    0       0       0            41        *         12        19        19        *         0          //Plate Gloves [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       11,009    0       0       0            41        *         12        19        19        *         0          //Plate Boots [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       07,013    0       0       0            41        *         12        19        19        *         0          //Spirit Helm [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       08,013    0       0       0            41        *         12        19        19        *         0          //Spirit Armor [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       09,013    0       0       0            41        *         12        19        19        *         0          //Spirit Pants [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       10,013    0       0       0            41        *         12        19        19        *         0          //Spirit Gloves [Level: +7~9 Luck JoL:0~1 Exc:0~2]
+   0       11,013    0       0       0            41        *         12        19        19        *         0          //Spirit Boots [Level: +7~9 Luck JoL:0~1 Exc:0~2]
    0       14,013    0       0       0            *         *         *         *         *         *         0          //Jewel of Bless
-   0       14,016    0       0       0            *         *         *         *         *         *         0          //Jewel of Life
-   0       14,022    0       0       0            *         *         *         *         *         *         0          //Jewel of Creation
-   0       14,019    0       0       0            35        *         *         *         *         *         0          //Devil's Invitation [Level: +4~6]
-   0       13,018    0       0       0            37        *         *         *         *         *         0          //Invisibility Cloak [Level: +5~7]
-   0       14,028    0       0       0            37        *         *         *         *         *         0          //Lost Map [Level: +5~7]
+   0       14,014    0       0       0            *         *         *         *         *         *         0          //Jewel of Soul
+   2       12,015    0       0       0            *         *         *         *         *         *         0          //Jewel of Chaos
+   2       14,016    0       0       0            *         *         *         *         *         *         0          //Jewel of Life
 end

@@ -1,17 +1,18 @@
 // #############################################################################
 // # SSeMU MU Online Emulator
 // # https://www.ssemu.com.ar
-// # https://www.facebook.com/ssemuemulator
-// # https://www.youtube.com/@ssemu
 // # ---------------------------------------------------------------------------
-// # © 2023 SetecSoft Development
-// # This file is part of the SSeMU MuOnline Server files.
+// # MU PIRATA - FAST SERVER: VIP por zen (sin P2W: solo QoL)
+// # Ventajas VIP = exp/drop levemente mayor + /move + cola de login (MapManager)
+// # NADIE obtiene items exclusivos por VIP: el loot es identico para todos
 // #############################################################################
 
 // -----------------------------------------------------------------------------------
 // [*/0~3]        [0~3]             [0~365]   [0~2000000000]   [Max Char 32]
 // AccountLevel   NewAccountLevel   Days      Money            Code            Comment
 // -----------------------------------------------------------------------------------
-// DEMOSTRATION
-// 0              1                 31        0                "month"         //Use: /buyvip month
+   0              1                 7         50000000         "vip7"          // VIP Bronce 7 dias (50M)
+   0              1                 30        150000000        "vip30"         // VIP Bronce 30 dias (150M)
+   1              2                 30        300000000        "vips30"        // VIP Plata 30 dias (300M)
+   2              3                 30        600000000        "vipg30"        // VIP Oro 30 dias (600M)
 end

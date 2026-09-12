@@ -1,13 +1,9 @@
 // #############################################################################
 // # SSeMU MU Online Emulator
+// # https://www.ssemu.com.ar
 // # ---------------------------------------------------------------------------
-// # Website  : https://www.ssemu.com.ar
-// # Forum    : https://www.ssemu.com.ar/forum
-// # YouTube  : https://www.youtube.com/@ssemu
-// # WhatsApp : https://whatsapp.com/channel/0029VaATlSF8F2pDP6OlCG2z
-// # ---------------------------------------------------------------------------
-// # © 2026 SetecSoft Development
-// # This file is part of the SSeMU MuOnline server package.
+// # MU PIRATA - FAST SERVER: Box of Kundun +1
+// # 8% SET tier1 (Leather/Vine/Pad/Rapier/MorningStar), 72% gear +4~6, 20% joyas
 // #############################################################################
 
 2
@@ -21,60 +17,48 @@ end
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Index   Group   SectionRate   ItemDropRate   MoneyAmount   SetItemDropRate   ItemDropCount   EffectValue   DW   DK   FE   MG   DL
 // ---------------------------------------------------------------------------------------------------------------------------------
-   0       0       10000         100            0             0                 1               0             1    1    1    1    1
+   0       0       800           100            0             10000             1               0             1    1    1    1    1
+   1       0       7200          100            0             0                 1               0             1    1    1    1    1
+   2       0       2000          100            100000        0                 1               0             1    1    1    1    1
 end
 
 4
 // -----------------------------------------------------------------------------------------------------------------------------
 // Group   Index     Level   Grade   Durability   Option0   Option1   Option2   Option3   Option4   Option5   Duration   Comment
 // -----------------------------------------------------------------------------------------------------------------------------
-   0       00,000    0       0       0            *         12        12        12        12        *         0          //Kris [Skill Luck Option: +4 Exc: 1]
-   0       00,003    0       0       0            *         12        12        12        12        *         0          //Katana [Skill Luck Option: +4 Exc: 1]
-   0       00,013    0       0       0            *         12        12        12        12        *         0          //Double Blade [Skill Luck Option: +4 Exc: 1]
-   0       00,009    0       0       0            *         12        12        12        12        *         0          //Sword of Salamander [Skill Luck Option: +4 Exc: 1]
-   0       00,012    0       0       0            *         12        12        12        12        *         0          //Heliacal Sword [Skill Luck Option: +4 Exc: 1]
-   0       01,003    0       0       0            *         12        12        12        12        *         0          //Tomahawk [Skill Luck Option: +4 Exc: 1]
-   0       04,002    0       0       0            *         12        12        12        12        *         0          //Elven Bow [Skill Luck Option: +4 Exc: 1]
-   0       04,004    0       0       0            *         12        12        12        12        *         0          //Tiger Bow [Skill Luck Option: +4 Exc: 1]
-   0       04,010    0       0       0            *         12        12        12        12        *         0          //Arquebus [Skill Luck Option: +4 Exc: 1]
-   0       04,013    0       0       0            *         12        12        12        12        *         0          //Bluewing Crossbow [Skill Luck Option: +4 Exc: 1]
-   0       05,001    0       0       0            *         12        12        12        12        *         0          //Angelic Staff [Skill Luck Option: +4 Exc: 1]
-   0       05,004    0       0       0            *         12        12        12        12        *         0          //Gorgon Staff [Skill Luck Option: +4 Exc: 1]
-   0       02,008    0       0       0            *         12        12        12        12        *         0          //Battle Scepter [Skill Luck Option: +4 Exc: 1]
-   0       06,004    0       0       0            *         12        12        12        12        *         0          //Buckler [Skill Luck Option: +4 Exc: 1]
-   0       06,006    0       0       0            *         12        12        12        12        *         0          //Skull Shield [Skill Luck Option: +4 Exc: 1]
-   0       06,007    0       0       0            *         12        12        12        12        *         0          //Spiked Shield [Skill Luck Option: +4 Exc: 1]
-   0       07,005    0       0       0            *         12        12        12        12        *         0          //Leather Helm [Skill Luck Option: +4 Exc: 1]
-   0       08,005    0       0       0            *         12        12        12        12        *         0          //Leather Armor [Skill Luck Option: +4 Exc: 1]
-   0       09,005    0       0       0            *         12        12        12        12        *         0          //Leather Pants [Skill Luck Option: +4 Exc: 1]
-   0       10,005    0       0       0            *         12        12        12        12        *         0          //Leather Gloves [Skill Luck Option: +4 Exc: 1]
-   0       11,005    0       0       0            *         12        12        12        12        *         0          //Leather Boots [Skill Luck Option: +4 Exc: 1]
-   0       07,009    0       0       0            *         12        12        12        12        *         0          //Plate Helm [Skill Luck Option: +4 Exc: 1]
-   0       08,009    0       0       0            *         12        12        12        12        *         0          //Plate Armor [Skill Luck Option: +4 Exc: 1]
-   0       09,009    0       0       0            *         12        12        12        12        *         0          //Plate Pants [Skill Luck Option: +4 Exc: 1]
-   0       10,009    0       0       0            *         12        12        12        12        *         0          //Plate Gloves [Skill Luck Option: +4 Exc: 1]
-   0       11,009    0       0       0            *         12        12        12        12        *         0          //Plate Boots [Skill Luck Option: +4 Exc: 1]
-   0       07,002    0       0       0            *         12        12        12        12        *         0          //Pad Helm [Skill Luck Option: +4 Exc: 1]
-   0       08,002    0       0       0            *         12        12        12        12        *         0          //Pad Armor [Skill Luck Option: +4 Exc: 1]
-   0       09,002    0       0       0            *         12        12        12        12        *         0          //Pad Pants [Skill Luck Option: +4 Exc: 1]
-   0       10,002    0       0       0            *         12        12        12        12        *         0          //Pad Gloves [Skill Luck Option: +4 Exc: 1]
-   0       11,002    0       0       0            *         12        12        12        12        *         0          //Pad Boots [Skill Luck Option: +4 Exc: 1]
-   0       07,007    0       0       0            *         12        12        12        12        *         0          //Sphinx Mask [Skill Luck Option: +4 Exc: 1]
-   0       08,007    0       0       0            *         12        12        12        12        *         0          //Sphinx Armor [Skill Luck Option: +4 Exc: 1]
-   0       09,007    0       0       0            *         12        12        12        12        *         0          //Sphinx Pants [Skill Luck Option: +4 Exc: 1]
-   0       10,007    0       0       0            *         12        12        12        12        *         0          //Sphinx Gloves [Skill Luck Option: +4 Exc: 1]
-   0       11,007    0       0       0            *         12        12        12        12        *         0          //Sphinx Boots [Skill Luck Option: +4 Exc: 1]
-   0       07,010    0       0       0            *         12        12        12        12        *         0          //Vine Helm [Skill Luck Option: +4 Exc: 1]
-   0       08,010    0       0       0            *         12        12        12        12        *         0          //Vine Armor [Skill Luck Option: +4 Exc: 1]
-   0       09,010    0       0       0            *         12        12        12        12        *         0          //Vine Pants [Skill Luck Option: +4 Exc: 1]
-   0       10,010    0       0       0            *         12        12        12        12        *         0          //Vine Gloves [Skill Luck Option: +4 Exc: 1]
-   0       11,010    0       0       0            *         12        12        12        12        *         0          //Vine Boots [Skill Luck Option: +4 Exc: 1]
-   0       07,013    0       0       0            *         12        12        12        12        *         0          //Spirit Helm [Skill Luck Option: +4 Exc: 1]
-   0       08,013    0       0       0            *         12        12        12        12        *         0          //Spirit Armor [Skill Luck Option: +4 Exc: 1]
-   0       09,013    0       0       0            *         12        12        12        12        *         0          //Spirit Pants [Skill Luck Option: +4 Exc: 1]
-   0       10,013    0       0       0            *         12        12        12        12        *         0          //Spirit Gloves [Skill Luck Option: +4 Exc: 1]
-   0       11,013    0       0       0            *         12        12        12        12        *         0          //Spirit Boots [Skill Luck Option: +4 Exc: 1]
-   0       14,019    1       0       0            *         *         *         *         *         *         0          //Devil's Invitation [Level: 1]
-   0       13,018    1       0       0            *         *         *         *         *         *         0          //Invisibility Cloak [Level: 1]
-   0       14,028    1       0       0            *         *         *         *         *         *         0          //Lost Map [Level: 1]
+   0       00,002    0       0       0            35        13        12        19        12        *         0          //Rapier [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1] (SET)
+   0       02,001    0       0       0            35        13        12        19        12        *         0          //Morning Star [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1] (SET)
+   0       05,000    0       0       0            35        13        12        19        12        *         0          //Skull Staff [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1] (SET)
+   0       06,006    0       0       0            35        *         12        19        12        *         0          //Skull Shield [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       07,005    0       0       0            35        *         12        19        12        *         0          //Leather Helm [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       08,005    0       0       0            35        *         12        19        12        *         0          //Leather Armor [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       09,005    0       0       0            35        *         12        19        12        *         0          //Leather Pants [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       10,005    0       0       0            35        *         12        19        12        *         0          //Leather Gloves [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       11,005    0       0       0            35        *         12        19        12        *         0          //Leather Boots [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       07,010    0       0       0            35        *         12        19        12        *         0          //Vine Helm [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       08,010    0       0       0            35        *         12        19        12        *         0          //Vine Armor [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       09,010    0       0       0            35        *         12        19        12        *         0          //Vine Pants [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       10,010    0       0       0            35        *         12        19        12        *         0          //Vine Gloves [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       11,010    0       0       0            35        *         12        19        12        *         0          //Vine Boots [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       07,002    0       0       0            35        *         12        19        12        *         0          //Pad Helm [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       08,002    0       0       0            35        *         12        19        12        *         0          //Pad Armor [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       09,002    0       0       0            35        *         12        19        12        *         0          //Pad Pants [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       10,002    0       0       0            35        *         12        19        12        *         0          //Pad Gloves [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       11,002    0       0       0            35        *         12        19        12        *         0          //Pad Boots [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       09,000    0       0       0            35        *         12        19        12        *         0          //Bronze Pants [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       11,000    0       0       0            35        *         12        19        12        *         0          //Bronze Boots [Level: +4~6 Luck JoL:0~1 Exc:1] (SET)
+   0       00,004    0       0       0            35        13        12        19        12        *         0          //Sword of Assassin [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1]
+   0       00,006    0       0       0            35        13        12        19        12        *         0          //Gladius [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1]
+   0       01,003    0       0       0            35        13        12        19        12        *         0          //Tomahawk [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1]
+   0       04,002    0       0       0            35        13        12        19        12        *         0          //Elven Bow [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1]
+   0       04,009    0       0       0            35        13        12        19        12        *         0          //Golden Crossbow [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1]
+   0       05,001    0       0       0            35        13        12        19        12        *         0          //Angelic Staff [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1]
+   0       02,008    0       0       0            35        13        12        19        12        *         0          //Battle Scepter [Level: +4~6 Skill50 Luck JoL:0~1 Exc:1]
+   0       13,008    0       0       0            *         *         *         *         *         *         0          //Ring of Ice (SET)
+   0       13,009    0       0       0            *         *         *         *         *         *         0          //Ring of Poison (SET)
+   0       13,012    0       0       0            *         *         *         *         *         *         0          //Pendant of Lighting (SET)
+   0       13,013    0       0       0            *         *         *         *         *         *         0          //Pendant of Fire (SET)
+   2       14,013    0       0       0            *         *         *         *         *         *         0          //Jewel of Bless
+   2       14,014    0       0       0            *         *         *         *         *         *         0          //Jewel of Soul
+   2       12,015    0       0       0            *         *         *         *         *         *         0          //Jewel of Chaos
 end

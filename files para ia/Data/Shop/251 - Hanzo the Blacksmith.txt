@@ -4,37 +4,23 @@
 // # https://www.facebook.com/ssemuemulator
 // # https://www.youtube.com/@ssemu
 // # ---------------------------------------------------------------------------
-// # © 2023 SetecSoft Development
-// # This file is part of the SSeMU MuOnline Server files.
+// # MU PIRATA - FAST SERVER: Hanzo the Blacksmith - pets & consumibles PvP
 // #############################################################################
 
 // -----------------------------------------------------------------------------------------------------------
 // [00,000]    [0~13]      [0~255]      [0-1]         [0-1]        [0~7]       [0~63]      [Index]
 // ItemIndex   ItemLevel   Durability   SkillSwitch   LuckSwitch   Aditional   Excellent   SetOption   Comment
 // -----------------------------------------------------------------------------------------------------------
-   06,000      0           0            0             1            1           0           0           //Small Shield
-   06,004      1           0            0             1            1           0           0           //Buckler
-   06,001      2           0            0             1            1           0           0           //Horn Shield
-   06,002      3           0            0             1            1           0           0           //Kite Shield
-   06,006      3           0            0             1            1           0           0           //Skull Shield
-   06,010      3           0            0             1            1           0           0           //Large Round Shield
-   06,009      3           0            0             1            1           0           0           //Plate Shield
-   06,007      3           0            0             1            1           0           0           //Spiked Shield
-   06,005      3           0            0             1            1           0           0           //Dragon Slayer Shield
-   06,008      3           0            0             1            1           0           0           //Tower Shield
-   06,011      3           0            0             1            1           0           0           //Serpent Shield
-   06,012      3           0            0             1            1           0           0           //Bronze Shield
-   00,001      0           0            0             1            1           0           0           //Short Sword
-   01,001      1           0            0             1            1           0           0           //Hand Axe
-   02,000      2           0            0             1            1           0           0           //Mace
-   00,002      2           0            0             1            1           0           0           //Rapier
-   01,002      2           0            0             1            1           0           0           //Double Axe
-   00,004      3           0            0             1            1           0           0           //Sword of Assassin
-   02,001      3           0            0             1            1           0           0           //Morning Star
-   01,003      3           0            0             1            1           0           0           //Tomahawk
-   00,000      2           0            0             1            1           0           0           //Kris
-   00,006      3           0            1             1            1           0           0           //Gladius
-   00,007      3           0            1             1            1           0           0           //Falchion
-   00,008      3           0            1             1            1           0           0           //Serpent Sword
-   00,005      3           0            1             1            1           0           0           //Blade
-end
+   13,000      0           0            0             0            0           0           0           //Guardian Angel
+   13,001      0           0            0             0            0           0           0           //Imp
+   13,002      0           0            0             0            0           0           0           //Horn of Uniria
+   13,003      0           0            0             0            0           0           0           //Dinorant
+   14,007      0           1            0             0            0           0           0           //Potion of Bless
+   14,007      1           1            0             0            0           0           0           //Potion of Soul
+   14,017      0           1            0             0            0           0           0           //Devil Eye
+   14,018      0           1            0             0            0           0           0           //Weapon of Archangel
+   14,019      1           1            0             0            0           0           0           //Devil's Invitation [Level: 1]
+   14,019      3           1            0             0            0           0           0           //Devil's Invitation [Level: 3]
+   14,019      5           1            0             0            0           0           0           //Devil's Invitation [Level: 5]
+   14,021      0           1            0             0            0           0           0           //Rena
+   14,010      0           1            0             0            0           0           0           //Town Portal Scroll
